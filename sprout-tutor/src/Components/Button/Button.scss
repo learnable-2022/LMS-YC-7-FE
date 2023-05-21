@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+button{
+    position: relative;
+    width: 15%;
+    padding: .7em;
+    border-radius: $border-radius;
+    outline: none;
+    border: none;
+}

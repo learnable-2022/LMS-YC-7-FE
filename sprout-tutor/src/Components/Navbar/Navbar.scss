@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+#navbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: $width;
+    background: $white;
+}
