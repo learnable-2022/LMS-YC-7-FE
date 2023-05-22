@@ -120,6 +120,24 @@ Ensure you change the branch you want to contribute to from `main` to `your bran
 
 ## NOTE!!!
 Follow the above instructions to commit and collaborate. Thank you.
+
+## ~ REMEMBER!!! ~
+
+Each time you come to start work for a new day, make sure you are on your branch by typing
+
+```
+git branch
+```
+
+This would show you the branch you are on. If you discover you aren't on your branch, you `checkout` to your branch
+
+When you are on your branch, you then do;
+
+```
+git pull origin test
+```
+
+This would ensure you are up to date with the test branch.
 ### COMPONENTS
 
 As you would have guessed, this contains all the components that would be used throughout the course of the project. Remember that every part of a website is made up of components. it should follow the same course as the `Pages` above, and should also be kept sacred. It should look like this;
