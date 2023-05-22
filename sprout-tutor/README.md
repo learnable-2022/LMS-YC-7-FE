@@ -56,6 +56,8 @@ npm install
 
 This should install all dependencies used in the project. else you have to go to your `/package.json` file there, look at the dependences and proceed to install them.
 
+<b>EVERY DEPENDENCY SHOULD BE INSTALLED INSIDE THE SPROUT TUTOR FOLDER. THANK YOU!</b>
+
 <h2>HOW TO CONTRIBUTE</h2>
 
 You would have seen the paths and how they have been described. I would urge you to look at the `./App.scss` file as it contains all the already proposed variables we would need for the duration of the project. please stick to them. You should also look to <b>Other SASS files</b> to see how these variables have been used. this would give you an insight of what to do and how to use the SASS variable sin your work.
