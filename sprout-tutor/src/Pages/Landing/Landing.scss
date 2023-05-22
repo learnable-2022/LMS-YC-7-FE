@@ -3,4 +3,10 @@
 #landing{
     position: relative;
     width: $width;
+
+    #btn{
+        background: $main;
+        color: $white;
+        font-family: $font;
+    }
 }
