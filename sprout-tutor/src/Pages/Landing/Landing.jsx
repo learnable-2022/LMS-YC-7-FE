@@ -6,8 +6,6 @@ const Landing = () => {
   return (
     <div id='landing'>
         Landing
-
-        <Button title={"Test"} id={'btn'} link={'/about'}/>
     </div>
   )
 }
