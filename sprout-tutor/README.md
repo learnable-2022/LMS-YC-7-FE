@@ -78,6 +78,48 @@ This should contain only the Pages that would be routed to throughout the course
 ```
 This is how it is to appear as so. That clearly indicates it is a Pages folder which nests a Landing page and an About page. This you would see already prompted in the code. <em>Please follow accordingly!!!</em>
 
+## NOTE!!!
+
+When you first come into the repo, you have to create your own branch. This branch can be your name of anyother thing of significance. Create it on the github by clicking the button you see main written on, and typing the name you want to name your branch. You would see an option to create your branch, click it and you have created your branch.
+
+After creating your branch, in your terminal, you route to your branch by typing
+
+```
+git checkout <branch-name>
+```
+
+This would route you to your branch.
+
+Then you do
+
+```
+git pull origin test
+```
+
+This would make your branch be up to date with test.
+
+After working for the day, you are to commit your code following this formart;
+
+```
+git add .
+```
+
+```
+git commit -m "changes you made"
+```
+
+```
+git push origin <your branch-name>
+```
+
+When this is completed, you make a pull request to the `test` branch, by going to the github repo, and choosing your branch.
+
+Then you click the contribute button there.
+
+Ensure you change the branch you want to contribute to from `main` to `your branch-name` before you make your pull request.
+
+## NOTE!!!
+Follow the above instructions to commit and collaborate. Thank you.
 ### COMPONENTS
 
 As you would have guessed, this contains all the components that would be used throughout the course of the project. Remember that every part of a website is made up of components. it should follow the same course as the `Pages` above, and should also be kept sacred. It should look like this;
