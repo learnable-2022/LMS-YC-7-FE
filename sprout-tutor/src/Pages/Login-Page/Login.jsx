@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
-import Forget from "./New-Password";
-// import { FaWallet } from "react-icons";
 
 function Login() {
   return (
     <section className="block">
-      <div className="flex flex-row box-border  ">
+      <div className="flex flex-row box-border  overflow-y-hidden">
         <img src="girl2.png" alt="Girl-Pix" className="h-screen w-1/2"></img>
-        <div className="mx-16 px-10 border-1 ">
+        <div className="mx-16 px-10 border-1 -my-16">
           <div className="flex justify-center align-center">
             <img
               src="Logo-sprout.png"

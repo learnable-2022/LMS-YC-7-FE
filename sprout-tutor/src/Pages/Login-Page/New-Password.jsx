@@ -35,7 +35,7 @@ function Forget() {
             <br />
             <Inputs name="Confirm Password" />
             <input type="text" className="px-28 rounded-lg mb-8" />
-            <Link to="/Forget-Password">
+            <Link to="/PasswordChanged">
               <Button2 name="Change Password" />
             </Link>
           </div>
