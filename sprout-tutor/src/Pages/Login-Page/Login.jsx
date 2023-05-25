@@ -11,9 +11,13 @@ function Login() {
     <section className="block">
       <div className="flex flex-row box-border  ">
         <img src="girl2.png" alt="Girl-Pix" className="h-screen w-1/2"></img>
-        <div className="mx-2 px-10 border-1 ">
+        <div className="mx-16 px-10 border-1 ">
           <div className="flex justify-center align-center">
-            <img src="Logo-sprout.png" alt="Logo" className="h-10 my-5 "></img>
+            <img
+              src="Logo-sprout.png"
+              alt="Logo"
+              className="h-10 my-5 w-2/4 "
+            ></img>
           </div>
           <h1 className="text-2xl font-semibold font-sans text-center">
             Log Into Your Account

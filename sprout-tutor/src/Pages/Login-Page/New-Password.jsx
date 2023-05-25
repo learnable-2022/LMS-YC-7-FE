@@ -17,7 +17,7 @@ function Forget() {
             <img
               src="Logo-sprout.png"
               alt="Logo"
-              className="h-10 mt-28 mb-8 "
+              className=" h-2/6 mt-28 mb-8 w-2/5"
             ></img>
           </div>
           <h1 className="text-2xl font-semibold font-sans text-center">
