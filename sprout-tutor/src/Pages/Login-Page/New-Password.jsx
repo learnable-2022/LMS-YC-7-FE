@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Inputs from "../../Components/Inputs/Inputs";
 import { Link } from "react-router-dom";
 import Button2 from "../../Components/ButtonL/Button2";
@@ -35,8 +35,9 @@ function Forget() {
             <br />
             <Inputs name="Confirm Password" />
             <input type="text" className="px-28 rounded-lg mb-8" />
-            <Link to="/PasswordChanged">
-              <Button2 name="Change Password" />
+
+            <Link to="/PasswordChangedgit">
+              <Button2 name="New Password" />
             </Link>
           </div>
         </div>
