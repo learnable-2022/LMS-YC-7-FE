@@ -1,7 +1,9 @@
 // import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
+import Forget from "./New-Password";
 // import { FaWallet } from "react-icons";
 
 function Login() {
@@ -43,7 +45,9 @@ function Login() {
           <input type="text" className="px-16" />
           <div>
             {" "}
-            <p className="float-right mr-18 mt-1">Forget Password?</p>
+            <p className="float-right mr-18 mt-1 text-blue-600">
+              Forget Password?
+            </p>
           </div>
           <br />
           <div className="flex my-6">
@@ -52,7 +56,9 @@ function Login() {
               Keep me signed in until i sign out
             </p>
           </div>
-          <Button2 name="Login" />
+          <Link to="/Forget-Password">
+            <Button2 name="Login" />
+          </Link>
         </div>
       </div>
     </section>
