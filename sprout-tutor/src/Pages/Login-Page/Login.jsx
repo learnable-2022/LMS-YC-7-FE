@@ -4,7 +4,7 @@ import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
 
-function Login() {
+function  Login() {
   return (
     <section className="block">
       <div className="flex flex-row box-border  overflow-y-hidden">

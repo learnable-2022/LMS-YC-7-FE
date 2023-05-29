@@ -1,0 +1,13 @@
+@import '../../App.scss';
+
+#offers{
+    position: relative;
+    width: $width;
+    margin-top: 18em;
+    font-family: $font;
+
+    h1{
+        text-align: center;
+        color: $main;
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+#about{
+    position: relative;
+    width: $width;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $main;
+    font-family: $font;
+    gap: 1em;
+}

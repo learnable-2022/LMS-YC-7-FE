@@ -1,11 +1,33 @@
 import React from 'react'
 import './Landing.scss'
-import Button from '../../Components/Button/Button'
+import Navbar from '../../Components/Navbar/Navbar'
+import Hero from '../../Components/Hero/Hero'
+import Offers from '../../Components/Offers/Offers'
+import Certificate from '../../Components/Certificate/Certificate'
+import About from '../../Components/About/About'
+import Started from '../../Components/Started/Started'
+import Pricing from '../../Components/Pricing/Pricing'
+import Testimonial from '../../Components/Testemonial/Testimonial'
 
 const Landing = () => {
   return (
     <div id='landing'>
-        Landing
+      <Navbar />
+
+      <Hero />
+
+      <Offers />
+
+      <Certificate />
+
+      <About />
+
+      <Started />
+
+      <Pricing />
+
+      <Testimonial />
+
     </div>
   )
 }
