@@ -22,10 +22,39 @@
         justify-content: center;
         flex-wrap: wrap;
 
-        #prc-btn{
+        .prc-btn{
             padding: 0;
             background: transparent;
             width: auto;
+        }
+    }
+}
+
+.modal-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    h1{
+        color: $main
+    }
+
+
+    #content-container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        width: 100%;
+        
+        #content{
+            position: relative;
+            display: grid;
+            padding: 2em;
+            background: $main;
+            border-radius: $small-radius;
+            gap: 1em;
         }
     }
 }
