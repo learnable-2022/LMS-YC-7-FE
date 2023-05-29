@@ -7,11 +7,11 @@ import pr3 from '../../assets/pr3.png'
 const HeroProfile = ({className}) => {
   return (
     <div id='hr-p' className={className}>
-        <img src={pr1} alt="" />
+        <img src={pr1} alt="" className='img one'/>
 
-        <img src={pr2} alt="" />
+        <img src={pr2} alt=""  className='img two'/>
         
-        <img src={pr3} alt="" />
+        <img src={pr3} alt="" className='img three'/>
     </div>
   )
 }

@@ -28,3 +28,21 @@
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    #started{
+        flex-direction: column-reverse;
+        text-align: center;
+
+        #str-btn{
+            padding: .7em;
+            display: grid;
+            place-items: center;
+            align-self: center;
+        }
+        
+        img{
+            width: 100%;
+        }
+    }
+}

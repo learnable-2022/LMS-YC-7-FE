@@ -13,3 +13,12 @@
     font-family: $font;
     gap: 1em;
 }
+
+@media screen and (max-width: 500px) {
+    #about{
+        
+        img{
+            width: 100%;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import Started from '../../Components/Started/Started'
 import Pricing from '../../Components/Pricing/Pricing'
 import Testimonial from '../../Components/Testemonial/Testimonial'
 import Contact from '../../Components/ContactUs/Contact'
+import Footer from '../../Components/Footer/Footer'
 
 const Landing = () => {
   return (
@@ -30,6 +31,8 @@ const Landing = () => {
       <Testimonial />
 
       <Contact />
+
+      <Footer />
 
     </div>
   )
