@@ -1,0 +1,48 @@
+@import '../../App.scss';
+
+#started{
+    position: relative;
+    width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em;
+    color: $main;
+
+    .str-text{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    #str-btn{
+        background: $main;
+        color: $white;
+        width: calc($wk-width * 0.2);
+        border: 0.02em solid $main;
+
+        &:hover{
+            background: transparent;
+            color: $main;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #started{
+        flex-direction: column-reverse;
+        text-align: center;
+
+        #str-btn{
+            padding: .7em;
+            display: grid;
+            place-items: center;
+            align-self: center;
+        }
+        
+        img{
+            width: 100%;
+        }
+    }
+}

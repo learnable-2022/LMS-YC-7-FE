@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.btn{
+    position: relative;
+    // width: 15%;
+    padding: .7em;
+    border-radius: $border-radius;
+    outline: none;
+    border: none;
+    width: $width;
+    cursor: pointer;
+    font-family: $font;
+    font-size: $text
+}

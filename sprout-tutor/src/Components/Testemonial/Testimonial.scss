@@ -1,0 +1,56 @@
+@import '../../App.scss';
+
+#testimonial{
+    position: relative;
+    width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+    font-family: $font;
+    color: $main;
+    
+    .t-content{
+        position: relative;
+        width: 100%;
+        margin: 1em 0;
+
+        h1{
+            text-align: center;
+        }
+    }
+
+    .t-button{
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        display: flex;
+        gap: 3em;
+
+        .t-btn{
+            background: $main;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: calc($wk-height * 0.02);
+            width: calc($wk-width * 0.02);
+            border-radius: $radius;
+
+            &:hover{
+                background: $yellow;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #testimonial{
+
+        .t-button{
+            bottom: 5%;
+            left: 60%;
+        }
+    }
+}

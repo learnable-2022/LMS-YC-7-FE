@@ -3,6 +3,7 @@
 #landing{
     position: relative;
     width: $width;
+    overflow: hidden;
 
     #btn{
         background: $main;
