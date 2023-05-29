@@ -8,6 +8,7 @@ import About from '../../Components/About/About'
 import Started from '../../Components/Started/Started'
 import Pricing from '../../Components/Pricing/Pricing'
 import Testimonial from '../../Components/Testemonial/Testimonial'
+import Contact from '../../Components/ContactUs/Contact'
 
 const Landing = () => {
   return (
@@ -27,6 +28,8 @@ const Landing = () => {
       <Pricing />
 
       <Testimonial />
+
+      <Contact />
 
     </div>
   )

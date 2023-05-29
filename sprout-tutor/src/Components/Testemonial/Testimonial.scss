@@ -3,7 +3,7 @@
 #testimonial{
     position: relative;
     width: $width;
-    // display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1em;
@@ -23,7 +23,7 @@
 
     .t-button{
         position: absolute;
-        bottom: 5%;
+        bottom: 10%;
         left: 10%;
         display: flex;
         gap: 3em;
@@ -49,6 +49,7 @@
     #testimonial{
 
         .t-button{
+            bottom: 5%;
             left: 60%;
         }
     }
