@@ -61,15 +61,15 @@ const Navbar = () => {
         <div id='content-container'>
           <div id="content">
             <img src={teach} alt="" />
-            <NavigateButton link={'/teacher-sign'} title={"TEACHER"}/>
+            <NavigateButton link={'/register/teacher'} title={"TEACHER"}/>
           </div>
           <div id="content">
           <img src={studt} alt="" />
-            <NavigateButton link={'/student-sign'} title={"STUDENT"}/>
+            <NavigateButton link={'/register/student'} title={"STUDENT"}/>
           </div>
           <div id="content">
           <img src={parent} alt="" />
-            <NavigateButton link={'/parent-sign'} title={"PARENT"}/>
+            <NavigateButton link={'/register/parent'} title={"PARENT"}/>
           </div>
         </div>
       </Modal>
