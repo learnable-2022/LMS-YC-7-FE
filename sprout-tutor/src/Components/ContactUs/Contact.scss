@@ -1,0 +1,185 @@
+@import '../../App.scss';
+
+#contact{
+    position: relative;
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font;
+    color: $white;
+    padding: 1em;
+    background: $dk-blue;
+    gap: 2em;
+
+    span{
+        width: $width;
+        text-align: center;
+    }
+
+    .cct-content{
+        position: relative;
+        width: $width;
+        height: calc($height * 0.6);
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        aside{
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: $white;
+            border-radius: $small-radius;
+            padding: 1em;
+            gap: 2em;
+            color: $main;
+
+            p{
+                color: $black;
+            }
+
+            a{
+                color: $main;
+                text-decoration: none;
+                align-items: flex-start;
+                display: flex;
+                gap: 1em;
+
+                i{
+                    background: $main;
+                    color: $white;
+                    padding: .5em;
+                    border-radius: $radius;
+                }
+
+                &:hover{
+                    text-decoration: underline  ;
+                }
+            }
+        }
+
+        form{
+            position: relative;
+            width: 65%;
+            height: 100%;
+            border: 0.02em solid $white;
+            border-radius: $small-radius;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            // flex-wrap: wrap;
+            gap: 2em;
+
+            #name, #cont{
+                width: $width;
+                display: flex;
+                gap: 2em;
+            }
+                
+            label{
+                position: relative;
+                width: $width;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                
+                input, textarea{
+                    position: relative;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    resize: none;
+                    background: transparent;
+                    border-bottom: 0.02em solid $white;
+                    font-family: $font;
+                    font-size: $text;
+                    color: $white;
+                }
+            }
+
+            #send{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: $main;
+                background: $white;
+                border: 0.02em solid $white;
+                border-radius: $small-radius;
+                padding: 1.7em 2.3em;
+                font-family: $font;
+                font-size: $font;
+                cursor: pointer;
+
+                &:hover{
+                    background: transparent;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #contact{
+        .cct-content{
+            height: auto;
+
+            form{
+                width: 55%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #contact{
+        .cct-content{
+            height: auto;
+
+            form{
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contact{
+        .cct-content{
+            height: auto;
+
+            aside{
+                width: 100%;
+            }
+
+            form{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #contact{
+        .cct-content{
+            height: auto;
+
+            aside{
+                width: 100%;
+            }
+
+            form{
+                width: 100%;
+
+                #name, #cont{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

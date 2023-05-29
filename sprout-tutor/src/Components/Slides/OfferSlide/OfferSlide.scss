@@ -1,0 +1,25 @@
+@import '../../../App.scss';
+
+#of-slide {
+  position: relative;
+  width: $width;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+
+  .slide-item {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 0.8em;
+
+    img {
+      width: calc(#{$wk-width} * 0.2);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

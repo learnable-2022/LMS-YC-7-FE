@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "/images/testemonials/test1.png",
+        "name": "- Johnathan Ani, Student",
+        "text": "My experience with Sprout Tutor has been absolutely amazing! As a young learner, I was initially hesitant about online education, but this platform has completely changed my perspective. the interactive lessons and games have made learning so fun. I live how I can explore different subjects and engage with thr content in an interactive way."
+    },
+    {
+        "id": 2,
+        "image": "/images/testemonials/test2.png",
+        "name": "- Sarah Ademola, Parent",
+        "text": "Since enrolling my child in Sprout Tutor, I’ve seen remarkable transformation in their attitude towards learning. The interactive lessons and engaging activities have made education a joyful experience for them. They eagerly look forward to their daily lessons and have shown tremendous progress in their academic skills"
+    },
+    {
+        "id": 3,
+        "image": "/images/testemonials/test3.png",
+        "name": "- David Olushola, Parent",
+        "text": "My child struggled with traditional learning methods, but Sprout Tutor has been a blessing. The platform’s interactive approach has boosted their confidence and enthusiasm for learning. The progress tracking feature allows me to monitor their development, and the suggested activities provided have further been impactful."
+    },
+    {
+        "id": 4,
+        "image": "/images/testemonials/test4.png",
+        "name": "- Michael Eze, Tutor",
+        "text": "As an educator, I am always on the lookout for innovative tools that enhance the learning experience of my students. Sprout Tutor has been a game-changer in my classroom. the engaging lessons and interactive activities have captured my students’ attention and fostered a love for learning. It has made teaching effective."
+    }
+]

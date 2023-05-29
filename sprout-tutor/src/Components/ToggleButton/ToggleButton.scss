@@ -1,0 +1,13 @@
+@import '../../App.scss';
+
+#toggle{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: .7em 0;
+    display: grid;
+    place-items: center;
+    border-radius: $small-radius;
+    font-family: $font;
+    font-size: $text
+}

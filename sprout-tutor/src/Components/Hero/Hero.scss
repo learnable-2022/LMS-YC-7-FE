@@ -1,0 +1,63 @@
+@import '../../App.scss';
+
+#hero{
+    position: relative;
+    width: $width;
+    height: calc($height * 0.9);
+    background: $dk-blue;
+    color: $white;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    text-align: center;
+    gap: 3em;
+    padding: 4em 2em;
+
+    h1{
+        font-size: $large-text;
+    }
+
+    .hr-btn{
+        width: 30%;
+        // padding: .7em;
+        border: 0.02em solid $white;
+        background: transparent;
+        color: $white;
+
+        &:hover{
+            background: $white;
+            color: $dk-blue;
+        }
+    }
+}
+
+.modal-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    h1{
+        color: $main
+    }
+
+
+    #content-container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        width: 100%;
+        
+        #content{
+            position: relative;
+            display: grid;
+            padding: 2em;
+            background: $main;
+            border-radius: $small-radius;
+            gap: 1em;
+        }
+    }
+}
