@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+#hr-p{
+    position: relative;
+    width: $width;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    #hr-p{
+
+        .img{
+            width: 80%;
+        }
+
+        .two, .three{
+            display: none;
+        }
+    }
+}

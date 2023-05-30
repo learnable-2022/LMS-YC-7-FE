@@ -1,0 +1,97 @@
+@import '../../App.scss';
+
+#t-profile{
+    position: relative;
+    width: $width;
+    height: calc($height * 0.7);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 2em;
+    gap: 2em;
+    // flex-wrap: wrap;
+
+
+    aside{
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        color: $main;
+        font-family: $font;
+        gap: 2em;
+
+        img{
+            width: 2em;
+        }
+    }
+
+    figure{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        display: grid;
+
+        img{
+            place-self: center;
+        }
+
+        span{
+            position: absolute;
+            border-radius: $radius;
+            outline: none;
+            border: none;
+        }
+
+        #one{
+            height: calc($wk-height * 0.05);
+            width: calc($wk-width * 0.05);
+            background: $main;
+            top: 0;
+            right: 0;
+        }
+        #two{
+            height: calc($wk-height * 0.05);
+            width: calc($wk-width * 0.05);
+            background: $turq;
+            top: 0;
+            left: 25%;
+        }
+        #three{
+            height: calc($wk-height * 0.05);
+            width: calc($wk-width * 0.05);
+            background: $yellow;
+            top: 50%;
+        }
+        #four{
+            height: calc($wk-height * 0.03);
+            width: calc($wk-width * 0.03);
+            background: $turq;
+            right: 20%;
+            bottom: 3%;
+        }
+        #five{
+            height: calc($wk-height * 0.05);
+            width: calc($wk-width * 0.05);
+            background: rgba($main, 0.7);
+            top: 80%;
+            left: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #t-profile{
+        position: relative;
+        flex-wrap: wrap;
+        height: $height;
+        padding: 0;
+
+        figure, aside{
+            position: relative;
+            width: $width;
+            height: 50%;
+        }
+    }
+}

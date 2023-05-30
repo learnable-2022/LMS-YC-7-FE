@@ -3,8 +3,102 @@
 #navbar{
     position: -webkit-sticky;
     position: sticky;
+    // position: fixed;
     top: 0;
     left: 0;
     width: $width;
     background: $white;
+    z-index: 99;
+
+    nav, menu{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+        background: $white;
+
+        img{
+            position: relative;
+            width: calc($wk-width * 0.1);
+        }
+
+        .link{
+            cursor: pointer;
+        }
+
+        .tog-btn{
+            position: relative;
+            justify-content: center;
+            width: calc($wk-width * 0.05);
+            color: $main;
+            background: none;
+        }
+
+        aside{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1em;
+
+            #nav-btn{
+                color: $main;
+                background: none;
+            }
+
+            .reg-btn{
+                background: $main;
+                color: $white;
+
+                &:hover{
+                    background: rgba($main, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.modal-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    h1{
+        color: $main
+    }
+
+
+    #content-container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        width: 100%;
+        
+        #content{
+            position: relative;
+            display: grid;
+            padding: 2em;
+            background: $main;
+            border-radius: $small-radius;
+            gap: 1em;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #navbar{
+        menu{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    #navbar{
+        nav{
+            display: none;
+        }
+    }
 }
