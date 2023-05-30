@@ -44,7 +44,7 @@ function Login() {
             <Inputs name="Your Password" />
             <p>Hide</p>
           </div>
-          <input type="text" className="px-16" />
+          <input type="Password" className="px-16" />
           <div>
             {" "}
             <p className="float-right mr-18 mt-1 text-blue-600">
@@ -59,7 +59,7 @@ function Login() {
             </p>
           </div>
           <Link to="/Forget-Password">
-            <Button2 name="Login" />
+            <Button2 name="Login" type="submit" />
           </Link>
         </div>
       </div>

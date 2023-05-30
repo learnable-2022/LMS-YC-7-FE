@@ -21,7 +21,7 @@ function PasswordChanged() {
         </p>
 
         <Link to="/">
-          <Button2 name="Proceed to Login" />
+          <Button2 name="Proceed to Login"  type="submit"  />
         </Link>
       </div>
     </section>

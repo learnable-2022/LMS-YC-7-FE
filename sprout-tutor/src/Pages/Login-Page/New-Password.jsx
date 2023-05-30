@@ -30,14 +30,14 @@ function Forget() {
             <div className="my-1">
               <Inputs name="New Password" />
             </div>
-            <input type="text" className="px-28 rounded-lg" />
+            <input type="Password" className="px-28 rounded-lg" />
             <br />
             <br />
             <Inputs name="Confirm Password" />
-            <input type="text" className="px-28 rounded-lg mb-8" />
+            <input type="Password" className="px-28 rounded-lg mb-8" />
 
-            <Link to="/PasswordChangedgit">
-              <Button2 name="New Password" />
+            <Link to="/PasswordChanged">
+              <Button2 name="New Password" type="submit" />
             </Link>
           </div>
         </div>

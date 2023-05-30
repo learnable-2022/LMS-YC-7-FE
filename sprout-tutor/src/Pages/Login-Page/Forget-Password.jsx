@@ -30,7 +30,7 @@ function NewP() {
             <Inputs name="Email Address" />
             <input type="text" className="px-28 rounded-lg mb-6 mt-2" />
             <Link to="/New-Password">
-              <Button2 name="New Password" />
+              <Button2 name="New Password" type="submit" />
             </Link>
             <p className="mt-10 text-sm ">Back to Login page</p>
           </div>
