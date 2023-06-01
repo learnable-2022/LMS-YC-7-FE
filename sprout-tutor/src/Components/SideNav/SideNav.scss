@@ -1,5 +1,51 @@
 @import '../../App.scss';
 
 #sidenav{
-    
+    position: relative;
+    height: 100%;
+    padding: .3em;
+    background: $white;
+    border-top: 0.02em solid $main;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+
+    #sd-links{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: .3em;
+        padding: 1em;
+
+        .sd-link{
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            font-family: $font;
+            font-family: $text;
+            color: $lt-gray;
+            border-radius: $small-radius;
+            padding: .7em 0 .7em .7em;
+
+            &.linked{
+                background: $main;
+                color: $white;
+            }
+        }
+    }
+
+    .exp-btn{
+        align-self: flex-start;
+        margin: 0 1.5em;
+    }
+}
+
+.sidenav{
+    width: 6.7%;
+    transition: all .3s ease-in-out;
+
+    &.active{
+        width: 20%;
+    }
 }

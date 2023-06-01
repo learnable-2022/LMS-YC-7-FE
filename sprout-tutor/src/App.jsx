@@ -8,6 +8,7 @@ import RegisterStudent from "./Pages/AuthStudent/RegisterStudent";
 import RegisterTeacher from "./Pages/AuthTeacher/RegisterTeacher";
 import RegisterParent from "./Pages/AuthParent/RegisterParent";
 import Landing from "./Pages/Landing/Landing";
+import Teacher from "./Pages/Teacher/Teacher";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/register/student" element={<RegisterStudent />} />
             <Route path="/register/teacher" element={<RegisterTeacher />} />
             <Route path="/register/parent" element={<RegisterParent/>} />
+            <Route path="/teacher" element={<Teacher />} />
           </Routes>
         </Router>
     </div>

@@ -34,7 +34,7 @@ function  Login() {
           </h1>
           <p className="text-sm font-normal font-sans text-center">
             Don&apos;t have an account?
-            <span className="text-blue-600" onClick={handleOpen}>Sign Up</span>
+            <span className="text-blue-600 cursor-pointer" onClick={handleOpen}>Sign Up</span>
           </p>
           <div className="my-6">
             <Button name="connect with wallet" />
