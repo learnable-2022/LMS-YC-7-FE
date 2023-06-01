@@ -28,8 +28,8 @@ const Navbar = () => {
       <nav>
         <img src={Logo} alt="" />
 
-        <Link to='about' className='link'>About</Link>
-        <Link to='contact' className='link'>Contact Us</Link>
+        <Link to='about' smooth={true} duration={500} spy={true} className='link'>About</Link>
+        <Link to='contact' smooth={true} duration={500} spy={true} className='link'>Contact Us</Link>
 
         <aside>
           <NavigateButton link={'/login'} title={'Log in'} id={"nav-btn"}/>
@@ -46,8 +46,8 @@ const Navbar = () => {
 
         {openMobileNav &&(
           <div className='mobile'>
-            <Link to='about' className='link'>About</Link>
-            <Link to='contact' className='link'>Contact Us</Link>
+            <Link to='about' smooth={true} duration={500} spy={true} className='link'>About</Link>
+            <Link to='contact' smooth={true} duration={500} spy={true} className='link'>Contact Us</Link>
             <NavigateButton link={'/login'} title={'Log in'} id={"nav-btn"}/>
             <ToggleButton onClick={handleOpen} text={"Register"} className={"reg-btn"}/>
           </div>
