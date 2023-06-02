@@ -1,30 +1,30 @@
-import React from 'react'
-import './CourseManager.scss'
-import TeacherOverview from '../TeacherOverview/TeacherOverview'
+import React from 'react';
+import './CourseManager.scss';
+import TeacherOverview from '../TeacherOverview/TeacherOverview';
 import TeacherSettings from '../TeacherSettings/TeacherSettings';
+// import ToggleButton from '../../ToggleButton/ToggleButton';
 
-const CourseManager = ( {activeLink} ) => {
+const CourseManager = ({ activeLink, onShowCreateCourse }) => {
+  const getComponent = (linkId) => {
+    switch (linkId) {
 
-    const getComponent = (linkId) => {
+      case 0:
+        return <TeacherOverview />;
 
-        switch(linkId) {
-            case 0:
-            return <TeacherOverview />;
+      case 6:
+        return <TeacherSettings />;
 
-            case 6:
-            return <TeacherSettings />
+      default:
+        return null;
+    }
+  };
 
-            default:
-            return null;
-        }
-    };
-    console.log(activeLink)
-    
   return (
     <div id='c-manager'>
-        {getComponent(activeLink)}
+      {/* <ToggleButton text={"Create Course"} onClick={onShowCreateCourse} /> */}
+      {getComponent(activeLink)}
     </div>
-  )
-}
+  );
+};
 
-export default CourseManager
+export default CourseManager;

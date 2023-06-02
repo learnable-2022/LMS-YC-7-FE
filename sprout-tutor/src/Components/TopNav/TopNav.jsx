@@ -1,48 +1,53 @@
-import React, { useState } from 'react'
-import './TopNav.scss'
-import logo from '../../assets/Logo-sprout.png'
-import ToggleButton from '../ToggleButton/ToggleButton'
-import NotificationPanel from '../NotificationPanel/NotificationPanel'
-import upload from '../../assets/upload-one.png'
+import React, { useState } from 'react';
+import './TopNav.scss';
+import logo from '../../assets/Logo-sprout.png';
+import ToggleButton from '../ToggleButton/ToggleButton';
+import NotificationPanel from '../NotificationPanel/NotificationPanel';
+import upload from '../../assets/upload-one.png';
+import NavigateButton from '../NavigateButton/NavigateButton';
 
-const TopNav = () => {
-  const [openMessage, setOpenMessage] = useState(false)
-  const [openNotification, setOpenNotification] = useState(false)
+const TopNav = ({ createCourseClick, showCreateCourse }) => {
+  const [openMessage, setOpenMessage] = useState(false);
+  const [openNotification, setOpenNotification] = useState(false);
 
-  function handleMessageOpen(){
-    setOpenMessage(!openMessage)
+  function handleMessageOpen() {
+    setOpenMessage(!openMessage);
   }
 
-  function handleNotificaitonOpen(){
-    setOpenNotification(!openNotification)
+  function handleNotificationOpen() {
+    setOpenNotification(!openNotification);
+  }
+
+  function handleCreateCourseClick() {
+    createCourseClick();
   }
 
   return (
     <div id='topnav'>
-      <img src={logo} alt="" id='logo'/>
+      <NavigateButton image={logo} id={"logo"} link={"/"}/>
 
       <label htmlFor="">
-        <input type="search" name="search" id="search" placeholder='Search here'/>
+        <input type="search" name="search" id="search" placeholder='Search here' />
         <button type='submit' id='tv-sb-btn'><i className='fa-solid fa-magnifying-glass fa-2x'></i></button>
       </label>
 
       <div id="userprofile">
-        <ToggleButton text={"Create Course"} image={upload} className={"upload"}/>
+        <ToggleButton text={"Create Course"} image={upload} className={"upload"} onClick={handleCreateCourseClick} isActive={showCreateCourse} />
 
         <ToggleButton className={'user messages'} onClick={handleMessageOpen}>
           <i className='fa-solid fa-envelope fa-2x'></i>
         </ToggleButton>
 
-        <ToggleButton className={'user notif'} onClick={handleNotificaitonOpen}>
+        <ToggleButton className={'user notif'} onClick={handleNotificationOpen}>
           <i className='fa-solid fa-bell fa-2x'></i>
         </ToggleButton>
 
-        <img src={""} alt={""} title={''}/>
+        <img src={""} alt={""} title={''} />
       </div>
 
       {openMessage && (
-        <NotificationPanel 
-          closePanel={handleMessageOpen} 
+        <NotificationPanel
+          closePanel={handleMessageOpen}
           className={'panel message-panel'}
           title={"Your in Messages"}
           text={"Manage your Messages"}
@@ -52,8 +57,8 @@ const TopNav = () => {
       )}
 
       {openNotification && (
-        <NotificationPanel 
-          closePanel={handleNotificaitonOpen}
+        <NotificationPanel
+          closePanel={handleNotificationOpen}
           className={'panel notif-panel'}
           title={"Your Notifications"}
           text={"Manage Your Notifications"}
@@ -63,7 +68,7 @@ const TopNav = () => {
       )}
 
     </div>
-  )
-}
+  );
+};
 
-export default TopNav
+export default TopNav;

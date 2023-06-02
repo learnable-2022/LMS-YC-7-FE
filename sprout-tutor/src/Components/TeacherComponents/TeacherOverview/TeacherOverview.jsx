@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './TeacherOverview.scss'
-import { Link } from 'react-router-dom'
 import ToggleButton from '../../ToggleButton/ToggleButton'
 import TeacherSettings from '../TeacherSettings/TeacherSettings'
 import Certificate from '../../Certificate/Certificate'
@@ -16,7 +15,7 @@ const TeacherOverview = () => {
             setActiveState(0)
         }
     }
-    
+
   return (
     <div id='t-overview'>
         <h1>Course Manager</h1>

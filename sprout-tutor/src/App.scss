@@ -22,6 +22,7 @@ $lt-blue: #D5E5F6;
 $lt-gray: #E5E7E8;
 $gray: #696F75;
 $orange: #EA7317;
+$green: #299310;
 
 
 
@@ -39,4 +40,14 @@ $font: 'Open Sans', sans-serif;
 
 .App{
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: .3em;
+}
+
+::-webkit-scrollbar-thumb{
+  width: 100%;
+  background: $main;
+  padding: 1em;
 }
