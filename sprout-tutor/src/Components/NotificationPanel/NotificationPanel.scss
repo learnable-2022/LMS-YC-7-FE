@@ -1,0 +1,52 @@
+@import '../../App.scss';
+
+#panel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $height;
+    width: $width;
+    background: rgba($black, 0.7);
+    font-family: $font;
+    font-size: $text;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+
+    #panel-content{
+        position: relative;
+        width: calc($wk-width * 0.3);
+        height: calc($wk-height * 0.3);
+        z-index: 999;
+        // padding: 1em .3em;
+        background: $lt-gray;
+        overflow-y: hidden;
+
+        span{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: .3em;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $white;
+            color: $black;
+
+            #panel-button{
+                color: $main;
+            }
+        }
+
+        #panel-head{
+            top: 0;
+        }
+
+        #manage{
+            bottom: 0;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}

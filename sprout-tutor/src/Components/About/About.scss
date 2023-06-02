@@ -12,6 +12,10 @@
     color: $main;
     font-family: $font;
     gap: 1em;
+
+    h1{
+        font-size: $large-text;
+    }
 }
 
 @media screen and (max-width: 500px) {
