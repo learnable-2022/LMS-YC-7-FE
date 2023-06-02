@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./RegisterTeacher.scss";
+import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 
 const RegisterTeacher = () => {
     const [active, setActive] = useState(1);
@@ -172,7 +173,7 @@ const RegisterTeacher = () => {
                     <label htmlFor="cpassword"> Confirm password</label>
                     <input id="cpassword" type="password" />
                   </div>
-                  <button>Create Account</button>
+                  <NavigateButton title={"Create Account"} link={"/teacherdashboard"} />
                 </form>
               </div>
             )

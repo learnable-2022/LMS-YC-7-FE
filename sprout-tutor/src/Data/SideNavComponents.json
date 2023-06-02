@@ -1,0 +1,52 @@
+[
+
+    {
+        "id": 1,
+        "icon": "fa-solid fa-border-all fa-2x",
+        "text": "Overview",
+        "link": ""
+    },
+    {
+        "id": 2,
+        "icon": "fa-solid fa-user fa-2x",
+        "text": "Profile",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "icon": "fa-solid fa-calendar-check fa-2x",
+        "text": "Course Manager",
+        "link": ""
+    },
+    {
+        "id": 4,
+        "icon": "fa-solid fa-chart-line fa-2x",
+        "text": "Progress Tracker",
+        "link": ""
+    },
+    {
+        "id": 5,
+        "icon": "fa-solid fa-file-circle-check fa-2x",
+        "text": "Grading and Assessment",
+        "link": ""
+    },
+    {
+        "id": 6,
+        "icon": "fa-solid fa-satellite-dish fa-2x",
+        "text": "Live Classes",
+        "link": ""
+    },
+    {
+        "id": 7,
+        "icon": "fa-solid fa-gear fa-2x",
+        "text": "Settings",
+        "link": ""
+    },
+    {
+        "id": 8,
+        "icon": "fa-solid fa-arrow-right-from-bracket fa-2x",
+        "text": "Logout",
+        "link": "/"
+    }
+
+]

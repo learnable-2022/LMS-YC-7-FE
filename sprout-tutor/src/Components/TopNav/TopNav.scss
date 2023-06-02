@@ -1,0 +1,70 @@
+@import '../../App.scss';
+
+#topnav{
+    position: relative;
+    width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background: $white;
+    gap: 2em;
+
+    #logo{
+        width: calc($wk-width * 0.13);
+        padding: 0;
+    }
+
+    label{
+        position: relative;
+        // width: auto;
+
+        input{
+            position: relative;
+            width: calc($wk-width * 0.3);
+            outline: none;
+            border: none;
+            border-radius: $small-radius;
+            background: $lt-gray;
+            color: $turq;
+            padding: .5em 2.3em;
+            font-family: $font;
+            font-size: $text;
+        }
+
+        #tv-sb-btn{
+            position: absolute;
+            top: 10%;
+            left: 1%;
+            color: $turq;
+        }
+    }
+
+    #userprofile{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 1em;
+
+        .upload{
+            background: $orange;
+            color: $white;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: .7em;
+
+            &:hover{
+                background: rgba($orange, 0.5);
+            }
+        }
+
+        .user{
+            color: $main;
+
+            &:hover{
+                color: $turq;
+            }
+        }
+    }
+}

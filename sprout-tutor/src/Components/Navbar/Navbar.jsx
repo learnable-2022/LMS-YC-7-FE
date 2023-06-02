@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.scss'
+// import 'animate.css'
 import Logo from '../../assets/Logo-sprout.png'
 import NavigateButton from '../NavigateButton/NavigateButton'
 import ToggleButton from '../ToggleButton/ToggleButton'
@@ -9,8 +10,8 @@ import studt from '../../assets/studt-logo.png'
 import parent from '../../assets/parent-logo.png'
 import { Link } from 'react-scroll'
 
-const Navbar = () => {
 
+const Navbar = () => {
   const [openModal, setOpenModal] = useState(false)
   const [openMobileNav, setOpenMobileNav] = useState(false)
 
@@ -22,14 +23,13 @@ const Navbar = () => {
     setOpenMobileNav(!openMobileNav)
   }
 
-
   return (
     <div id='navbar'>
       <nav>
         <img src={Logo} alt="" />
 
-        <Link to='about' className='link'>About</Link>
-        <Link to='contact' className='link'>Contact Us</Link>
+        <Link to='about' smooth={true} duration={500} spy={true} className='link'>About</Link>
+        <Link to='contact' smooth={true} duration={500} spy={true} className='link'>Contact Us</Link>
 
         <aside>
           <NavigateButton link={'/login'} title={'Log in'} id={"nav-btn"}/>
@@ -40,42 +40,42 @@ const Navbar = () => {
       <menu>
         <img src={Logo} alt="" />
 
-        <ToggleButton onClick={openMobile} className={"tog-btn"}>
+        <ToggleButton onClick={openMobile} className={`tog-btn`}>
           <i className={`fa-solid fa-${openMobileNav ? 'times' : 'bars'} fa-2x`}></i>
         </ToggleButton>
 
-        {openMobileNav &&(
-          <div className='mobile'>
-            <Link to='about' className='link'>About</Link>
-            <Link to='contact' className='link'>Contact Us</Link>
+        {openMobileNav && (
+          <div className={`mobile ${openMobileNav ? 'active' : ''}`}>
+            <Link to='about' smooth={true} duration={500} spy={true} className='link'>About</Link>
+            <Link to='contact' smooth={true} duration={500} spy={true} className='link'>Contact Us</Link>
             <NavigateButton link={'/login'} title={'Log in'} id={"nav-btn"}/>
             <ToggleButton onClick={handleOpen} text={"Register"} className={"reg-btn"}/>
           </div>
-          )}
+        )}
       </menu>
 
-    {openModal && (
-      <Modal className={"modal-content"} closeModal={handleOpen}>
-        <h1>REGISTER AS...</h1>
+      {openModal && (
+        <Modal className={"modal-content"} closeModal={handleOpen}>
+          <h1>REGISTER AS...</h1>
 
-        <div id='content-container'>
-          <div id="content">
-            <img src={teach} alt="" />
-            <NavigateButton link={'/register/teacher'} title={"TEACHER"}/>
+          <div id='content-container'>
+            <div id="content">
+              <img src={teach} alt="" />
+              <NavigateButton link={'/register/teacher'} title={"TEACHER"}/>
+            </div>
+            <div id="content">
+              <img src={studt} alt="" />
+              <NavigateButton link={'/register/student'} title={"STUDENT"}/>
+            </div>
+            <div id="content">
+              <img src={parent} alt="" />
+              <NavigateButton link={'/register/parent'} title={"PARENT"}/>
+            </div>
           </div>
-          <div id="content">
-          <img src={studt} alt="" />
-            <NavigateButton link={'/register/student'} title={"STUDENT"}/>
-          </div>
-          <div id="content">
-          <img src={parent} alt="" />
-            <NavigateButton link={'/register/parent'} title={"PARENT"}/>
-          </div>
-        </div>
-      </Modal>
-    )}
+        </Modal>
+      )}
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;
