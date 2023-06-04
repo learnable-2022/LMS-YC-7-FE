@@ -28,6 +28,8 @@ const Step1 = ({onNext}) => {
             setThumbnail(e.target.result);
         };
         reader.readAsDataURL(file);
+        } else {
+            alert("File greater than 200kb")
         }
     }
 
