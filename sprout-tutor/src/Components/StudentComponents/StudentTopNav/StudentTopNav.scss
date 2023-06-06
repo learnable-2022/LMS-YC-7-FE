@@ -1,0 +1,62 @@
+@import '../../../App.scss';
+
+#st-topnav{
+    position: relative;
+    width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    background: $white;
+
+    #std-logo{
+        width: calc($wk-width * 0.15);
+    }
+
+    span, nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    span{
+        width: calc($wk-width * 0.5);
+
+        p{
+            font-size: calc($text * 1.5);
+            color: $main;
+        }
+
+        label{
+            width: 80%;
+
+            input{
+                width: 100%;
+                outline: none;
+                resize: none;
+                border: none;
+                background: $lt-gray;
+                font-family: $font;
+                font-size: $text;
+                padding-left: 2.5em;
+                border-radius: $small-radius;
+            }
+
+            button{
+                position: absolute;
+                top: 9%;
+                left: 16%;
+                padding: 0;
+                color: $lt-blue;
+            }
+        }
+    }
+    
+    nav{
+
+        .st-btn{
+            color: $main;
+        }
+    }
+}
