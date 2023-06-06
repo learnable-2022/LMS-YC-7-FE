@@ -128,6 +128,10 @@
             background: $main;
             border-radius: $small-radius;
             gap: 1em;
+
+            #nav-tog{
+                background: $white;
+            }
         }
     }
 }
