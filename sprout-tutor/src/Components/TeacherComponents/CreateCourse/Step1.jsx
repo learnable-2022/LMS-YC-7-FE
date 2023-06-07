@@ -7,7 +7,7 @@ const Step1 = ({onNext}) => {
     const [thumbnail, setThumbnail] = useState(null);
     const fileInputRef = useRef(null);
 
-    function handleClick(index) {
+    function handleThumbnailClick(index) {
         if (index) {
         setActiveIndex(index);
         } else {
