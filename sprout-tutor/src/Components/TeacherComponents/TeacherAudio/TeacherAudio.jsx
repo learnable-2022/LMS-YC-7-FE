@@ -23,7 +23,9 @@ const TeacherAudio = () => {
 
 if (audios) return (
     <div>
-
+        <ul>
+           {Array.from(audios).map((audios, idx)=> <li key={idx}>{audios.name} </li> )}
+        </ul>
     </div>
 )
 
@@ -51,7 +53,11 @@ if (audios) return (
                 onDrop={handleDrop}
                 onClick={handleAudioClick}
                 >
-                    <h1> Drop Audio file here or click to upload</h1>
+                   {audios ? (
+                <source src={audios} type="audios/*" alt='Lesson audios' />
+                 ) : (
+                <span>Drop audios  file here or click to upload</span>
+                 )}
                 
                 <input
                 type='file'

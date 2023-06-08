@@ -54,7 +54,11 @@ if (video) return (
                 onDrop={handleDrop}
                 onClick={handleVideoClick}
                 >
-                    <h1> Drop Video  file here or click to upload</h1>
+                  {video ? (
+                <source src={video} type="video/*" alt='Lesson video' />
+                 ) : (
+                <span>Drop Video  file here or click to upload</span>
+                 )}
                 
                 <input
                 type='file'
