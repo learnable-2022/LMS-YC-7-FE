@@ -5,10 +5,11 @@ import blank from '../../../assets/blank.webp'
 import OtherInformation from './OtherInformation/OtherInformation'
 import MiscellaneousInfo from './MiscellaneousInfo/MiscellaneousInfo'
 
-const StudentGeneral = ({closePop}) => {
+const StudentGeneral = ({closePop, onImageSelection}) => {
     const [isVisiblePassword, setIsVisiblePassword] = useState(false);
     const [isVisibleConfirmPassword, setIsVisibleConfirmPassword] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
+    const [uploadedImage, setUploadedImage] = useState('');
     const popRef = useRef(null)
 
     useEffect((closePop) => {
@@ -44,7 +45,8 @@ const StudentGeneral = ({closePop}) => {
     };
 
     const handleToggleButtonClick = () => {
-        closePop();
+        setUploadedImage(selectedImage);
+        closePop(uploadedImage);
         popRef.current.classList.remove('zoomIn');
         popRef.current.classList.add('zoomOut');
     };
@@ -124,7 +126,7 @@ const StudentGeneral = ({closePop}) => {
             <MiscellaneousInfo />
 
             <span>
-                <ToggleButton text={'Save Changes'} className={'sbt-btn'} />
+                <ToggleButton text={'Save Changes'} className={'sbt-btn'} onClick={handleToggleButtonClick} />
             </span>
         </form>
     </div>

@@ -4,6 +4,7 @@ import ToggleButton from '../../ToggleButton/ToggleButton'
 import edit from '../../../assets/edit.png'
 import StudentGeneral from '../StudentGeneral/StudentGeneral'
 import STProfilleAbout from './STProfileAbout/STProfilleAbout'
+import STCourses from './STCourses/STCourses'
 
 const StudentProfile = () => {
     const [openPop, setOpenPop] = useState(false)
@@ -41,9 +42,21 @@ const StudentProfile = () => {
 
             <STProfilleAbout />
 
+            <STCourses />
+
         </section>
 
-        <aside></aside>
+        <aside>
+            <section>
+                <h1>Recommended courses</h1>
+            </section>
+            <section>
+                <h1>Top-Rated Teachers</h1>
+            </section>
+            <section>
+                <h1>Recent Activity</h1>
+            </section>
+        </aside>
 
         {openPop && <StudentGeneral closePop={handlePopOpen} />}
     </div>

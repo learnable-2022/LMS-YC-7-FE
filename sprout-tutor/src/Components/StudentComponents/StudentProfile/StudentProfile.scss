@@ -9,12 +9,13 @@
     display: flex;
     justify-content: space-between;
     gap: 1em;
+    overflow-x: hidden;
 
     section{
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 70%;
         gap: 1em;
 

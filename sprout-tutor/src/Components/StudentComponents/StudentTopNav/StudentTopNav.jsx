@@ -4,8 +4,10 @@ import NavigateButton from '../../NavigateButton/NavigateButton'
 import logo from '../../../assets/Logo-sprout.png'
 import ToggleButton from '../../ToggleButton/ToggleButton'
 import NotificationPanel from '../../NotificationPanel/NotificationPanel'
+import blank from '../../../assets/blank.webp'
 
-const StudentTopNav = () => {
+
+const StudentTopNav = ({ uploadedImage }) => {
     const [openNavPanel, setOpenNavPanel] = useState(0)
 
     function handleOpenNavPanel(index) {
@@ -30,10 +32,12 @@ const StudentTopNav = () => {
         </span>
 
         <nav>
-            <ToggleButton onClick={() => setOpenNavPanel(1)} className={'st-btn st-upload'}>
+            <img src={uploadedImage || blank} alt="" id="disp-img" />
+
+            <ToggleButton onClick={() => setOpenNavPanel(1)} className={'st-btn st-upload'} image={null}>
                 <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>            
             </ToggleButton>
-            <ToggleButton onClick={() => setOpenNavPanel(2)} className={'st-btn st-notif'}>
+            <ToggleButton onClick={() => setOpenNavPanel(2)} className={'st-btn st-notif'} image={null}>
                 <i className='fa-solid fa-bell fa-2x'></i>
             </ToggleButton>
         </nav>

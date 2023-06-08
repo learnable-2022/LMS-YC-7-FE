@@ -54,6 +54,15 @@
     }
     
     nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        #disp-img{
+            height: calc($wk-height * 0.03);
+            width: calc($wk-width * 0.03);
+            border-radius: $radius;
+        }
 
         .st-btn{
             color: $main;
