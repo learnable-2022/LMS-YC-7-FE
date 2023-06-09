@@ -31,15 +31,15 @@ const StudentSideNav = ({closenav, setActiveLink}) => {
           </span>
 
           <nav>
-            <NavigateButton link={'/studentdashboard'} title={'Course Manager'} id={'st-side-btn'} onClick={() => handleSetActiveLink(0)}/>
-            <ToggleButton text={'My Cart'} className={'st-side-btn'}/>
-            <ToggleButton text={'Wishlist'} className={'st-side-btn'}/>
+            <NavigateButton link={'/studentdashboard'} title={'Course Manager'} className={`st-side-btn`} />
+            <ToggleButton text={'My Cart'} className={`st-side-btn`}/>
+            <ToggleButton text={'Wishlist'} className={`st-side-btn`}/>
           </nav>
 
           <nav>
-            <ToggleButton text={'My Profile'} className={'st-side-btn'} onClick={() => handleSetActiveLink(3)}/>
-            <ToggleButton text={'Edit Profile'} className={'st-side-btn'}/>
-            <ToggleButton text={'Wishlist'} className={'st-side-btn'}/>
+            <ToggleButton text={'My Profile'} className={`st-side-btn`} onClick={() => handleSetActiveLink(0)}/>
+            <ToggleButton text={'Edit Profile'} className={`st-side-btn`}/>
+            <ToggleButton text={'Wishlist'} className={`st-side-btn`}/>
           </nav>
         </div>
 
