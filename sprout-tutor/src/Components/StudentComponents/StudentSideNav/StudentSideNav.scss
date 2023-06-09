@@ -48,6 +48,11 @@
                     background: $main;
                     color: $white;
                 }
+
+                &.active{
+                    background: $main;
+                    color: $white;
+                }
             }
         }
     }

@@ -7,7 +7,7 @@ const StudentDisplay = ( {activeLink} ) => {
     function getComponent(linkId){
         switch(linkId){
 
-            case 3:
+            case 0:
             return <StudentProfile />
 
             default:
