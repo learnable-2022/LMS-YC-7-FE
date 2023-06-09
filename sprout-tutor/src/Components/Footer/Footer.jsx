@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Footer.scss'
-import logo from '../../assets/Logo-sprout.png'
+import logo from '../../assets/footlogo.png'
 import { Link } from 'react-scroll'
 import NavigateButton from '../NavigateButton/NavigateButton'
 
