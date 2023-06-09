@@ -56,17 +56,17 @@ const Step1 = ({onNext}) => {
         
         <h1>Course Details</h1>
 
-        <label htmlFor='title'>
+        <label className='title'>
             <h2>Course Title</h2>
             <input type='text' name='text' id='title' placeholder='Untitled Course' />
         </label>
 
-        <label htmlFor='description'>
+        <label className='description'>
             <h2>Course Description</h2>
             <textarea name='text' id='description' placeholder='What is the course about'></textarea>
         </label>
 
-        <label htmlFor='grade'>
+        <label className='grade'>
             <h2>Audience Grade</h2>
         </label>
 

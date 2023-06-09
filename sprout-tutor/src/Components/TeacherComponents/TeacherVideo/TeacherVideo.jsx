@@ -3,7 +3,7 @@ import './TeacherVideo.scss'
 import ToggleButton from '../../ToggleButton/ToggleButton';
 
 
-const TeacherVideo = () => {
+const TeacherVideo = (onNext) => {
   const [video, setVideo] = useState(null);
   const inputRef = useRef(null);
 
@@ -24,15 +24,25 @@ const TeacherVideo = () => {
     setVideo(event.dataTransfer.file)
   };
 
-if (video) return (
-    <div>
 
-    </div>
-)
-
+function handleInputChange(e) {
+  const file = e.target.files[0];
+  if (file && file.type.startsWith('image/')) {
+  handleFile(file);
+  } else {
+  console.log('Please select a video file.');
+  }
+}
   function handleVideoClick() {
     inputRef.current.click();
 };
+
+
+function handleSave() {
+  
+  onNext();
+}
+
 
   return (
     <div>
@@ -55,7 +65,7 @@ if (video) return (
                 onClick={handleVideoClick}
                 >
                   {video ? (
-                <source src={video} type="video/*" alt='Lesson video' />
+                <video src={video}  alt='Lesson video' />
                  ) : (
                 <span>Drop Video  file here or click to upload</span>
                  )}
@@ -66,12 +76,14 @@ if (video) return (
                 accept='video/*'
                 style={{ display: 'none' }}
                 ref={inputRef}
-                onChange={(event) => setVideo(event.target.video)}
+                onChange={handleInputChange}
             />
                 </div>
             )}       
       </span>
-     
+      <span id='st1-submit'>
+        <button className={'st1-btn st1-cont'} onClick={handleSave} >Continue</button>
+      </span>
     </div>
   )
 }

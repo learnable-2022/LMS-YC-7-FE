@@ -70,7 +70,10 @@ if (audios) return (
                 </div>
             )}       
       </span>
-     
+      <span id='st1-submit'>
+            <ToggleButton text={"Save"} className={'st1-btn st1-save'}/>
+            <ToggleButton text={"Continue"} onClick={handleSave} image={right} className={'st1-btn st1-cont'}/>
+        </span>
     </div>
   )
 }
