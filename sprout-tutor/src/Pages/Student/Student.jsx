@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Student.scss'
 import StudentTopNav from '../../Components/StudentComponents/StudentTopNav/StudentTopNav'
-import StudentManager from '../../Components/StudentComponents/StudentManager/StudentManager'
+import StudentDisplay from '../../Components/StudentComponents/StudentDisplay/StudentDisplay'
 
 const Student = () => {
+  const [activeLink, setActiveLink] = useState(0)
   return (
     <div id='student'>
-        <StudentTopNav />
+        <StudentTopNav setActiveLink={setActiveLink} />
 
-        <StudentManager />
+        <StudentDisplay activeLink={activeLink} />
+
     </div>
   )
 }

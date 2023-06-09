@@ -5,42 +5,58 @@ import logo from '../../../assets/Logo-sprout.png'
 import ToggleButton from '../../ToggleButton/ToggleButton'
 import NotificationPanel from '../../NotificationPanel/NotificationPanel'
 import blank from '../../../assets/blank.webp'
+import StudentSideNav from '../StudentSideNav/StudentSideNav'
 
 
-const StudentTopNav = ({ uploadedImage }) => {
+const StudentTopNav = ({ uploadedImage, setActiveLink }) => {
     const [openNavPanel, setOpenNavPanel] = useState(0)
+    const [openMenu, setOpenMenu] = useState(false)
 
-    function handleOpenNavPanel(index) {
-        if(index){
-            setOpenNavPanel(index)
-        } else{
-            setOpenNavPanel(0)
-        }
+    const handleOpenNavPanel = (index) => {
+        setOpenNavPanel(index);
+    };
+
+    function handleOpenMenu() {
+        setOpenMenu(!openMenu)
     }
 
   return (
     <div id='st-topnav'>
-        <NavigateButton link={'/'} image={logo} id={'std-logo'} />
+        <div id="st-top">
+            <NavigateButton link={'/'} image={logo} id={'std-logo'} />
 
-        <span>
-            <p>My Profile</p>
+            <span>
+                <label htmlFor="search">
+                    <input type="search" name="search" id="search" placeholder='Search here'/>
+                    <button type="submit"><i className='fa-solid fa-magnifying-glass fa-2x'></i></button>
+                </label>
 
-            <label htmlFor="search">
-                <input type="search" name="search" id="search" placeholder='Search here'/>
-                <button type="submit"><i className='fa-solid fa-magnifying-glass fa-2x'></i></button>
-            </label>
-        </span>
+                <p>My Dashboard</p>
+            </span>
 
-        <nav>
-            <img src={uploadedImage || blank} alt="" id="disp-img" />
+            <nav>
+                <ToggleButton onClick={() => setOpenNavPanel(1)} className={'st-btn st-upload'} image={null}>
+                    <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>            
+                </ToggleButton>
+                <ToggleButton onClick={() => setOpenNavPanel(2)} className={'st-btn st-notif'} image={null}>
+                    <i className='fa-solid fa-bell fa-2x'></i>
+                </ToggleButton>
 
-            <ToggleButton onClick={() => setOpenNavPanel(1)} className={'st-btn st-upload'} image={null}>
-                <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>            
+                <img src={uploadedImage || blank} alt="" id="disp-img" />
+            </nav>
+
+            <ToggleButton className={'st-btn st-menu-btn'} onClick={handleOpenMenu}>
+                <i className='fa-solid fa-ellipsis-vertical fa-2x'></i>
             </ToggleButton>
-            <ToggleButton onClick={() => setOpenNavPanel(2)} className={'st-btn st-notif'} image={null}>
-                <i className='fa-solid fa-bell fa-2x'></i>
-            </ToggleButton>
-        </nav>
+        </div>
+
+        <div id="st-bottom">
+
+        </div>
+
+        {openMenu && (
+            <StudentSideNav closenav={handleOpenMenu} setActiveLink={setActiveLink} />
+        )}
 
         {openNavPanel === 1 && 
             <NotificationPanel 

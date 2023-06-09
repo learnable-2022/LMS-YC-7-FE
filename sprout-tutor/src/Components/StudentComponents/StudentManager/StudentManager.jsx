@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './StudentManager.scss'
-import SideNav from '../../SideNav/SideNav'
+import StudentSideNav from '../StudentSideNav/StudentSideNav'
 import StudentDisplay from '../StudentDisplay/StudentDisplay'
 
 const StudentManager = () => {
@@ -8,9 +8,9 @@ const StudentManager = () => {
 
   return (
     <div id='st-manager'>
-        <SideNav setActiveLink={setActiveLink}/>
+        {/* <StudentSideNav setActiveLink={setActiveLink}/> */}
 
-        <StudentDisplay activeLink={activeLink}/>
+        {/* <StudentDisplay activeLink={activeLink}/> */}
     </div>
   )
 }
