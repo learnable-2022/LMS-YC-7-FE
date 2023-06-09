@@ -10,6 +10,7 @@
     flex-direction: column;
     padding: .5em 2em;
     background: $white;
+    z-index: 99;
 
     #st-top{
         position: relative;
