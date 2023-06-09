@@ -1,0 +1,61 @@
+@import '../../../App.scss';
+
+#st-sidenav{
+    position: absolute;
+    top: calc($wk-height * 0.05);
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background: $white;
+    box-shadow: 0.02em 0.02em 0.3em rgba($black, 0.4),
+                0.02em -0.02em 0.3em rgba($black, 0.4),
+                -0.02em 0.02em 0.3em rgba($black, 0.4),
+                0.02em -0.02em 0.3em rgba($black, 0.4);
+    border-radius: $small-radius;
+    width: 20%;
+    transition: all .3s ease-out;
+
+    &.active{
+        width: -100%;
+    }
+
+    .st-close-btn{
+        margin-left: auto;
+        color: $orange;
+        padding: 1em;
+    }
+
+    #st-side-content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        span, nav{
+            border-bottom: 0.02em solid $main;
+            color: $main;
+
+            .st-side-btn, #st-side-btn{
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                padding: .5em 1em;
+                border-radius: 0;
+                
+                &:hover{
+                    background: $main;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    #st-logout{
+        padding: 0;
+        text-align: left;
+        padding: .5em 2em;
+        color: $main;
+    }
+}

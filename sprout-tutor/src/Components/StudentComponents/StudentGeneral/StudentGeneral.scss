@@ -1,0 +1,129 @@
+@import '../../../App.scss';
+
+#st-general{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $height;
+    width: $width;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 1em;
+
+    #st-gen-top{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 .5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: calc($text * 1.5);
+        color: $main;
+        border-bottom: 0.02em solid $main;
+        font-weight: 600;
+        z-index: 99;
+        background: $white;
+    }
+
+    form{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1em;
+
+        section{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            aside{
+                position: relative;
+                width: 70%;
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 2em;
+
+                span{
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    border: 0.02em solid $main;
+                    border-radius: $small-radius;
+                    padding: .5em;  
+                    
+                    input{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        font-family: $font;
+                        font-size: $text;
+                        background: none;
+                    }
+
+                    .visi-btn{
+                        position: absolute;
+                        right: 3%;
+                        bottom: 13%;
+                        color: $main;
+                    }
+                }
+            }
+
+            #st-pr-img{
+                height: calc($wk-height * 0.27);
+                width: calc($wk-width * 0.3);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: .2em;
+                
+                img{
+                    height: 90%;
+                    width: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
+                    border-radius: $small-radius;
+                }
+                label{
+                    border: 0.02em solid $main;
+                    padding: .7em 1.2em;
+                    border-radius: $small-radius;
+                    width: 100%;
+                    cursor: pointer;
+                    text-align: center;
+
+                    &:hover{
+                        background: $main;
+                        color: $white;
+                    }
+                }
+                input{
+                    display: none;
+                }
+            }
+        }
+
+        span{
+            width: 100%;
+            margin: 1em 0;
+            padding: 2em 0;
+            border-top: 0.02em solid $orange;
+
+            .sbt-btn{
+                background: $orange;
+                padding: .5em 1.7em;
+                color: $white;
+                margin-left: auto;
+            }
+        }
+    }
+}
