@@ -10,6 +10,8 @@
     flex-direction: column;
     padding: .5em 2em;
     background: $white;
+    z-index: 9;
+    gap: 1em;
 
     #st-top{
         position: relative;
@@ -77,6 +79,21 @@
         }
         .st-btn{
             color: $main;
+        }
+    }
+
+    #st-bottom{
+        position: relative;
+        display: flex;
+        gap: 1em;
+        margin-left: 1%;
+
+        h5{
+            font-weight: 600;
+        }
+
+        p{
+            color: $gray;
         }
     }
 }

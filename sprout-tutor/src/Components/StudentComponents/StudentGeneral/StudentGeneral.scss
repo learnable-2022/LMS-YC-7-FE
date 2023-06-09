@@ -11,6 +11,7 @@
     flex-direction: column;
     overflow-x: hidden;
     gap: 1em;
+    z-index: 10;
 
     #st-gen-top{
         position: -webkit-sticky;
@@ -26,7 +27,7 @@
         color: $main;
         border-bottom: 0.02em solid $main;
         font-weight: 600;
-        z-index: 99;
+        z-index: 11;
         background: $white;
     }
 

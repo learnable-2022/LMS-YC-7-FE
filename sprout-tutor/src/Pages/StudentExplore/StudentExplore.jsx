@@ -5,8 +5,8 @@ import StudentTopNav from '../../Components/StudentComponents/StudentTopNav/Stud
 const StudentExplore = () => {
   return (
     <div id='st-explore'>
-        <StudentTopNav />
-        
+        <StudentTopNav title={'Home >'} text={'Explore'} />
+
         StudentExplore
     </div>
   )
