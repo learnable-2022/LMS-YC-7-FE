@@ -31,7 +31,7 @@ const StudentSideNav = ({closenav, setActiveLink}) => {
           </span>
 
           <nav>
-            <ToggleButton text={'Course Manager'} className={'st-side-btn'}/>
+            <NavigateButton link={'/studentdashboard'} title={'Course Manager'} id={'st-side-btn'} onClick={() => handleSetActiveLink(0)}/>
             <ToggleButton text={'My Cart'} className={'st-side-btn'}/>
             <ToggleButton text={'Wishlist'} className={'st-side-btn'}/>
           </nav>

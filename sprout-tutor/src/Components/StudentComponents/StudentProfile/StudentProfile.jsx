@@ -5,6 +5,8 @@ import edit from '../../../assets/edit.png'
 import StudentGeneral from '../StudentGeneral/StudentGeneral'
 import STProfilleAbout from './STProfileAbout/STProfilleAbout'
 import STCourses from './STCourses/STCourses'
+import STCoursesCompleted from './STCoursesCompleted/STCoursesCompleted'
+import StudentSuggestions from './StudentSuggestions/StudentSuggestions'
 
 const StudentProfile = () => {
     const [openPop, setOpenPop] = useState(false)
@@ -44,18 +46,12 @@ const StudentProfile = () => {
 
             <STCourses />
 
+            <STCoursesCompleted />
+
         </section>
 
         <aside>
-            <section>
-                <h1>Recommended courses</h1>
-            </section>
-            <section>
-                <h1>Top-Rated Teachers</h1>
-            </section>
-            <section>
-                <h1>Recent Activity</h1>
-            </section>
+            <StudentSuggestions />
         </aside>
 
         {openPop && <StudentGeneral closePop={handlePopOpen} />}

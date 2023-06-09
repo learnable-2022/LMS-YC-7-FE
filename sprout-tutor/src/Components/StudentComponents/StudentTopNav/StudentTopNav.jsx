@@ -8,7 +8,7 @@ import blank from '../../../assets/blank.webp'
 import StudentSideNav from '../StudentSideNav/StudentSideNav'
 
 
-const StudentTopNav = ({ uploadedImage, setActiveLink }) => {
+const StudentTopNav = ({ uploadedImage, setActiveLink, title, text }) => {
     const [openNavPanel, setOpenNavPanel] = useState(0)
     const [openMenu, setOpenMenu] = useState(false)
 
@@ -51,7 +51,8 @@ const StudentTopNav = ({ uploadedImage, setActiveLink }) => {
         </div>
 
         <div id="st-bottom">
-
+            <h5>{title}</h5>
+            <p>{text}</p>
         </div>
 
         {openMenu && (
