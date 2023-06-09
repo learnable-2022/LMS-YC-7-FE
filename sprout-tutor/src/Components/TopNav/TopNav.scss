@@ -68,3 +68,12 @@
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    #topnav{
+
+        label{
+            display: none;
+        }
+    }
+}

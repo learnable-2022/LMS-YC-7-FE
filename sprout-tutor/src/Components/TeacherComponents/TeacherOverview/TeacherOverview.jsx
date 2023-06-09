@@ -3,7 +3,7 @@ import './TeacherOverview.scss'
 import ToggleButton from '../../ToggleButton/ToggleButton'
 import TeacherSettings from '../TeacherSettings/TeacherSettings'
 import Certificate from '../../Certificate/Certificate'
-    import Insight from '../Insight/Insight'
+import Insight from '../Insight/Insight'
 
 const TeacherOverview = () => {
     const [activeState, setActiveState] = useState(0)
