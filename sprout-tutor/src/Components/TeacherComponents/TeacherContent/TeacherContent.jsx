@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './TeacherContent.scss';
 import SideNav from '../../SideNav/SideNav';
-import CourseManager from '../CourseManager/CourseManager';
 import CreateCourse from '../CreateCourse/CreateCourse';
+import TeacherOverview from '../TeacherOverview/TeacherOverview';
 
 const TeacherContent = ({showCreateCourse, setShowCreateCourse}) => {
   const [activeLink, setActiveLink] = useState(0);
@@ -18,7 +18,7 @@ const TeacherContent = ({showCreateCourse, setShowCreateCourse}) => {
       {showCreateCourse ? (
         <CreateCourse cancelCourse={handleCancelCourseClick}/>
       ) : (
-        <CourseManager activeLink={activeLink} />
+        <TeacherOverview activeLink={activeLink} />
       )}
     </div>
   );

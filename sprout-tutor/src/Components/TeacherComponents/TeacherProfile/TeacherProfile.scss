@@ -1,0 +1,43 @@
+@import '../../../App.scss';
+
+#teach-profile{
+    position: relative;
+    width: 100%;
+    background: $lt-blue;
+    display: flex;
+    padding: 2em;
+    gap: 2em;
+
+    section{
+        position: relative;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .teach-p-btn{
+            background: $orange;
+            display: flex;
+            gap: .5em;
+            color: $white;
+            padding: .5em 1em;
+            margin-left: auto;
+        }
+
+        #teach-progress-panel{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+    
+            span{
+                height: calc($wk-height * 0.07);
+                width: calc($wk-width * 0.13);
+                border-radius: $small-radius;
+                background: $white;
+                padding: .3em;
+            }
+        }
+    }
+}

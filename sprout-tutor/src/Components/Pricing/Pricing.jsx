@@ -35,7 +35,7 @@ const Pricing = () => {
 
       {openModal && (
         <Modal className={"modal-content"} closeModal={handleClick}>
-          <h1>REGISTER AS...</h1>
+          <h1>REGISTER AS</h1>
 
           <div id='content-container'>
             <div id="content">
@@ -46,10 +46,10 @@ const Pricing = () => {
             <img src={studt} alt="" />
               <NavigateButton link={'/register/student'} id={'nav-tog'} title={"STUDENT"}/>
             </div>
-            <div id="content">
+            {/* <div id="content">
             <img src={parent} alt="" />
               <NavigateButton link={'/register/parent'} id={'nav-tog'} title={"PARENT"}/>
-            </div>
+            </div> */}
           </div>
         </Modal>
       )}
