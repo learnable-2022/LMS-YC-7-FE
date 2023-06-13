@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
 
-const TeacherAudio = () => {
+const TeacherAudio = (onNext) => {
   const [audios, setAudios] = useState(null);
   const inputRef = useRef(null);
 
@@ -24,7 +24,7 @@ const TeacherAudio = () => {
 if (audios) return (
     <div>
         <ul>
-           {Array.from(audios).map((audios, idx)=> <li key={idx}>{audios.name} </li> )}
+           {audios.from(audios).map((audios, idx)=> <li key={idx}>{audios.name} </li> )}
         </ul>
     </div>
 )
@@ -33,6 +33,9 @@ if (audios) return (
     inputRef.current.click();
 };
 
+function handleSave() {  
+  onNext();
+}
   return (
     <div>
       <label htmlFor='title'>
@@ -70,10 +73,11 @@ if (audios) return (
                 </div>
             )}       
       </span>
+      <div>
       <span id='st1-submit'>
-            <ToggleButton text={"Save"} className={'st1-btn st1-save'}/>
-            <ToggleButton text={"Continue"} onClick={handleSave} image={right} className={'st1-btn st1-cont'}/>
-        </span>
+        <button className={'st1-btn st1-cont'} onClick={handleSave} >Continue</button>
+      </span>
+      </div>
     </div>
   )
 }

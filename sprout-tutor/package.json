@@ -11,13 +11,19 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.22",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2",
     "react-scroll": "^1.8.9",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "web3-react": "^5.0.5"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

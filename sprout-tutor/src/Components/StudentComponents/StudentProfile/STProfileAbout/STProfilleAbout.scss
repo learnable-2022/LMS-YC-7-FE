@@ -1,0 +1,43 @@
+@import '../../../../App.scss';
+
+#stp-about{
+    position: relative;
+    width: $width;
+    display: flex;
+    padding: 2em 4em;
+    gap: 1em;
+
+    figure{
+        position: relative;
+        width: 30%;
+        height: calc($wk-height * 0.2);
+        background: $white;
+        border-radius: $small-radius;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        img{
+            width: 100%;
+            height: 60%;
+            border-top-right-radius: $small-radius;
+            border-top-left-radius: $small-radius;
+        }
+    }
+
+    article{
+        position: relative;
+        width: 70%;
+        padding: .5em;
+        background: $white;
+        border-radius: $small-radius;
+
+        span{
+            position: relative;
+            h4{
+                color: $main;
+                font-weight: 700;
+            }
+        }
+    }
+}

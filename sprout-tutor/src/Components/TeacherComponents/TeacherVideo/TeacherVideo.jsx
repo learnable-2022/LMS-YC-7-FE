@@ -46,16 +46,15 @@ function handleSave() {
 
   return (
     <div>
-      <label htmlFor='title'>
+      <label className='tv-title'>
         <h1>Lesson Title</h1>
           <input type='text' name='text' id='title' placeholder='Untitled Lesson' />
       </label>
 
-      <label htmlFor='description'>
+      <label className='tv-description'>
           <h1>Course Description</h1>
           <textarea name='text' id='description' placeholder='What is the Lesson about'></textarea>
       </label>
-
       <span>
             <h1>Video file</h1>
             {!video && (
@@ -81,9 +80,11 @@ function handleSave() {
                 </div>
             )}       
       </span>
-      <span id='st1-submit'>
-        <button className={'st1-btn st1-cont'} onClick={handleSave} >Continue</button>
-      </span>
+      <div>
+        <span id='st1-submit'>
+          <button className={'st1-btn st1-cont'} onClick={handleSave} >Continue</button>
+        </span>
+      </div>
     </div>
   )
 }

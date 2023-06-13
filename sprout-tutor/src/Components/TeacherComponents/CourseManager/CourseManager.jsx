@@ -8,7 +8,7 @@ const CourseManager = ({ activeLink, onShowCreateCourse }) => {
   const getComponent = (linkId) => {
     switch (linkId) {
 
-      case 0:
+      case 2:
         return <TeacherOverview />;
 
       case 6:

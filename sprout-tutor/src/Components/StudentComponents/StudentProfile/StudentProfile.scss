@@ -1,0 +1,71 @@
+@import '../../../App.scss';
+
+#st-profile{
+    position: relative;
+    width: $width;
+    height: 100%;
+    background: $lt-blue;
+    padding: .5em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    overflow-x: hidden;
+
+    section{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        gap: 1em;
+
+        .st-edit{
+            position: relative;
+            background: $orange;
+            display: flex;
+            align-self: flex-end;
+            padding: .5em;
+            color: $white;
+        }
+
+
+        #st-progress-panel{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+    
+            span{
+                height: calc($wk-height * 0.07);
+                width: calc($wk-width * 0.13);
+                border-radius: $small-radius;
+                background: $white;
+                padding: .3em;
+            }
+        }
+
+        #st-about{
+            position: relative;
+            display: flex;
+            width: 100%;
+            gap: 1.2em;
+
+            figure, article{
+                position: relative;
+                border-radius: $small-radius;
+                background: $white;
+            }
+
+            
+        }
+    }
+    
+    aside{
+        position: relative;
+        width: 30%;
+        height: 100%;
+        background: $white;
+    }
+
+}
