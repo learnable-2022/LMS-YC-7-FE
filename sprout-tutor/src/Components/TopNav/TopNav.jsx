@@ -3,10 +3,10 @@ import './TopNav.scss';
 import logo from '../../assets/Logo-sprout.png';
 import ToggleButton from '../ToggleButton/ToggleButton';
 import NotificationPanel from '../NotificationPanel/NotificationPanel';
-import upload from '../../assets/upload-one.png';
+import blank from '../../assets/blank.webp';
 import NavigateButton from '../NavigateButton/NavigateButton';
 
-const TopNav = ({ createCourseClick, showCreateCourse }) => {
+const TopNav = () => {
   const [openMessage, setOpenMessage] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);
 
@@ -16,10 +16,6 @@ const TopNav = ({ createCourseClick, showCreateCourse }) => {
 
   function handleNotificationOpen() {
     setOpenNotification(!openNotification);
-  }
-
-  function handleCreateCourseClick() {
-    createCourseClick();
   }
 
   return (
@@ -32,17 +28,23 @@ const TopNav = ({ createCourseClick, showCreateCourse }) => {
       </label>
 
       <div id="userprofile">
-        <ToggleButton text={"Create Course"} image={upload} className={"upload"} onClick={handleCreateCourseClick} isActive={showCreateCourse} />
-
         <ToggleButton className={'user messages'} onClick={handleMessageOpen}>
-          <i className='fa-solid fa-envelope fa-2x'></i>
+          <i className='fa-regular fa-envelope fa-2x'></i>
         </ToggleButton>
 
         <ToggleButton className={'user notif'} onClick={handleNotificationOpen}>
-          <i className='fa-solid fa-bell fa-2x'></i>
+          <i className='fa-regular fa-bell fa-2x'></i>
         </ToggleButton>
 
-        <img src={""} alt={""} title={''} />
+        <div id='teach-prof'>
+          <span>
+            <h5></h5> <br />
+            <p>Teacher</p>
+          </span>
+
+          <img src={blank} alt={""} id='disp-img'/>
+        </div>
+
       </div>
 
       {openMessage && (

@@ -5,7 +5,7 @@
     width: 100%;
     background: $lt-blue;
     display: flex;
-    padding: 2em;
+    padding: 1em;
     gap: 2em;
 
     section{
@@ -29,15 +29,41 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
     
             span{
-                height: calc($wk-height * 0.07);
-                width: calc($wk-width * 0.13);
+                height: calc($wk-height * 0.08);
+                width: calc($wk-width * 0.16);
                 border-radius: $small-radius;
                 background: $white;
                 padding: .3em;
+
+                h4{
+                    font-weight: 700;
+                }
             }
+        }
+    }
+
+    aside{
+        position: relative;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .aside{
+            position: relative;
+            height: calc($wk-height * 0.24);
+            border-radius: $small-radius;
+            padding: 1em;
+        }
+        
+        .side-disp-one{
+            background:url(../../../assets/topcourse.png) no-repeat center, $white;
+        }
+        .side-disp-two{
+            background:url(../../../assets/stdlocation.png) no-repeat center, $white;
         }
     }
 }
