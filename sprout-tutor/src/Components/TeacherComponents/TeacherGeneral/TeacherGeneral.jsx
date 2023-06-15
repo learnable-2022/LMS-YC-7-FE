@@ -77,8 +77,8 @@ const TeacherGeneral = ({closePop, onImageSelection}) => {
                         <input type="tel" name="phone" id="phone" />
                     </span>
                     <span>
-                        <label htmlFor="class">Class</label>
-                        <input type="text" name="class" id="class" />
+                        <label htmlFor="field">Field</label>
+                        <input type="text" name="field" id="field" />
                     </span>
                     <span>
                         <label htmlFor="username">Username</label>
