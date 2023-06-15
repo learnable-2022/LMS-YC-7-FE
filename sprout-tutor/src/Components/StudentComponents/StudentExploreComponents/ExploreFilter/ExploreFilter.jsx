@@ -11,15 +11,21 @@ const ExploreFilter = () => {
 
   return (
     <div id='explore-filter'>
-        <div id="filter-control">
-            <ToggleButton onClick={handleVisibility} className={`filter-btn ${toggleVisibility ? 'active' : ''}`}>
-                <i className={`fa-solid fa-${toggleVisibility ? 'chevron-right' : 'chevron-left'} fa-2x`}></i>
-            </ToggleButton>
-        </div>
+        <ToggleButton onClick={handleVisibility} className={`filter-btn ${toggleVisibility ? 'active' : ''}`}>
+            <i className={`fa-solid fa-${toggleVisibility ? 'chevron-left' : 'chevron-right'} fa-2x`}></i>
+        </ToggleButton> 
 
-        {toggleVisibility && (
-            <div id="filter-content">
-                thigs
+        {!toggleVisibility && (
+            <div id="filter-content" className={`filter-content ${toggleVisibility ? 'active' : ''}`}>
+                <span>
+                    <label htmlFor="filter"></label>
+
+                    <select name="filter" id="filter">
+                        <option value="popularity">Popularity</option>
+                        <option value="rated">Top Rated</option>
+                        <option value="uploaded">Recently Uploaded</option>
+                    </select>
+                </span>
             </div>
         )}
     </div>

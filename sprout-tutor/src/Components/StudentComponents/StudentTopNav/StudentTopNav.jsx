@@ -39,7 +39,7 @@ const StudentTopNav = ({ uploadedImage, setActiveLink, title, text }) => {
                     <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>            
                 </ToggleButton>
                 <ToggleButton onClick={() => setOpenNavPanel(2)} className={'st-btn st-notif'} image={null}>
-                    <i className='fa-solid fa-bell fa-2x'></i>
+                    <i className='fa-regular fa-bell fa-2x'></i>
                 </ToggleButton>
 
                 <img src={uploadedImage || blank} alt="" id="disp-img" />

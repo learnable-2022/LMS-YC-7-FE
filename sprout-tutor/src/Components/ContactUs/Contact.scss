@@ -9,19 +9,23 @@
     justify-content: center;
     font-family: $font;
     color: $white;
-    padding: 1em;
+    padding: 2em 5em;
     background: $dk-blue;
     gap: 2em;
 
     span{
         width: $width;
         text-align: center;
+
+        h1{
+            font-size: $large-text;
+        }
     }
 
     .cct-content{
         position: relative;
         width: $width;
-        height: calc($height * 0.6);
+        height: calc($height * 0.65);
         display: flex;
         gap: 1em;
         flex-wrap: wrap;
@@ -103,14 +107,14 @@
             }
 
             #send{
-                position: absolute;
-                bottom: 0;
-                right: 0;
+                position: relative;
                 color: $main;
+                justify-self: center;
+                align-self: center;
                 background: $white;
+                padding: .5em 4em;
                 border: 0.02em solid $white;
                 border-radius: $small-radius;
-                padding: 1.7em 2.3em;
                 font-family: $font;
                 font-size: $font;
                 cursor: pointer;
@@ -166,6 +170,8 @@
 
 @media screen and (max-width: 500px) {
     #contact{
+        padding: 1em;
+
         .cct-content{
             height: auto;
 

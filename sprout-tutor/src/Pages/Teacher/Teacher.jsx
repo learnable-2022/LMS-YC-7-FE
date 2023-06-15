@@ -12,7 +12,7 @@ const Teacher = () => {
 
   return (
     <div id='teacher'>
-        <TopNav createCourseClick={handleCreateCourseClick} showCreateCourse={showCreateCourse} />
+        <TopNav />
         <TeacherContent showCreateCourse={showCreateCourse} setShowCreateCourse={setShowCreateCourse}/>
     </div>
   );

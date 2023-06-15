@@ -30,7 +30,7 @@ const Hero = () => {
 
       {openModal && (
         <Modal className={"modal-content"} closeModal={handleOpen}>
-          <h1>REGISTER AS...</h1>
+          <h1>REGISTER AS</h1>
 
           <div id='content-container'>
             <div id="content">
@@ -41,10 +41,10 @@ const Hero = () => {
             <img src={studt} alt="" />
               <NavigateButton link={'/register/student'} title={"STUDENT"}/>
             </div>
-            <div id="content">
+            {/* <div id="content">
             <img src={parent} alt="" />
               <NavigateButton link={'/register/parent'} title={"PARENT"}/>
-            </div>
+            </div> */}
           </div>
         </Modal>
     )}
