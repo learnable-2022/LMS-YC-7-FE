@@ -3,11 +3,15 @@ import './TeacherOverview.scss';
 import TeacherSettings from '../TeacherSettings/TeacherSettings';
 import CourseManager from '../CourseManager/CourseManager';
 import TeacherProfile from '../TeacherProfile/TeacherProfile';
+import TeacherOverviewContainer from '../TeacherOverviewContainer/TeacherOverviewContainer';
 
 const TeacherOverview = ({ activeLink, onShowCreateCourse }) => {
-  
+
   const getComponent = (linkId) => {
     switch (linkId) {
+      case 0:
+        return <TeacherOverviewContainer />;
+
       case 1:
         return <TeacherProfile createCourseClick={onShowCreateCourse} />;
 
