@@ -1,0 +1,54 @@
+@import '../../../../App.scss';
+
+#t-sect-one{
+    position: relative;
+    width: $width;
+    height: calc($wk-height * 0.3);
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    aside{
+        position: relative;
+        width: 35%;
+        height: 100%;
+        background: $white;
+        border-radius: $small-radius;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        #sale-analysis{
+            position: relative;
+            width: 100%;
+            height: 70%;
+            justify-self: center;
+            align-self: center;
+            display: grid;
+            place-items: center;
+
+
+            .circle{
+                position: relative;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                width: 80%;
+                height: 100%;
+                border: 2em solid $main;
+                border-radius: $radius;
+            }
+        }
+    }
+
+    section{
+        position: relative;
+        width: 65%;
+        height: 100%;
+        background: url(../../../../assets/no-queries.png) no-repeat center, $white;
+        border-radius: $small-radius;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+}

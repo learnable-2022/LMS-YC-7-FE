@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Hero.scss'
 import teach from '../../assets/teach-logo.png'
 import studt from '../../assets/studt-logo.png'
-import parent from '../../assets/parent-logo.png'
 import NavigateButton from '../NavigateButton/NavigateButton'
 import Modal from '../Modal/Modal'
 import ToggleButton from '../ToggleButton/ToggleButton'
@@ -26,7 +25,7 @@ const Hero = () => {
 
         <ToggleButton text={"Get Started"} className={"hr-btn"} onClick={handleOpen}/>
 
-        <HeroProfile />
+        {/* <HeroProfile /> */}
 
       {openModal && (
         <Modal className={"modal-content"} closeModal={handleOpen}>
