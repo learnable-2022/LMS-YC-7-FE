@@ -2,10 +2,35 @@
 
 #c-manager{
     position: relative;
-    width: $width;
+    width: 100%;
+    font-family: $font;
+    padding: 1em;
+    background: $white;
     height: 100%;
     overflow-x: hidden;
-    background: $white;
-    padding: 1em;
-    font-family: $font;
+
+    h1{
+        font-size: $large-text;
+        color: $main;
+    }
+
+    nav{
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: .3em;
+        gap: 3em;
+
+        .t-link{
+            border-radius: 0;
+            border-bottom: 0.02em solid $lt-gray;
+            padding: .2em 1em;
+            transition: all 0.3s ease-in-out;
+
+            &.active{
+                color: $main;
+                border-color: $main;
+            }
+        }
+    }
 }

@@ -1,0 +1,12 @@
+@import '../../../App.scss';
+
+#st-display{
+    position: relative;
+    width: $width;
+    // height: 88.5%;
+    background: $white;
+    overflow-x: hidden;
+    // padding: .5em;
+    font-family: $font; 
+    overflow-x: hidden;
+}

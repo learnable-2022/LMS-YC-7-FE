@@ -24,12 +24,14 @@ const Certificate = () => {
                 With our advanced technology, your achievements are immutably recorded, providing lifelong proof of your accomplishments. Whether it's a course completion certificate, academic credential, or skill mastery, our blockchain-powered system ensures tamper-proof verification, enabling you to confidently showcase your qualifications to employers, universities, and the world. Take control of your credentials and pave the way for a future of endless opportunities
             </p>
 
-            <ToggleButton link={"/signup"} text={"Get Started"} className={"cert-btn"} onClick={handleOpen}/>
+            <ToggleButton link={"/signup"} text={"Get Started"} className={"cert-btn"} onClick={handleOpen} >
+              <i className='fa-solid fa-arrow-right'></i>
+            </ToggleButton>            
         </div>
 
       {openModal && (
         <Modal className={"modal-content"} closeModal={handleOpen}>
-          <h1>REGISTER AS...</h1>
+          <h1>REGISTER AS</h1>
 
           <div id='content-container'>
             <div id="content">
@@ -40,10 +42,10 @@ const Certificate = () => {
             <img src={studt} alt="" />
               <NavigateButton link={'/register/student'} id={'nav-tog'} title={"STUDENT"}/>
             </div>
-            <div id="content">
+            {/* <div id="content">
             <img src={parent} alt="" />
               <NavigateButton link={'/register/parent'} id={'nav-tog'} title={"PARENT"}/>
-            </div>
+            </div> */}
           </div>
         </Modal>
       )}

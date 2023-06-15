@@ -6,14 +6,20 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2em;
+    padding: 2em 5em;
     color: $main;
+    gap: 2em;
 
     .str-text{
         position: relative;
         display: flex;
         flex-direction: column;
         gap: 2em;
+
+        h1{
+            font-size: $large-text;
+            font-weight: 700;
+        }
     }
 
     #str-btn{
@@ -33,6 +39,7 @@
     #started{
         flex-direction: column-reverse;
         text-align: center;
+        padding: 2em;
 
         #str-btn{
             padding: .7em;

@@ -18,12 +18,24 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1em;
+
+        h1{
+            font-size: $large-text;
+            font-weight: 700;
+        }
     }
 
     .cert-btn{
         width: calc($wk-width * 0.2);
         border: 0.02em solid $white;
         align-self: center;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        background: $white;
+        color: $dk-blue;
 
         &:hover{
             color: $white;

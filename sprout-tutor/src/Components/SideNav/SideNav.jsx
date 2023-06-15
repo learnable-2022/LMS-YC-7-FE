@@ -24,7 +24,7 @@ const SideNav = ({ setActiveLink }) => {
           <Link
             to={item.link}
             key={index}
-            className={`sd-link ${index === activeIndex ? 'linked' : ''}`} // Add 'linked' class to the active link
+            className={`sd-link ${index === activeIndex ? 'linked' : ''}`}
             onClick={() => handleLinkClick(index)}
           >
             <i className={item.icon}></i>
