@@ -21,7 +21,7 @@
         #sale-analysis{
             position: relative;
             width: 100%;
-            height: 70%;
+            height: 60%;
             justify-self: center;
             align-self: center;
             display: grid;
@@ -50,5 +50,16 @@
         display: flex;
         flex-direction: column;
         padding: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #t-sect-one{
+        flex-direction: column;
+
+        section, aside{
+            width: 100%;
+            // height: calc($wk-height * 0.3);
+        }
     }
 }
