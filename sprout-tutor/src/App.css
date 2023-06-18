@@ -1,0 +1,11 @@
+@media (max-width: 640px) {
+  .blockED-css {
+    border: 2px solid blue;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px 0.5rem;
+  }
+  .blockeD-CSS {
+    max-width: 100%;
+  }
+}
