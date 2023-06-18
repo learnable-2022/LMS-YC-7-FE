@@ -1,7 +1,5 @@
-// import React from "react";
-import { useState } from "react";
 import { React, useEffect, useState } from "react";
-// import { useHistory } from "react-router-dom";
+
 
 import { Link } from "react-router-dom";
 import teach from '../../assets/teach-logo.png'
@@ -13,8 +11,7 @@ import Inputs from "../../Components/Inputs/Inputs";
 import Logo from "../../assets/Logo-sprout.png";
 
 function Login() {
-  // const [name, setName] = useState();
-  // const [Password, setPassword] = useState();
+  
 import Modal from "../../Components/Modal/Modal";
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 
