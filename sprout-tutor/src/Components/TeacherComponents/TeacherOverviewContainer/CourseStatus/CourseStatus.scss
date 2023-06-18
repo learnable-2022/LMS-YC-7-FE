@@ -1,0 +1,12 @@
+@import '../../../../App.scss';
+
+#t-course-status{
+    position: relative;
+    width: 100%;
+    background: $white;
+    border-radius: $small-radius;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

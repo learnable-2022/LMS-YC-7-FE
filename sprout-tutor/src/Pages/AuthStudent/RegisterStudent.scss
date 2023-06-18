@@ -145,6 +145,194 @@
             }
           }
         }
+        .google-ctn {
+          margin-top: 50px;
+          width: 100%;
+          .google-wrapper-one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .line-one,
+            .line-two {
+              background: #cfcece;
+              display: block;
+              height: 2px;
+              width: 100%;
+            }
+            .google-header {
+              font-family: "Open Sans", sans-serif;
+              width: min-content;
+              min-width: max-content;
+              margin: 0 10px;
+              color: #bfc2c6;
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+          .google-wrapper-two {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+            .button-one,
+            .button-two {
+              width: 50%;
+              border: 1px solid #bfc2c6;
+              border-radius: 40px;
+              padding: 8px 0;
+              text-align: center;
+              font-family: "Open Sans", sans-serif;
+              font-size: 15px;
+              line-height: 20px;
+              color: #2364aa;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .button-one svg,
+            .button-two svg {
+              margin-right: 10px;
+            }
+          }
+        }
       }
     }
+
+    @media (max-width: 950px) {
+      .main {
+        .main-image-ctn {
+          display: none;
+        }
+        .container {
+          width: 100%;
+        }
+      }
+    }
+    
+    @media (max-width: 650px) {
+      .main {
+        .container {
+          .logo-ctn {
+            width: 200px;
+          }
+          .title-ctn {
+            margin-top: 20px;
+            margin-bottom: 30px;
+    
+            h2 {
+              font-size: 22px;
+              line-height: 25px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+          .auth-phase-ctn {
+            .auth-phase-icon-ctn {
+              div {
+                p {
+                  font-size: 10px;
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+            .auth-phase--ctn {
+              margin-bottom: 14px;
+              p {
+                font-size: 12px;
+                line-height: 15px;
+              }
+            }
+            .form-ctn {
+              .input-ctn {
+                label {
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+                input {
+                  height: 35px;
+                }
+              }
+              button {
+                margin-top: 10px;
+                height: 35px;
+              }
+            }
+          }
+          .google-ctn {
+            .google-wrapper-one {
+              .google-header {
+                font-size: 14px;
+                line-height: 18px;
+              }
+            }
+            .google-wrapper-two {
+              .button-one,
+              .button-two {
+                padding: 5px 0;
+    
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 550px) {
+      .main {
+        .container {
+          padding: 0 1rem;
+    
+          .auth-phase-ctn {
+            .auth-phase-icon-ctn {
+              padding: 0;
+              justify-content: space-around;
+            }
+            .auth-phase--ctn {
+              p {
+                font-size: 10px;
+                line-height: 12px;
+              }
+            }
+            .form-ctn {
+              .input-ctn {
+                input {
+                  font-size: 12px;
+                }
+              }
+              .input-wrapper {
+                flex-direction: column;
+                .input-ctn {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .google-ctn {
+            .google-wrapper-one {
+              .google-header {
+                font-size: 12px;
+                line-height: 14px;
+              }
+            }
+            .google-wrapper-two {
+              flex-direction: column;
+              .button-one,
+              .button-two {
+                width: 100%;
+                margin: 5px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    
     
