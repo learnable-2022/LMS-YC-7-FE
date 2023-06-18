@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 
     #sd-links{
         position: relative;
@@ -34,20 +35,49 @@
             }
         }
     }
+}
 
-    .exp-btn{
-        align-self: flex-start;
-        margin: 0 1.5em;
+
+#sd-nav-mobile{
+    position: fixed;
+    width: 90%;
+    top: 2%;
+    left: 2%;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+
+    .mobile-btn{
+        color: $main;
+    }
+
+    #sd-links{
+        position: relative;
+        width: calc($wk-width * 0.2);
+        z-index: 99;
+        background: $white;
+
+        .sd-link{
+            display: flex;
+            width: 100%;
+        }
     }
 }
 
-.sidenav{
-    width: 7%;
-    transition: all .3s ease-in-out;
-    display: grid;
-    place-items: center;
+@media screen and (max-width: 600px) {
+    #sidenav{
 
-    &.active{
-        width: 20%;
+        #sd-nav-desk{
+            display: none;
+            padding: 0;
+            margin: 0;
+        }
+
+    }
+    .sidenav{
+        width: 0;
     }
 }

@@ -30,6 +30,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 2em;
     
             span{
                 height: calc($wk-height * 0.08);

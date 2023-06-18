@@ -10,3 +10,10 @@
     display: flex;
     gap: .1em;
 }
+
+@media screen and (max-width: 1000px) {
+    #t-content{
+        height: 93%;
+        width: 100%;
+    }
+}

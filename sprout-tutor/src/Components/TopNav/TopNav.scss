@@ -81,3 +81,16 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    #topnav{
+
+        #logo{
+            display: none;
+        }
+
+        label{
+            display: none;
+        }
+    }
+}

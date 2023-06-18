@@ -53,6 +53,7 @@
 
                 #analysis-nav{
                     position: relative;
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -123,6 +124,27 @@
                     background: $lt-blue;
                     padding: 1em;
                     border-radius: $small-radius;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #t-over-container{
+        padding: .5em;
+
+        #teach-analysis{
+            
+            #analysis-content{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                // height: 0;
+
+                section, aside{
+                    width: 100%;
+                    height: calc($wk-height * 1);
                 }
             }
         }
