@@ -10,6 +10,7 @@
     display: grid;
     place-items: center;
     font-family: $font;
+    z-index: 99;
     
     #modal-content{
         position: relative;
@@ -20,6 +21,7 @@
         flex-wrap: wrap;
         padding: 1em;
         border-radius: $small-radius;
+        z-index: 999;
 
         .tg-btn{
             position: absolute;
@@ -27,7 +29,7 @@
             right: 3%;
             background: none;
             padding: 0;
-            font-size: $large-text;
+            // font-size: $large-text;
         }
     }
 }

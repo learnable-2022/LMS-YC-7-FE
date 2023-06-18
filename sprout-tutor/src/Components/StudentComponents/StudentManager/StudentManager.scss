@@ -1,0 +1,10 @@
+@import '../../../App.scss';
+
+#st-manager{
+    position: relative;
+    width: $width;
+    height: 88.3%;
+    display: flex;
+    gap: .3em;
+    background: $lt-blue;
+}

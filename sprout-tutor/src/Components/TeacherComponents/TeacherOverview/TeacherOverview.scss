@@ -1,0 +1,9 @@
+@import '../../../App.scss';
+
+#t-overview{
+    position: relative;
+    width: $width;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: $font;
+}

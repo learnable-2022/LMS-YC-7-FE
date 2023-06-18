@@ -9,14 +9,33 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 1em;
+    gap: 2em;
     padding: 2em;
     margin: 1em 0;
     // flex-wrap: wrap;
 
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+
+        h1{
+            font-size: $large-text;
+            font-weight: 700;
+        }
+    }
+
     .cert-btn{
         width: calc($wk-width * 0.2);
         border: 0.02em solid $white;
+        align-self: center;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        background: $white;
+        color: $dk-blue;
 
         &:hover{
             color: $white;
@@ -61,7 +80,10 @@
         
         .text{
             text-align: center;
-            gap: 1em;
+            gap: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }

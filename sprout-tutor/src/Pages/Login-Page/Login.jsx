@@ -1,7 +1,12 @@
+// import React from "react";
+import { useState } from "react";
 import { React, useEffect, useState } from "react";
 // import { useHistory } from "react-router-dom";
 
 import { Link } from "react-router-dom";
+import teach from '../../assets/teach-logo.png'
+import studt from '../../assets/studt-logo.png'
+import parent from '../../assets/parent-logo.png'
 import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
@@ -10,6 +15,8 @@ import Logo from "../../assets/Logo-sprout.png";
 function Login() {
   // const [name, setName] = useState();
   // const [Password, setPassword] = useState();
+import Modal from "../../Components/Modal/Modal";
+import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 
   // async function LoginSubmit() {
   //   let result = await fetch("https://sprout-tutor.onrender.com/", {
@@ -22,6 +29,12 @@ function Login() {
   //   result = await result.json();
   //   console.warn(result);
   // }
+  const [openModal, setOpenModal] = useState(false)
+
+  function handleOpen(){
+    setOpenModal(!openModal)
+  }
+
   return (
     <section className="block ">
       <div className="flex overflow-y-hidden">
@@ -40,7 +53,7 @@ function Login() {
           </h1>
           <p className="text-sm font-normal font-sans text-center">
             Don&apos;t have an account?
-            <span className="text-blue-600">Sign Up</span>
+            <span className="text-blue-600 cursor-pointer" onClick={handleOpen}>Sign Up</span>
           </p>
           <div className="my-6">
             <Button name="connect with wallet" />
@@ -95,6 +108,27 @@ function Login() {
           </div> */}
         </div>
       </div>
+
+      {openModal && (
+        <Modal className={"modal-content"} closeModal={handleOpen}>
+          <h1>REGISTER AS...</h1>
+
+          <div id='content-container'>
+            <div id="content">
+              <img src={teach} alt="" />
+              <NavigateButton link={'/register/teacher'} title={"TEACHER"}/>
+            </div>
+            <div id="content">
+            <img src={studt} alt="" />
+              <NavigateButton link={'/register/student'} title={"STUDENT"}/>
+            </div>
+            <div id="content">
+            <img src={parent} alt="" />
+              <NavigateButton link={'/register/parent'} title={"PARENT"}/>
+            </div>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 }

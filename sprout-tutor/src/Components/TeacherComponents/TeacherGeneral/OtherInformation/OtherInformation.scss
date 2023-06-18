@@ -1,0 +1,66 @@
+@import '../../../../App.scss';
+
+#oth-info{
+    position: relative;
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    gap: 2em;
+
+    h1{
+        border-bottom: 0.02em solid $main;
+        font-size: calc($text * 1.5);
+        color: $main;
+        font-weight: 600;
+    } 
+
+    section{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        span{
+            position: relative;
+            border: 0.02em solid $main;
+            border-radius: $small-radius;
+            padding: .5em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            width: calc($wk-width * 0.25);
+            
+            input{
+                outline: none;
+                border: none;
+                font-family: $font;
+            }
+        }
+    }
+
+    #text-info{
+        position: relative;
+        border: 0.02em solid $main;
+        border-radius: $small-radius;
+        padding: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        
+        textarea{
+            position: relative;
+            width: 100%;
+            height: calc($wk-height * 0.1);
+            text-align: left;
+            resize: none;
+            outline: none;
+            border: none;
+        }
+
+        small{
+            margin-left: auto;
+        }
+    }
+}

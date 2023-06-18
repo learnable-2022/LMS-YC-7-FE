@@ -1,0 +1,96 @@
+@import '../../App.scss';
+
+#topnav{
+    position: relative;
+    width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background: $white;
+    gap: 2em;
+
+    #logo{
+        width: calc($wk-width * 0.13);
+        padding: 0;
+    }
+
+    label{
+        position: relative;
+        // width: auto;
+
+        input{
+            position: relative;
+            width: calc($wk-width * 0.3);
+            outline: none;
+            border: none;
+            border-radius: $small-radius;
+            background: $lt-gray;
+            color: $turq;
+            padding: .5em 2.3em;
+            font-family: $font;
+            font-size: $text;
+        }
+
+        #tv-sb-btn{
+            position: absolute;
+            top: 10%;
+            left: 1%;
+            color: $turq;
+        }
+    }
+
+    #userprofile{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 1.5em;
+
+        .user{
+            color: $main;
+
+            &:hover{
+                color: $turq;
+            }
+        }
+
+        #teach-prof{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            color: $main;
+
+            
+            #disp-img{
+                height: calc($wk-height * 0.03);
+                width: calc($wk-width * 0.03);
+                border-radius: $radius;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #topnav{
+
+        label{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #topnav{
+
+        #logo{
+            display: none;
+        }
+
+        label{
+            display: none;
+        }
+    }
+}

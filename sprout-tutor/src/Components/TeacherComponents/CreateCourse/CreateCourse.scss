@@ -1,0 +1,265 @@
+@import '../../../App.scss';
+
+#create-course{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 1em 3em;
+    background: $white;
+    overflow-x: hidden;
+    font-family: $font;
+
+    h1{
+        color: $main;
+        font-size: $large-text;
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+
+        .cr-link{
+            border-radius: 0;
+            border-bottom: 0.02em solid $gray;
+            padding: .3em 1em;
+
+            &.active{
+                color: $main;
+                border-color: $main;
+            }
+        }
+    }
+
+    #cr-course-content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        align-self: flex-start;
+
+        .cr-container{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            h1{
+                color: $black;
+                font-size: calc($text * 1.5);
+                font-weight: 600;
+                border-bottom: 0.01em solid $lt-gray;
+            }
+
+            label, select, span{
+                position: relative;
+                width: 85%;
+
+                input, textarea, option{
+                    width: 100%;
+                    background: $lt-blue;
+                    color: $black;
+                    outline: none;
+                    border: none;
+                    resize: none;
+                }
+
+                h2{
+                    font-weight: 700;
+                    margin: .3em 0;
+                }
+
+                input{
+                    font-size: $large-text;
+                }
+
+                textarea{
+                    height: calc($wk-height * 0.15);
+                }
+
+                #thumbnail-drop-area{
+                    width: 100%;
+                    // height: calc($wk-height * 0.05);
+                    padding: 2em 0;
+                    display: grid;
+                    place-items: center;
+                    text-align: center;
+                    border: 0.1em dashed $gray;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                #price{
+                    font-size: $text;
+                }
+
+                i{
+                    position: absolute;
+                    top: 60%;
+                    right: 2%;
+                }
+            }
+
+            #st1-submit{
+                display: flex;
+                align-items: center;
+                gap: 1em;
+
+                .st1-btn{
+                    width: 15%;
+                    color: $white;
+                }
+
+                .st1-save{
+                    background: $main;
+                }
+                .st1-cont{
+                    display: flex;
+                    background: $green;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .act-two{
+            position: relative;
+            background: $lt-blue;
+            width: 99%;
+            // height: 100%;
+            padding: 1em;
+
+            h1{
+                border-color: $gray;
+            }
+
+            .st2-container{
+                display: flex;
+                gap: 2em;
+
+                aside{
+                    width: 25%;
+                    background: $white;
+                    height: calc($wk-height * 0.3);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 1em 0;
+                    overflow-x: hidden;
+
+                    .st2-btn{
+                        background: $orange;
+                        width: 80%;
+                        color: $white;
+                    }
+                }
+
+                form{
+                    width: 60%;
+                    background: $white;
+                    height: calc($wk-height * 0.3);
+                    overflow-x: hidden;
+                    display: grid;
+                    place-items: center;
+
+                    section{
+                        position: relative;
+                        height: calc($wk-height * 0.15);
+                        width: calc($wk-width * 0.2);
+                        box-shadow: 0.1em 0.1em 0.3em $gray,
+                                    -0.1em 0.1em 0.3em $gray,
+                                    0.1em -0.1em 0.3em $gray,
+                                    -0.1em 0.1em 0.3em $gray;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1em;
+                        padding: 1em;
+
+                        span{
+                            display: flex;
+                            align-items: center;
+                            gap: 2em;
+                            color: $black;
+                            cursor: pointer;
+
+                            input{
+                                width: .4em;
+                            }
+                        }
+
+                        #submit{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            padding: .5em;
+                            background: $main;
+                            color: $white;
+                            cursor: pointer;
+
+                            &:hover{
+                                background: $green;
+                            }
+                        }
+                    }
+                }
+
+                #attr-display{
+                    width: 75%;
+                    background: $white;
+                    height: calc($wk-height * 0.3);
+                    overflow-x: hidden;
+                    padding: 1em;
+
+                    .attr-display-btn{
+                        background: $orange;
+                        width: calc($wk-width * 0.03);
+                    }
+                }
+            }
+        }
+    }
+
+    .cancel-btn{
+        width: 15%;
+        background: $orange;
+        color: $white;
+    }
+    
+    .cl-btn{
+        margin-top: 2em;
+    }
+
+    .content-modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4em;
+
+        #truth-box{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+    
+        .no-btn{
+            width: 15%;
+            background: $green;
+            color: $white;
+        }
+    }
+
+}

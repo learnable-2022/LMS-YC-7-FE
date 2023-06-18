@@ -1,0 +1,27 @@
+@import '../../App.scss';
+
+#st-explore{
+    position: relative;
+    width: 100%;
+
+    #ex-head{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding: .5em 1em;
+        background: $lt-blue;
+
+        h1{
+            font-weight: 600;
+            font-size: calc($text * 1.5);
+        }
+    }
+
+    #explore-main{
+        position: relative;
+        width: 100%;
+        display: flex;
+        padding: 1em;
+    }
+}

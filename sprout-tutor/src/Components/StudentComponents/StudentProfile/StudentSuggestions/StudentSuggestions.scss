@@ -1,0 +1,29 @@
+@import '../../../../App.scss';
+
+#st-suggest{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+
+    .sts-class{
+        border-radius: $small-radius;
+        height: calc($wk-height * 0.25);
+        padding: 1em;
+
+        h1{
+            color: $main;
+            font-weight: 600;   
+        }
+    }
+
+    .sts-recommend, .sts-rated{
+        background: url(../../../../assets/stdrecommend.png) no-repeat center, $white;
+    }
+
+    .sts-activity{
+        background: url(../../../../assets/stdactivity.png) no-repeat center, $white;
+    }
+}

@@ -4,7 +4,7 @@ footer{
     position: relative;
     width: $width;
     padding: 2em;
-    background: $dk-blue;
+    background: $black;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,6 +27,10 @@ footer{
             flex-direction: column;
             align-items: start;
             gap: 1em;
+
+            h1{
+                font-weight: 700;
+            }
 
             .link, #link{
                 background: transparent;
@@ -54,8 +58,12 @@ footer{
     span{
         width: $width;
         text-align: center;
-        padding: 2em 0;
+        padding: 1em 0;
         margin-top: .5em;
         border-top: 0.02em solid $white;
+
+        p{
+            color: $gray;
+        }
     }
 }

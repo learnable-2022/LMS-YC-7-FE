@@ -1,0 +1,19 @@
+@import '../../../App.scss';
+
+#t-content{
+    position: relative;
+    width: $width;
+    // height: calc($height * 0.875);
+    height: 87.5%;
+    background: $lt-blue;
+    overflow-x: hidden;
+    display: flex;
+    gap: .1em;
+}
+
+@media screen and (max-width: 1000px) {
+    #t-content{
+        height: 93%;
+        width: 100%;
+    }
+}

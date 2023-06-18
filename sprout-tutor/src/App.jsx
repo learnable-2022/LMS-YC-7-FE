@@ -13,10 +13,14 @@ import RegisterStudent from "./Pages/AuthStudent/RegisterStudent";
 import RegisterTeacher from "./Pages/AuthTeacher/RegisterTeacher";
 import RegisterParent from "./Pages/AuthParent/RegisterParent";
 import Landing from "./Pages/Landing/Landing";
+import Teacher from "./Pages/Teacher/Teacher";
+import Student from "./Pages/Student/Student";
+import StudentExplore from "./Pages/StudentExplore/StudentExplore";
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -29,6 +33,23 @@ function App() {
           <Route path="/register/parent" element={<RegisterParent />} />
         </Routes>
       </Router>
+=======
+        <Router>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/Forget-Password" element={<NewP />} />
+            <Route path="/New-Password" element={<Forget />} />
+            <Route path="/PasswordChanged" element={<PasswordChanged />} />
+            <Route path="/register/student" element={<RegisterStudent />} />
+            <Route path="/register/teacher" element={<RegisterTeacher />} />
+            <Route path="/register/parent" element={<RegisterParent/>} />
+            <Route path="/teacherdashboard" element={<Teacher />} />
+            <Route path="/studentdashboard" element={<Student />} />
+            <Route path="/studentexplore" element={<StudentExplore />} />
+          </Routes>
+        </Router>
+>>>>>>> 63acf47316355d6a4820a7faa7cb60aeef414d3e
     </div>
   );
 }
