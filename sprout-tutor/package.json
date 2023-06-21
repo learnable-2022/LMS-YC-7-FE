@@ -23,6 +23,7 @@
     "react-router-dom": "^6.11.2",
     "react-scroll": "^1.8.9",
     "react-slideshow-image": "^4.2.1",
+    "react-toastify": "^9.1.3",
     "sass": "^1.62.1"
   },
   "devDependencies": {

@@ -1,96 +1,45 @@
-import React, {useState, useRef} from 'react'
+import React, { useState } from 'react';
 import './TeacherVideo.scss'
-import ToggleButton from '../../ToggleButton/ToggleButton';
 
+const TeacherVideo = () => {
+  const [videoFile, setVideoFile] = useState(null);
+  const [lessonTitle, setLessonTitle] = useState('');
+  const [lessonDescription, setLessonDescription] = useState('');
 
-const TeacherVideo = (onNext) => {
-  const [video, setVideo] = useState(null);
-  const inputRef = useRef(null);
-
-  function handleVideoClick(index) {
-    if (index) {
-    setActiveIndex(index);
-    } else {
-    setActiveIndex(0);
-    }
-}
-
-  const handleDragOver = (event) => {
-    event.preventDefault();
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setVideoFile(file);
   };
 
-  const handleDrop = (event) => {
-    event.preventDefault();
-    setVideo(event.dataTransfer.file)
+  const handleTitleChange = (event) => {
+    setLessonTitle(event.target.value);
   };
 
+  const handleDescriptionChange = (event) => {
+    setLessonDescription(event.target.value);
+  };
 
-function handleInputChange(e) {
-  const file = e.target.files[0];
-  if (file && file.type.startsWith('image/')) {
-  handleFile(file);
-  } else {
-  console.log('Please select a video file.');
-  }
-}
-  function handleVideoClick() {
-    inputRef.current.click();
-};
+  const handlePreview = () => {
+    // Handle preview logic here
+  };
 
-
-function handleSave() {
-  
-  onNext();
-}
-
+  const handlePublish = () => {
+    // Handle publish logic here
+  };
 
   return (
     <div>
-      <label className='tv-title'>
-        <h1>Lesson Title</h1>
-          <input type='text' name='text' id='title' placeholder='Untitled Lesson' />
-      </label>
-
-      <label className='tv-description'>
-          <h1>Course Description</h1>
-          <textarea name='text' id='description' placeholder='What is the Lesson about'></textarea>
-      </label>
-      <span>
-            <h1>Video file</h1>
-            {!video && (
-                <div id='thumbnail-drop-area'
-                onDragOver={handleDragOver}
-                onDrop={handleDrop}
-                onClick={handleVideoClick}
-                >
-                  {video ? (
-                <video src={video}  alt='Lesson video' />
-                 ) : (
-                <span>Drop Video  file here or click to upload</span>
-                 )}
-                
-                <input
-                type='file'
-                multiple
-                accept='video/*'
-                style={{ display: 'none' }}
-                ref={inputRef}
-                onChange={handleInputChange}
-            />
-                </div>
-            )}       
-      </span>
-      <div>
-        <span id='st1-submit'>
-          <button className={'st1-btn st1-cont'} onClick={handleSave} >Continue</button>
-        </span>
-      </div>
+      <h1>Upload Video Lesson</h1>
+      <input type="text" placeholder="Lesson Title" value={lessonTitle} onChange={handleTitleChange} />
+      <textarea placeholder="Lesson Description" value={lessonDescription} onChange={handleDescriptionChange} />
+      <input type="file" accept="video/*" onChange={handleFileChange} />
+      <button onClick={handlePreview}>Preview</button>
+      <button onClick={handlePublish}>Publish</button>
     </div>
-  )
-}
+  );
+};
 
-
-export default TeacherVideo
+export default TeacherVideo;
 
 
 
