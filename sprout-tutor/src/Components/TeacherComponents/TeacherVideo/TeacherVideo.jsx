@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import Dropzone from 'react-dropzone';
+import ReactPlayer from 'react-player';
 import './TeacherVideo.scss'
 
 const TeacherVideo = () => {
-  const [videoFile, setVideoFile] = useState(null);
+  const [videoFiles, setVideoFiles] = useState([]);
   const [lessonTitle, setLessonTitle] = useState('');
   const [lessonDescription, setLessonDescription] = useState('');
+ 
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    setVideoFile(file);
+  const handleFileDrop = (acceptedFiles) => {
+    setVideoFiles([...videoFiles, ...acceptedFiles]);
   };
 
   const handleTitleChange = (event) => {
@@ -19,26 +21,59 @@ const TeacherVideo = () => {
     setLessonDescription(event.target.value);
   };
 
-  const handlePreview = () => {
-    // Handle preview logic here
+  const handleSave = () => {
+    const lessonData = {
+      videoFiles,
+      lessonTitle,
+      lessonDescription,
+    };
+    // Handle save logic here
+    alert('Lesson saved successfully.');
+    // Redirect to teacher's dashboard or any other desired page
+    history.push('/teacher-dashboard');
   };
 
-  const handlePublish = () => {
-    // Handle publish logic here
-  };
+
 
   return (
     <div>
-      <h1>Upload Video Lesson</h1>
-      <input type="text" placeholder="Lesson Title" value={lessonTitle} onChange={handleTitleChange} />
-      <textarea placeholder="Lesson Description" value={lessonDescription} onChange={handleDescriptionChange} />
-      <input type="file" accept="video/*" onChange={handleFileChange} />
-      <button onClick={handlePreview}>Preview</button>
-      <button onClick={handlePublish}>Publish</button>
+      <label>
+        <h2>Lesson Title</h2>
+          <input type="text"  name='text' placeholder="Untitled Title" value={lessonTitle} onChange={handleTitleChange} />
+      </label>
+
+      <label>
+          <h2>Lesson Description</h2>
+          <textarea name='text' id='description' placeholder="What is the Lesson about" value={lessonDescription} onChange={handleDescriptionChange} />
+      </label>
+
+      <Dropzone onDrop={handleFileDrop} accept="video/*" multiple>
+        {({ getRootProps, getInputProps }) => (
+          <div
+            {...getRootProps()}
+            style={{ border: '1px dashed black', padding: '20px', marginBottom: '20px', cursor: 'pointer' }}
+            onClick={() => {
+              const fileInput = document.querySelector('input[type="file"]');
+              fileInput.click();
+            }}
+          >
+            <input {...getInputProps()} />
+            <p>Drag and drop video files here, or click to select files</p>
+          </div>
+        )}
+      </Dropzone>
+      {videoFiles.map((file, index) => (
+        <div key={index}>
+          <ReactPlayer url={URL.createObjectURL(file)} controls />
+        </div>
+      ))}
+      <div>
+        <button onClick={handleSave}>Publish</button>
+      </div>
+
     </div>
   );
 };
-
 export default TeacherVideo;
 
 

@@ -1,1 +1,10 @@
 @import '../../../App.scss';
+
+button{
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: $green;
+  color: $white;
+  border-radius: 16px
+}

@@ -1,65 +1,93 @@
 import React, { useState } from 'react';
+import './TeacherAssessment.scss'
 
 const TeacherAssessment = () => {
-  const [lessonTitle, setLessonTitle] = useState('');
-  const [lessonDescription, setLessonDescription] = useState('');
   const [questions, setQuestions] = useState([]);
-  const [timer, setTimer] = useState(0);
-
-  const handleTitleChange = (event) => {
-    setLessonTitle(event.target.value);
-  };
-
-  const handleDescriptionChange = (event) => {
-    setLessonDescription(event.target.value);
-  };
-
-  const handleQuestionChange = (event, index) => {
-    const updatedQuestions = [...questions];
-    updatedQuestions[index] = event.target.value;
-    setQuestions(updatedQuestions);
-  };
+  const [question, setQuestion] = useState('Question 1');
+  const [options, setOptions] = useState(['', '', '', '']);
+  const [isMultipleChoice, setIsMultipleChoice] = useState(true);
+  const [timer, setTimer] = useState('');
 
   const handleAddQuestion = () => {
-    setQuestions([...questions, '']);
+    const newQuestionNumber = questions.length + 1;
+    setQuestions([...questions, { title: `Question ${newQuestionNumber}`, question, options }]);
+    setQuestion(`Question ${newQuestionNumber + 1}`);
+    setOptions(['', '', '', '']);
   };
 
-  const handleTimerChange = (event) => {
-    setTimer(event.target.value);
+  const handleToggleQuestionType = () => {
+    setIsMultipleChoice(!isMultipleChoice);
   };
 
-  const handleSave = () => {
-    // Handle save logic here
-    alert('Assessment saved successfully.');
-    // Redirect to teacher's dashboard
+  const handleSavePublish = () => {
+    // Perform save/publish functionality here
   };
 
-  const handlePreview = () => {
-    // Handle preview logic here
-  };
-
-  const handlePublish = () => {
-    // Handle publish logic here
+  const handleOptionChange = (index, value) => {
+    const newOptions = [...options];
+    newOptions[index] = value;
+    setOptions(newOptions);
   };
 
   return (
     <div>
-      <div><h1>Upload Assessment</h1></div>
-      <div><input type="text" placeholder="Lesson Title" value={lessonTitle} onChange={handleTitleChange} /></div>
-      <div><textarea placeholder="Lesson Description" value={lessonDescription} onChange={handleDescriptionChange} /></div>
-      {questions.map((question, index) => (
-        <div key={index}>
-          <h4>Question {index + 1}:</h4>
-          <input type="text" value={question} onChange={(e) => handleQuestionChange(e, index)} />
+      <div>
+        <h2> Assessment</h2>
+        <div>
+          <label htmlFor="question">Question: </label>
+          <textarea id="question" value={question} onChange={(e) => setQuestion(e.target.value)}></textarea>
         </div>
-      ))}
-      <div><button onClick={handleAddQuestion}>Add Question</button></div>
-      <div><input type="number" placeholder="Timer (in seconds)" value={timer} onChange={handleTimerChange} /></div>
-      
-      <button onClick={handleSave}>Save</button>
-      <button onClick={handlePreview}>Continue to Publish</button>
-      <button onClick={handlePublish}>Publish</button>
+        {isMultipleChoice ? (
+          <div>
+            <h3>Options:</h3>
+            {options.map((option, index) => (
+              <div key={index}>
+                <label htmlFor={`option${index}`}>{`Option ${String.fromCharCode(65 + index)}: `}</label>
+                <input
+                  id={`option${index}`}
+                  type="text"
+                  value={option}
+                  onChange={(e) => handleOptionChange(index, e.target.value)}
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div>
+            <h3>Essay</h3>
+            <p>Allow the teacher to input essay-specific details here</p>
+          </div>
+        )}
+        <button onClick={handleToggleQuestionType}>
+          Switch to {isMultipleChoice ? 'Essay' : 'Multiple Choice'}
+        </button>
+        <button onClick={handleAddQuestion}>Add Question</button>
+        <div>
+          <label htmlFor="timer">Timer (in minutes): </label>
+          <input
+            id="timer"
+            type="number"
+            min="0"
+            value={timer}
+            onChange={(e) => setTimer(e.target.value)}
+          />
+        </div>
+        <button onClick={handleSavePublish}>Save/Publish</button>
+      </div>
+      <div>
+        <h2>Preview</h2>
+        {questions.map((q) => (
+          <div key={q.title}>
+            <h3>{q.title}</h3>
+            <p>{q.question}</p>
+            {q.options.map((option, index) => (
+              <div key={index}>{`${String.fromCharCode(65 + index)}. ${option}`}</div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
+
 export default TeacherAssessment;

@@ -1,85 +1,64 @@
-import React, {useState, useRef} from 'react'
+import React, { useState } from 'react';
+import Dropzone from 'react-dropzone';
+import ReactAudioPlayer from 'react-audio-player';
 
-const TeacherAudio = (onNext) => {
-  const [audios, setAudios] = useState(null);
-  const inputRef = useRef(null);
+const TeacherAudio = () => {
+  const [audioFiles, setAudioFiles] = useState([]);
+  const [lessonTitle, setLessonTitle] = useState('');
+  const [lessonDescription, setLessonDescription] = useState('');
 
-  function handleAudioClick(index) {
-    if (index) {
-    setActiveIndex(index);
-    } else {
-    setActiveIndex(0);
-    }
-}
-
-  const handleDragOver = (event) => {
-    event.preventDefault();
+  const handleFileDrop = (acceptedFiles) => {
+    setAudioFiles([...audioFiles, ...acceptedFiles]);
   };
 
-  const handleDrop = (event) => {
-    event.preventDefault();
-    setAudios(event.dataTransfer.file)
+  const handleTitleChange = (event) => {
+    setLessonTitle(event.target.value);
   };
 
-if (audios) return (
-    <div>
-        <ul>
-           {audios.from(audios).map((audios, idx)=> <li key={idx}>{audios.name} </li> )}
-        </ul>
-    </div>
-)
+  const handleDescriptionChange = (event) => {
+    setLessonDescription(event.target.value);
+  };
 
-  function handleAudioClick() {
-    inputRef.current.click();
-};
+  const handlePreview = () => {
+    // Handle preview logic here
+  };
 
-function handleSave() {  
-  onNext();
-}
+  const handlePublish = () => {
+    // Handle publish logic here
+  };
+
   return (
     <div>
-      <label htmlFor='title'>
+      <label>
         <h1>Lesson Title</h1>
-          <input type='text' name='text' id='title' placeholder='Untitled Lesson' />
+          <input type="text"  name='text' placeholder="Untitled Title" value={lessonTitle} onChange={handleTitleChange} />
       </label>
 
-      <label htmlFor='description'>
+      <label>
           <h1>Course Description</h1>
-          <textarea name='text' id='description' placeholder='What is the Lesson about'></textarea>
+          <textarea name='text' id='description' placeholder="What is the Lesson about" value={lessonDescription} onChange={handleDescriptionChange} />
       </label>
-
-      <span>
-            <h1>Audio file</h1>
-            {!audios && (
-                <div id='thumbnail-drop-area'
-                onDragOver={handleDragOver}
-                onDrop={handleDrop}
-                onClick={handleAudioClick}
-                >
-                   {audios ? (
-                <source src={audios} type="audios/*" alt='Lesson audios' />
-                 ) : (
-                <span>Drop audios  file here or click to upload</span>
-                 )}
-                
-                <input
-                type='file'
-                multiple
-                accept='audio/*'
-                style={{ display: 'none' }}
-                ref={inputRef}
-                onChange={(event) => setAudios(event.target.audios)}
-            />
-                </div>
-            )}       
-      </span>
-      <div>
-      <span id='st1-submit'>
-        <button className={'st1-btn st1-cont'} onClick={handleSave} >Continue</button>
-      </span>
-      </div>
+      <Dropzone 
+        onDrop={handleFileDrop} 
+        accept="audio/*" 
+        multiple>
+        {({ getRootProps, getInputProps }) => (
+          <div {...getRootProps()} style={{ border: '1px dashed black', padding: '20px', marginBottom: '20px' }}>
+            <input {...getInputProps()} />
+            <p>Drag and drop audio files here, or click to select files</p>
+          </div>
+        )}
+      </Dropzone>
+      {audioFiles.map((file, index) => (
+        <div key={index}>
+          <ReactAudioPlayer src={URL.createObjectURL(file)} controls />
+        </div>
+      ))}
+      <button onClick={handlePreview}>Preview</button>
+      <button onClick={handlePublish}>Publish</button>
     </div>
-  )
-}
+  );
+};
 
-export default TeacherAudio
+
+export default TeacherAudio;
