@@ -8,7 +8,8 @@
     left: 0;
     width: $width;
     background: $white;
-    z-index: 99;
+    z-index: 999;
+    border-bottom: 0.02em solid $main;
 
     nav, menu{
         position: relative;

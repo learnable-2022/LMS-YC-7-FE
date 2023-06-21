@@ -40,6 +40,12 @@ $font: 'Open Sans', sans-serif;
 
 .App{
   scroll-behavior: smooth;
+
+  h2{
+    font-weight: 700;
+    color: $main;
+  }
+
 }
 
 ::-webkit-scrollbar{

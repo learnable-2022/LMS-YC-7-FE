@@ -2,7 +2,7 @@ import React from 'react'
 import './NavigateButton.scss'
 import { useNavigate } from 'react-router-dom'
 
-const NavigateButton = ({id, title, link, image}) => {
+const NavigateButton = ({id, title, link, image, className}) => {
     const navigate = useNavigate()
 
     function handleClick(){
@@ -10,7 +10,7 @@ const NavigateButton = ({id, title, link, image}) => {
     }
     
   return (
-    <button type='button' onClick={handleClick} id={id} className='btn'>
+    <button type='button' onClick={handleClick} id={id} className={`btn ${className}`}>
       {title}
       <img src={image} alt="" />
     </button>

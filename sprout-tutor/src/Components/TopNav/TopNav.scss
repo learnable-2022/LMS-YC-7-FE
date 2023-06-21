@@ -45,19 +45,7 @@
         display: flex;
         align-items: center;
         margin-left: auto;
-        gap: 1em;
-
-        .upload{
-            background: $orange;
-            color: $white;
-            display: flex;
-            flex-direction: row-reverse;
-            padding: .7em;
-
-            &:hover{
-                background: rgba($orange, 0.5);
-            }
-        }
+        gap: 1.5em;
 
         .user{
             color: $main;
@@ -66,11 +54,40 @@
                 color: $turq;
             }
         }
+
+        #teach-prof{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            color: $main;
+
+            
+            #disp-img{
+                height: calc($wk-height * 0.03);
+                width: calc($wk-width * 0.03);
+                border-radius: $radius;
+                object-fit: contain;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 900px) {
     #topnav{
+
+        label{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #topnav{
+
+        #logo{
+            display: none;
+        }
 
         label{
             display: none;

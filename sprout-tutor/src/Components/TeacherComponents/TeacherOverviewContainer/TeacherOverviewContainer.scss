@@ -1,0 +1,152 @@
+@import '../../../App.scss';
+
+#t-over-container{
+    position: relative;
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+
+    p{
+        position: relative;
+        color: $main;
+        display: flex;
+        align-items: center;
+        gap: .3em;
+    }
+    .add-std{
+        position: relative;
+        width: calc($wk-width * 0.1);
+        background: $orange;
+        color: $white;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: .5em;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+        margin-top: auto;
+    }
+
+    #teach-analysis{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        #analysis-content{
+            position: relative;
+            width: 100%;
+            height: calc($wk-height * 0.3);
+            display: flex;
+            gap: 2em;
+
+            section{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: $white;
+                border-radius: $small-radius;
+
+                #analysis-nav{
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1em;
+
+                    span, menu{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        gap: 1em;
+
+                        #caret{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0;
+                            gap: 0;
+                            margin: 0;
+                            align-items: flex-start;
+                        }
+
+                        .circle{
+                            height: calc($wk-height * 0.01);
+                            width: calc($wk-width * 0.01);
+                            border-radius: $radius;
+                        }
+
+                        .visit{
+                            background: $yellow;
+                        }
+                        .sales{
+                            background: $main;
+                        }
+                    }
+                }
+            }
+            aside{
+                position: relative;
+                height: 100%;
+                width: 35%;
+                background: url(../../../assets/oops-nos-td.png) no-repeat center, $white;
+                border-radius: $small-radius;
+                display: flex;
+                padding: 1em;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        #analysis-overlay{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            gap: 1em;
+
+            #a-overlay-display{
+                background: $white;
+                width: 100%;
+                border-radius: $small-radius;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1em;
+
+                i{
+                    color: $main;
+                    background: $lt-blue;
+                    padding: 1em;
+                    border-radius: $small-radius;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #t-over-container{
+        padding: .5em;
+
+        #teach-analysis{
+            
+            #analysis-content{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                // height: 0;
+
+                section, aside{
+                    width: 100%;
+                    height: calc($wk-height * 1);
+                }
+            }
+        }
+    }
+}

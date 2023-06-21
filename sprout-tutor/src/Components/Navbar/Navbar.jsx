@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import './Navbar.scss'
-// import 'animate.css'
 import Logo from '../../assets/Logo-sprout.png'
 import NavigateButton from '../NavigateButton/NavigateButton'
 import ToggleButton from '../ToggleButton/ToggleButton'
 import Modal from '../Modal/Modal'
 import teach from '../../assets/teach-logo.png'
 import studt from '../../assets/studt-logo.png'
-import parent from '../../assets/parent-logo.png'
 import { Link } from 'react-scroll'
 
 
@@ -66,10 +64,6 @@ const Navbar = () => {
             <div id="content">
               <img src={studt} alt="" />
               <NavigateButton link={'/register/student'} id={'nav-tog'} title={"STUDENT"}/>
-            </div>
-            <div id="content">
-              <img src={parent} alt="" />
-              <NavigateButton link={'/register/parent'} id={'nav-tog'} title={"PARENT"}/>
             </div>
           </div>
         </Modal>

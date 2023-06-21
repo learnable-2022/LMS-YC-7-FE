@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Hero.scss'
 import teach from '../../assets/teach-logo.png'
 import studt from '../../assets/studt-logo.png'
-import parent from '../../assets/parent-logo.png'
 import NavigateButton from '../NavigateButton/NavigateButton'
 import Modal from '../Modal/Modal'
 import ToggleButton from '../ToggleButton/ToggleButton'
@@ -26,11 +25,11 @@ const Hero = () => {
 
         <ToggleButton text={"Get Started"} className={"hr-btn"} onClick={handleOpen}/>
 
-        <HeroProfile />
+        {/* <HeroProfile /> */}
 
       {openModal && (
         <Modal className={"modal-content"} closeModal={handleOpen}>
-          <h1>REGISTER AS...</h1>
+          <h1>REGISTER AS</h1>
 
           <div id='content-container'>
             <div id="content">
@@ -41,10 +40,10 @@ const Hero = () => {
             <img src={studt} alt="" />
               <NavigateButton link={'/register/student'} title={"STUDENT"}/>
             </div>
-            <div id="content">
+            {/* <div id="content">
             <img src={parent} alt="" />
               <NavigateButton link={'/register/parent'} title={"PARENT"}/>
-            </div>
+            </div> */}
           </div>
         </Modal>
     )}
