@@ -1,9 +1,11 @@
-import React from 'react'
 import './Contact.scss'
+import heading from '../../assets/heading.png'
 
 const Contact = () => {
   return (
     <div id='contact'>
+
+        <img src={heading} alt="" className="heading" />
         <span>
             <h1>Contact Us</h1>
             <p>Have a question or just want to say hi? We'd love to hear from you.</p>

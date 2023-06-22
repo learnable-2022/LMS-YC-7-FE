@@ -46,6 +46,19 @@ $font: 'Open Sans', sans-serif;
     color: $main;
   }
 
+  .heading{
+    width: $width;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .App{
+
+    .heading{
+      height: calc($wk-height * 0.05);
+    }
+  }
 }
 
 ::-webkit-scrollbar{

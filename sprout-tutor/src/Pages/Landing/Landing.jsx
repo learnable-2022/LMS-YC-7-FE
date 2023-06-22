@@ -10,6 +10,7 @@ import Pricing from '../../Components/Pricing/Pricing'
 import Testimonial from '../../Components/Testemonial/Testimonial'
 import Contact from '../../Components/ContactUs/Contact'
 import Footer from '../../Components/Footer/Footer'
+import PreFooter from '../../Components/PreFooter/PreFooter'
 
 const Landing = () => {
   return (
@@ -20,17 +21,19 @@ const Landing = () => {
 
       <Offers />
 
-      <Certificate />
+      {/* <Certificate /> */}
 
       <About />
 
       <Started />
 
-      <Pricing />
+      {/* <Pricing /> */}
 
       <Testimonial />
 
       <Contact />
+
+      <PreFooter />
 
       <Footer />
 

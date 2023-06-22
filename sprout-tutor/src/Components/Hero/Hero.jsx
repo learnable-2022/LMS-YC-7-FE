@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import './Hero.scss'
 import teach from '../../assets/teach-logo.png'
 import studt from '../../assets/studt-logo.png'
+import underline from '../../assets/underline.png'
+import child from '../../assets/child.png'
+import pointer from '../../assets/pointer.png'
+import heroframe from '../../assets/heroframe.png'
 import NavigateButton from '../NavigateButton/NavigateButton'
 import Modal from '../Modal/Modal'
 import ToggleButton from '../ToggleButton/ToggleButton'
@@ -16,14 +20,33 @@ const Hero = () => {
 
   return (
     <div id='hero'>
-        <h1>
-            Interactive Learning for Kids
-        </h1>
-        <p>
-            Ignite your child’s curiosity with our interactive Learning Management System (LMS). Explore engaging courses, fun games, and interactive activities that make learning a delightful adventure
-        </p>
+        <div id="hero-left">
 
-        <ToggleButton text={"Get Started"} className={"hr-btn"} onClick={handleOpen}/>
+          <span>
+            <h1>
+              Interactive
+              Learning
+              <img src={underline} alt={"underline"} />
+              For Young Children
+            </h1>
+          </span>
+
+          <p>
+            Ignite your child’s curiosity with our interactive <br />
+            Learning Management System (LMS). Explore engaging courses, <br />
+            fun games, and interactive activities that make learning a <br />
+            delightful adventure
+          </p>
+
+          <ToggleButton text={"Get Started"} className={"hr-btn"} onClick={handleOpen}/>
+
+          <img src={pointer} alt="" id='hero-pointer' />
+          
+          <img src={heroframe} alt="" id='hero-frame' />
+        </div>
+        
+        <img src={child} alt="" id="hero-child" />
+
 
         {/* <HeroProfile /> */}
 

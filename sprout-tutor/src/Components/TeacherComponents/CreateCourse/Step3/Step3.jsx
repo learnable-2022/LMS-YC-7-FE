@@ -5,9 +5,11 @@ import '../CreateCourse.scss'
 
 const Step3 = () => {
   return (
-    <div className='cr-container act-three'>
-        
-        
+    <div className='cr-course-content'>
+      <div className='cr-container act-three'>
+          <h1>Add Lessons</h1>
+          
+      </div>
     </div>
   )
 }

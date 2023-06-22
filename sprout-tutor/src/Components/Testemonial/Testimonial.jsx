@@ -3,6 +3,8 @@ import './Testimonial.scss';
 import testimonial from '../../Data/Testimonial.json';
 import TestiProfile from './TestiProfile';
 import ToggleButton from '../ToggleButton/ToggleButton';
+import heading from '../../assets/heading.png'
+
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,6 +28,7 @@ const Testimonial = () => {
   return (
     <div id='testimonial'>
       <div className="t-content">
+        <img src={heading} alt="" className="heading" />
         <h1>What Our Customers Say</h1>
         <TestiProfile
           text={testimonial[currentSlide].text}
