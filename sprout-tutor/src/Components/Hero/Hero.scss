@@ -3,32 +3,56 @@
 #hero{
     position: relative;
     width: $width;
-    height: calc($height * 0.9);
-    background: $dk-blue;
-    color: $white;
-    font-family: $font;
+    background: $secondary;
+    height: $height;
+    color: $main;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    // justify-content: center;
-    text-align: center;
+    justify-content: space-around;
     gap: 3em;
     padding: 4em 2em;
 
     h1{
-        font-size: $large-text;
+        font-size: clamp($large-text, 5vw, $extra-large-text);
+        font-weight: 700;
+    }
+
+    #hero-left{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+
+        #hero-pointer{
+            position: absolute;
+            top: 60%;
+            left: 40%;
+        }
+
+        #hero-frame{
+            position: relative;
+            margin-top: auto;
+        }
+    }
+
+    #hero-child{
+        position: relative;
+        width: auto;
+        height: 100%;
+        object-fit: contain;
     }
 
     .hr-btn{
-        // width: 30%;
         padding: .7em 5em;
         border: 0.02em solid $white;
-        background: transparent;
+        background: $main;
         color: $white;
 
         &:hover{
-            background: $white;
-            color: $dk-blue;
+            color: $white;
+            background: $dk-blue;
         }
     }
 }
@@ -58,6 +82,24 @@
             background: $main;
             border-radius: $small-radius;
             gap: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #hero{
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+        gap: 1em;
+
+        #hero-left{
+            position: relative;
+
+            #hero-pointer{
+                top: 65%;
+                left: 70%;
+            }
         }
     }
 }

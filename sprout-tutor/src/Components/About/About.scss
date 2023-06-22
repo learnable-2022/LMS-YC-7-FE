@@ -3,7 +3,6 @@
 #about{
     position: relative;
     width: $width;
-    padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +13,18 @@
     gap: 1em;
 
     h1{
-        font-size: $large-text;
+        position: absolute;
+        top: 6%;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        color: $white;
+        font-weight: 700;
+        font-size: clamp($text, 5vw, $large-text);
+    }
+
+    p{
+        padding: 2em 4em;
     }
 }
 
@@ -23,6 +33,10 @@
         
         img{
             width: 100%;
+        }
+
+        h1{
+            top: 2.5%;
         }
     }
 }
