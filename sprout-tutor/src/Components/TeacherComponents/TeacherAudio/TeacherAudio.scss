@@ -85,6 +85,7 @@ $font: 'Open Sans', sans-serif;
   }
 
   .dropZoneContent {
+    text-align: center;
     align-items: center;
     justify-content: center;
     border: 0.15em dashed $gray;
@@ -97,7 +98,7 @@ $font: 'Open Sans', sans-serif;
   .preview {
     border: 0.125em  $black;
     padding: 1.25em;
-    margin: 1em 0;
+    margin: 1em ;
 
     @media (max-width: $mobile-breakpoint) {
       margin: 0.625em 0;

@@ -71,9 +71,9 @@ const TeacherVideo = () => {
               }}
             >
               <input {...getInputProps()} />
-              <p>Drag and drop video files here, or click to select files</p>
+              <p>Drop video files here, or click to select files</p>
             </div>
-          )}
+        )}
         </Dropzone>
         <div className='preview'>
           {videoFiles.map((file, index) => (
