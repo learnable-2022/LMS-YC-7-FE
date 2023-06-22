@@ -3,15 +3,19 @@
 #offers{
     position: relative;
     width: $width;
-    // margin-top: 18em;
-    padding: 4em;
     font-family: $font;
+    display: flex;
+    flex-direction: column;
 
     h1{
+        position: absolute;
+        top: 8%;
+        justify-self: center;
+        align-self: center;
         text-align: center;
-        color: $main;
+        color: $white;
         font-weight: 700;
-        font-size: $large-text;
+        font-size: clamp($text, 5vw, $large-text);
     }
 }
 

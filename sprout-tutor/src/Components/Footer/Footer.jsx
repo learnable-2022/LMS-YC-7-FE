@@ -19,8 +19,8 @@ const Footer = () => {
 
             <nav>
                 <h1>Company</h1>
-                <Link to='about' className='link'>About</Link>
-                <Link to='contact' className='link'>Contact Us</Link>
+                <Link to='about' smooth={true} duration={500} spy={true} className='link'>About</Link>
+                <Link to='contact' smooth={true} duration={500} spy={true} className='link'>Contact Us</Link>
             </nav>
 
             <nav>
@@ -31,20 +31,30 @@ const Footer = () => {
             </nav>
 
             <nav>
-                <h1>Teaching</h1>
+                <h1>Product</h1>
+                <NavigateButton link={''} title={'Teaching'} id={'link'}/>
                 <NavigateButton link={''} title={'Become a Teacher'} id={'link'}/>
                 <NavigateButton link={''} title={'Teaching Academy'} id={'link'}/>
+                <NavigateButton link={''} title={'Sprout Tutor for Schools'} id={'link'}/>
             </nav>
 
             <nav>
-                <h1>Be Social</h1>
-                <a href=""><i className='fa-brands fa-twitter'></i> Twitter</a>
-                <a href=""><i className='fa-brands fa-facebook'></i> Facebook</a>
-                <a href=""><i className='fa-brands fa-instagram'></i> Instagram</a>
-                <a href=""><i className='fa-brands fa-linkedin'></i> LinkedIn</a>
+                <h1>Policy</h1>
+                <NavigateButton link={''} title={'Privacy Policy'} id={'link'}/>
+                <NavigateButton link={''} title={'Cookie Settings'} id={'link'}/>
+                <NavigateButton link={''} title={'SiteMap'} id={'link'}/>
+                <NavigateButton link={''} title={'Accessibility'} id={'link'}/>
             </nav>
 
+
         </div>
+
+        <nav id='footer-socials'>
+            <a href=""><i className='fa-brands fa-twitter'></i></a>
+            <a href=""><i className='fa-brands fa-facebook'></i></a>
+            <a href=""><i className='fa-brands fa-instagram'></i></a>
+            <a href=""><i className='fa-brands fa-linkedin'></i></a>
+        </nav>
 
         <span>
             <p> © Copyright {year} by SproutTutor. All Rights Reserved</p>

@@ -1,0 +1,33 @@
+@import '../../App.scss';
+
+#pre-footer{
+    position: relative;
+    background: $black;
+    color: $white;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    span{
+        color: $white;
+        
+        h2{
+            font-size: clamp($text, 5vw, calc($text * 1.5));
+            color: $white;
+        }
+    }
+    
+    #pre-btn{
+        background: $white;
+        color: $black;
+        width: calc($wk-width * 0.2);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #pre-footer{
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+}

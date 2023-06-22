@@ -1,5 +1,87 @@
 @import '../../../../App.scss';
 
 .act-three{
+  position: relative;
+  background: $lt-blue;
+  width: 99%;
+  // height: 100%;
+  padding: 1em;
+
+  h1{
+      border-color: $gray;
+  }
+
+  .st2-container{
+      display: flex;
+      gap: 2em;
+
+      aside{
+          width: 25%;
+          background: $white;
+          height: calc($wk-height * 0.3);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1em 0;
+          overflow-x: hidden;
+
+          .st2-btn{
+              background: $orange;
+              width: 80%;
+              color: $white;
+          }
+      }
+
+      form{
+          width: 60%;
+          background: $white;
+          height: calc($wk-height * 0.3);
+          overflow-x: hidden;
+          display: grid;
+          place-items: center;
+
+          section{
+              position: relative;
+              height: calc($wk-height * 0.15);
+              width: calc($wk-width * 0.2);
+              box-shadow: 0.1em 0.1em 0.3em $gray,
+                          -0.1em 0.1em 0.3em $gray,
+                          0.1em -0.1em 0.3em $gray,
+                          -0.1em 0.1em 0.3em $gray;
+              display: flex;
+              flex-direction: column;
+              gap: 1em;
+              padding: 1em;
+
+              span{
+                  display: flex;
+                  align-items: center;
+                  gap: 2em;
+                  color: $black;
+                  cursor: pointer;
+
+                  input{
+                      width: .4em;
+                  }
+              }
+
+              #submit{
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  padding: .5em;
+                  background: $main;
+                  color: $white;
+                  cursor: pointer;
+
+                  &:hover{
+                      background: $green;
+                  }
+              }
+          }
+      }
     
-}
+    }
+    
+  }

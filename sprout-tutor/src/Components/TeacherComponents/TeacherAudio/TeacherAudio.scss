@@ -1,1 +1,79 @@
 @import '../../../App.scss';
+
+  .video-container{
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+
+      label, select, span{
+          position: relative;
+          width: 85%;
+
+          input, textarea, option{
+              width: 100%;
+              background: $lt-blue;
+              color: $black;
+              outline: none;
+              border: none;
+              resize: none;
+          }
+
+          h2{
+              color: $black;
+              font-size: calc($text * 1.5);
+              font-weight: 600 bold;
+              margin: .3em 0;
+          }
+
+          input{
+              font-size: $large-text;
+          }
+
+          textarea{
+              height: calc($wk-height * 0.15);
+          }
+
+          #video-drop-area{
+              width: 100%;
+              // height: calc($wk-height * 0.05);
+              padding: 2em 0;
+              display: grid;
+              place-items: center;
+              text-align: center;
+              border: 0.1em dashed $gray;
+              overflow: hidden;
+
+              img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+              }
+          }
+
+      }
+
+      #st1-submit{
+          display: flex;
+          align-items: center;
+          gap: 1em;
+
+          .st1-btn{
+              width: 15%;
+              padding: 10em;
+              color: $white;
+          }
+
+          .st1-save{
+              background: $main;
+          }
+          .st1-cont{
+              display: flex;
+              background: $green;
+              align-items: center;
+              justify-content: center;
+          }
+      }
+  }

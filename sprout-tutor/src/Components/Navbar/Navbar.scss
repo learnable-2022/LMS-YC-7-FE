@@ -15,7 +15,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 5em;
         padding: 1em;
         background: $white;
 
@@ -26,6 +26,7 @@
 
         .link{
             cursor: pointer;
+            color: $main;
         }
 
         .tog-btn{
@@ -42,6 +43,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            margin-left: auto;
             gap: 1em;
 
             #nav-btn{
@@ -146,6 +148,10 @@
 }
 @media screen and (max-width: 768px) {
     #navbar{
+        menu{
+            justify-content: space-between;
+        }
+        
         nav{
             display: none;
         }

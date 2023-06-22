@@ -1,10 +1,13 @@
-import React from 'react'
 import './About.scss'
 import about from '../../assets/about-bg.png'
+import heading from '../../assets/heading.png'
+
 
 const About = () => {
   return (
     <div id='about'>
+        <img src={heading} alt="" className="heading" />
+
         <h1>About SproutTutor</h1>
 
         <img src={about} alt="" />

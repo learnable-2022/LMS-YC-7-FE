@@ -1,0 +1,14 @@
+[33mc0e6471[m[33m ([m[1;36mHEAD -> [m[1;32mstanley[m[33m, [m[1;31morigin/stanley[m[33m)[m HEAD@{0}: checkout: moving from test to stanley
+[33mbc170a2[m[33m ([m[1;32mtest[m[33m)[m HEAD@{1}: checkout: moving from stanley to test
+[33mc0e6471[m[33m ([m[1;36mHEAD -> [m[1;32mstanley[m[33m, [m[1;31morigin/stanley[m[33m)[m HEAD@{2}: checkout: moving from test to stanley
+[33mbc170a2[m[33m ([m[1;32mtest[m[33m)[m HEAD@{3}: pull: Fast-forward
+[33mc1d0951[m HEAD@{4}: checkout: moving from stanley to test
+[33mc0e6471[m[33m ([m[1;36mHEAD -> [m[1;32mstanley[m[33m, [m[1;31morigin/stanley[m[33m)[m HEAD@{5}: commit: message
+[33m6e3a095[m HEAD@{6}: checkout: moving from test to stanley
+[33mc1d0951[m HEAD@{7}: checkout: moving from stanley to test
+[33m6e3a095[m HEAD@{8}: commit: update
+[33m7d51745[m HEAD@{9}: commit: video and audio upload
+[33m97008f1[m HEAD@{10}: pull origin test: Merge made by the 'ort' strategy.
+[33mc2781fd[m HEAD@{11}: checkout: moving from test to stanley
+[33mc1d0951[m HEAD@{12}: checkout: moving from stanley to test
+[33mc2781fd[m HEAD@{13}: commit: commit
