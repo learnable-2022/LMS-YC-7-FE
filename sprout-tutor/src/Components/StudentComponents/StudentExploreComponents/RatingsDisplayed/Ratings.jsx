@@ -1,6 +1,6 @@
 import React from "react";
 
-function Ratings({ isChanged }) {
+function Ratings() {
   return (
     <div className=" border-2 rounded-lg w-full mx-auto pl-10 bg-white hidden sm:inline-block">
       <div>
@@ -208,6 +208,7 @@ function Ratings({ isChanged }) {
           </div>
         </form>
       </div>
+    
     </div>
   );
 }

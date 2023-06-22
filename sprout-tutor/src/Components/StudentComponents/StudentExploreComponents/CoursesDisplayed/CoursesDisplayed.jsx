@@ -7,6 +7,7 @@ function CoursesDisplayed() {
   const [courseData, setCourseData] = useState(CourseData);
   const [FreecourseData, setFreeCourseData] = useState(FreeCourse);
   const [NewcourseData, setNewCourseData] = useState(NewCourse);
+
   return (
     <div className=" flex flex-wrap w-screen pl-10 relative right-60 text-2xl sm:w-full sm:left-40">
       {courseData.map((course) => {
