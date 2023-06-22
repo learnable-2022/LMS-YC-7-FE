@@ -1,79 +1,119 @@
 @import '../../../App.scss';
 
-  .video-container{
-      position: relative;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
+$mobile-breakpoint: 768px;
 
 
-      label, select, span{
-          position: relative;
-          width: 85%;
+$white: #FCFCFD;
+$black: #0d0d0d;
+$main: #2364AA;
+$sub: #F0F8FF;
+$secondary: #FFF4CC;
+$yellow: #FEC601;
+$dk-blue: #101828;
+$turq: #73BFB8;
+$lt-blue: #D5E5F6;
+$lt-gray: #E5E7E8;
+$gray: #696F75;
+$orange: #EA7317;
+$green: #299310;
 
-          input, textarea, option{
-              width: 100%;
-              background: $lt-blue;
-              color: $black;
-              outline: none;
-              border: none;
-              resize: none;
-          }
+$height: 100vh;
+$width: 100%;
+$wk-height: 100em;
+$wk-width: 100em;
+$radius: 50%;
+$border-radius: 1em;
+$small-radius: .5em;
+$text: 1em;
+$large-text: 2.5em;
+$extra-large-text: 4em;
+$font: 'Open Sans', sans-serif;
 
-          h2{
-              color: $black;
-              font-size: calc($text * 1.5);
-              font-weight: 600 bold;
-              margin: .3em 0;
-          }
+.teacher-audio {
+  .label {
+    margin-bottom: 1em;
 
-          input{
-              font-size: $large-text;
-          }
+    h2 {
+      color: $black;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
 
-          textarea{
-              height: calc($wk-height * 0.15);
-          }
+    input[type='text'] {
+      border-radius: 0.25em;
+      text-align: justify;
+      height: 1.3em;
 
-          #video-drop-area{
-              width: 100%;
-              // height: calc($wk-height * 0.05);
-              padding: 2em 0;
-              display: grid;
-              place-items: center;
-              text-align: center;
-              border: 0.1em dashed $gray;
-              overflow: hidden;
-
-              img{
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-              }
-          }
-
+      @media (max-width: $mobile-breakpoint) {
+        height: 2.75em;
       }
+    }
 
-      #st1-submit{
-          display: flex;
-          align-items: center;
-          gap: 1em;
+    textarea {
+      background-color: $turq;
+      color: $black;
+      border-radius: 0.25em;
+      padding: 1em 1.25em;
+      height: 3.25em;
 
-          .st1-btn{
-              width: 15%;
-              padding: 10em;
-              color: $white;
-          }
-
-          .st1-save{
-              background: $main;
-          }
-          .st1-cont{
-              display: flex;
-              background: $green;
-              align-items: center;
-              justify-content: center;
-          }
+      @media (max-width: $mobile-breakpoint) {
+        height: 12.25em;
       }
+    }
   }
+
+  span {
+    h2 {
+      color: $black;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+  }
+
+  .dropZone {
+    border-radius: 1em;
+    border-width: 0.25em;
+    padding: 2em 3.125em;
+    align-items: center;
+    width: 49.3125em;
+
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      padding: 1.5em;
+    }
+  }
+
+  .dropZoneContent {
+    align-items: center;
+    justify-content: center;
+    border: 0.15em dashed $gray;
+    padding: 4.0em;
+    margin-bottom: 1.25em;
+    height: 10em;
+    cursor: pointer;
+  }
+
+  .preview {
+    border: 0.125em  $black;
+    padding: 1.25em;
+    margin: 1em 0;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin: 0.625em 0;
+    }
+  }
+
+  .publishButton {
+    background: $green;
+    color: $white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    padding: 1em 2em;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 0.8em 1.6em;
+    }
+  }
+}
