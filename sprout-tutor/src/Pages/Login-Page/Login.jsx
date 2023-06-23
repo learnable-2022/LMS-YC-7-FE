@@ -54,7 +54,6 @@ function Login() {
         console.log(err, "error");
       });
   };
- 
 
   function handleOpen() {
     setOpenModal(!openModal);
@@ -83,13 +82,11 @@ function Login() {
             </span>
           </p>
           <div className="my-6">
-            {/* <Button name="connect with wallet" /> */}
             <div className="flex justify-center align-middle">
               <ConnectButton label="connect with wallet" />
             </div>
 
             <br />
-            {/* <Button name="connect with Google" /> */}
 
             <div className="flex justify-center align-middle">
               <button className="border-2 bg-blue-500 text-white rounded-lg px-4 pb-2 py-2 font-bold text-sm cursor-pointer">
