@@ -1,29 +1,60 @@
-import { React, useEffect, useState } from "react";
-
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+// Link
+import { useNavigate } from "react-router-dom";
 import teach from "../../assets/teach-logo.png";
 import studt from "../../assets/studt-logo.png";
 import parent from "../../assets/parent-logo.png";
-import Button from "../../Components/ButtonL/Button";
+// import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
 import Modal from "../../Components/Modal/Modal";
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 import Logo from "../../assets/Logo-sprout.png";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { response } from "express";
+ConnectButton;
 
 function Login() {
-  // async function LoginSubmit() {
-  //   let result = await fetch("https://sprout-tutor.onrender.com/", {
-  //     method: "post",
-  //     body: JSON.stringify({ name, Password }),
-  //     headers: {
-  //       "content-type": "aplication/json",
-  //     },
-  //   });
-  //   result = await result.json();
-  //   console.warn(result);
-  // }
   const [openModal, setOpenModal] = useState(false);
+
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("user-info")) {
+      navigate("/teacherdashboard");
+    }
+  }, [navigate]);
+
+  const LoginSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://sprout-tutor.onrender.com/auth/login", {
+      method: "POST",
+      body: JSON.stringify({
+        email: Email,
+        password: Password,
+      }),
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result, "result");
+        if (result) {
+          alert("You are logged in.");
+        } else {
+          alert("Please check your login information.");
+        }
+      })
+      .catch((err) => {
+        console.log(err, "error");
+      });
+  };
+ 
 
   function handleOpen() {
     setOpenModal(!openModal);
@@ -52,9 +83,20 @@ function Login() {
             </span>
           </p>
           <div className="my-6">
-            <Button name="connect with wallet" />
+            {/* <Button name="connect with wallet" /> */}
+            <div className="flex justify-center align-middle">
+              <ConnectButton label="connect with wallet" />
+            </div>
+
             <br />
-            <Button name="connect with Google" />
+            {/* <Button name="connect with Google" /> */}
+
+            <div className="flex justify-center align-middle">
+              <button className="border-2 bg-blue-500 text-white rounded-lg px-4 pb-2 py-2 font-bold text-sm cursor-pointer">
+                {" "}
+                connect with Google
+              </button>
+            </div>
           </div>
           <div className="flex justify-evenly lg:mb-6 lg:-mt-2 sm:mt-10">
             <hr className="border-1 border-slate-600  px-20 mt-3" />
@@ -68,7 +110,7 @@ function Login() {
           <input
             type="text"
             className="px-16"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <br />
           <br />
@@ -94,14 +136,14 @@ function Login() {
               Keep me signed in until i sign out
             </p>
           </div>
-          <div>
+          {/* <div>
             <Link to="/Forget-Password">
               <Button2 name="Login" type="submit" />
             </Link>
-          </div>
-          {/* <div onClick={LoginSubmit}>
-            <Button2 name="Login" type="submit" />
           </div> */}
+          <div onClick={LoginSubmit}>
+            <Button2 name="Login" type="submit" />
+          </div>
         </div>
       </div>
 

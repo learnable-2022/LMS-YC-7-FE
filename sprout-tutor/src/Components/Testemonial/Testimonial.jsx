@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Testimonial.scss';
-import testimonial from '../../Data/Testimonial.json';
+import testimonial from '../../../Data/Testimonial.json';
 import TestiProfile from './TestiProfile';
 import ToggleButton from '../ToggleButton/ToggleButton';
 import heading from '../../assets/heading.png'

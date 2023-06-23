@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import CourseData from "../../../../Data/CourseData.json";
-import FreeCourse from "../../../../Data/FreeCourse.json";
-import NewCourse from "../../../../Data/NewCourse.json";
+import CourseData from "../../../../../Data/CourseData.json";
+import FreeCourse from "../../../../../Data/FreeCourse.json";
+import NewCourse from "../../../../../Data/NewCourse.json";
 
 function CoursesDisplayed() {
   const [courseData, setCourseData] = useState(CourseData);
