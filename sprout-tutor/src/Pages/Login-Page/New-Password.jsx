@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Inputs from "../../Components/Inputs/Inputs";
-import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo-sprout.png";
+import "../../App.css";
 import Button2 from "../../Components/ButtonL/Button2";
+import PasswordChanged from "./Changed-Password";
 
 function Forget() {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <section>
-      <div className="flex flex-row box-border">
+    <Fragment>
+      <div className="flex flex-row box-border blockED-css">
         <img
-          src="boy-sprout2.png"
+          src="girl2.png"
           alt="Girl-Pix"
-          className="h-screen w-1/2"
+          className="h-screen w-1/2 hidden sm:block"
         ></img>
         <div className="mx-0 px-2">
           <div className="flex justify-center align-center">
             <img
-              src="Logo-sprout.png"
+              src={Logo}
               alt="Logo"
-              className=" h-2/6 mt-28 mb-8 w-2/5"
+              className=" h-2/6 mt-28 mb-8 w-2/5 "
             ></img>
           </div>
           <h1 className="text-2xl font-semibold font-sans text-center">
@@ -30,19 +33,20 @@ function Forget() {
             <div className="my-1">
               <Inputs name="New Password" />
             </div>
-            <input type="text" className="px-28 rounded-lg" />
+            <input type="Password" className="px-28 rounded-lg" />
             <br />
             <br />
             <Inputs name="Confirm Password" />
-            <input type="text" className="px-28 rounded-lg mb-8" />
+            <input type="Password" className="px-28 rounded-lg mb-8" />
+            <div onClick={() => setShowModal(true)}>
+              <Button2 name="New Password" type="submit" />
+            </div>
 
-            <Link to="/PasswordChangedgit">
-              <Button2 name="New Password" />
-            </Link>
+            <PasswordChanged isChanged={showModal} />
           </div>
         </div>
       </div>
-    </section>
+    </Fragment>
   );
 }
 

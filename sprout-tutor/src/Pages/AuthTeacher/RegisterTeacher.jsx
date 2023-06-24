@@ -2,26 +2,28 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./RegisterTeacher.scss";
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+ConnectButton;
 
 const RegisterTeacher = () => {
-    const [active, setActive] = useState(1);
-    console.log("active", active);
+  const [active, setActive] = useState(1);
+  console.log("active", active);
 
-    return (
-        <div className="main">
-          <div className="main-image-ctn">
-            <img src="/assets/image 4.png" />
-          </div>
-          <div className="container">
-            <div className="logo-ctn">
-              <svg
-                width="322"
-                height="61"
-                viewBox="0 0 322 61"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-             <path
+  return (
+    <div className="main">
+      <div className="main-image-ctn">
+        <img src="/assets/image 4.png" />
+      </div>
+      <div className="container">
+        <div className="logo-ctn">
+          <svg
+            width="322"
+            height="61"
+            viewBox="0 0 322 61"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
               d="M12.3937 49.0526H0.191605V40.8115C0.188736 40.8518 0.188736 40.8923 0.191605 40.9326C0.433034 41.7208 0.83108 42.452 1.36187 43.0825C1.73797 43.6126 2.14738 44.1183 2.58763 44.5964C3.31023 45.3667 4.12516 46.0447 5.01391 46.6151C7.22252 48.0508 9.76478 48.8904 12.3937 49.0526Z"
               fill="#2364AA"
             />
@@ -87,8 +89,8 @@ const RegisterTeacher = () => {
               fill="#2364AA"
             />
           </svg>
-          </div>
-          <div className="title-ctn">
+        </div>
+        <div className="title-ctn">
           <h2 className="title-header">Create an account</h2>
           <p>
             Already have an account?{" "}
@@ -150,12 +152,23 @@ const RegisterTeacher = () => {
                 </div>
                 <div className="input-wrapper">
                   <div className="input-ctn">
-                    <label htmlFor="year"> How many years Of Teaching Experience?</label>
-                    <input id="year" type="text" placeholder="Years of experience" />
+                    <label htmlFor="year">
+                      {" "}
+                      How many years Of Teaching Experience?
+                    </label>
+                    <input
+                      id="year"
+                      type="text"
+                      placeholder="Years of experience"
+                    />
                   </div>
                   <div className="input-ctn">
                     <label htmlFor="subject"> Subject </label>
-                    <input id="subject" type="text" placeholder="Your subject" />
+                    <input
+                      id="subject"
+                      type="text"
+                      placeholder="Your subject"
+                    />
                   </div>
                 </div>
                 <button onClick={(e) => setActive(3)}>Next</button>
@@ -173,14 +186,28 @@ const RegisterTeacher = () => {
                     <label htmlFor="cpassword"> Confirm password</label>
                     <input id="cpassword" type="password" />
                   </div>
-                  <NavigateButton title={"Create Account"} link={"/teacherdashboard"} />
+                  <NavigateButton
+                    title={"Create Account"}
+                    link={"/teacherdashboard"}
+                  />
                 </form>
               </div>
             )
           )}
         </div>
-
-        <div className="google-ctn">
+        <div className="flex my-4">
+          {" "}
+          <div className="">
+            <ConnectButton label="connect with wallet" />
+          </div>
+          <div className="">
+            <button className="border-2 bg-blue-500 text-white rounded-lg px-4 pb-2 py-2 font-bold text-sm cursor-pointer">
+              {" "}
+              connect with Google
+            </button>
+          </div>
+        </div>
+        {/* <div className="google-ctn">
           <div className="google-wrapper-one">
             <p className="line-one"></p>
             <h4 className="google-header">OR CONTINUE WITH</h4>
@@ -188,23 +215,22 @@ const RegisterTeacher = () => {
           </div>
           <div className="google-wrapper-two">
             <button className="button-one">
-            <svg
-             width="17"
-             height="15"
-             viewBox="0 0 32 33"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-            >
-            
-            <path
+              <svg
+                width="17"
+                height="15"
+                viewBox="0 0 32 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
                   d="M25.6002 10.1389H5.6002V9.33892L23.2002 7.93092V9.33892H25.6002V6.93892C25.6002 5.17892 24.1746 3.94372 22.4338 4.19172L6.3682 6.48612C4.6258 6.73572 3.2002 8.37892 3.2002 10.1389V26.1389C3.2002 26.9876 3.53734 27.8015 4.13745 28.4017C4.73757 29.0018 5.5515 29.3389 6.4002 29.3389H25.6002C26.4489 29.3389 27.2628 29.0018 27.8629 28.4017C28.4631 27.8015 28.8002 26.9876 28.8002 26.1389V13.3389C28.8002 12.4902 28.4631 11.6763 27.8629 11.0762C27.2628 10.4761 26.4489 10.1389 25.6002 10.1389ZM23.2002 21.3485C22.8849 21.3484 22.5727 21.2862 22.2815 21.1655C21.9903 21.0447 21.7257 20.8678 21.5028 20.6448C21.2799 20.4218 21.1032 20.157 20.9826 19.8657C20.8621 19.5744 20.8001 19.2622 20.8002 18.9469C20.8003 18.6316 20.8625 18.3195 20.9833 18.0282C21.104 17.737 21.2809 17.4724 21.5039 17.2495C21.7269 17.0267 21.9917 16.8499 22.283 16.7294C22.5743 16.6088 22.8865 16.5468 23.2018 16.5469C23.8385 16.5471 24.4491 16.8003 24.8992 17.2507C25.3493 17.7011 25.602 18.3118 25.6018 18.9485C25.6016 19.5853 25.3484 20.1958 24.8981 20.6459C24.4477 21.096 23.8369 21.3487 23.2002 21.3485Z"
                   fill="#2364AA"
                 />
               </svg>
               Connect Wallet
-              </button>
+            </button>
             <button className="button-two">
-            <svg
+              <svg
                 width="15"
                 height="15"
                 viewBox="0 0 25 25"
@@ -229,9 +255,9 @@ const RegisterTeacher = () => {
                 />
               </svg>
               Google
-           </button>
+            </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

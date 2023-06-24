@@ -1,3 +1,3 @@
 .button {
-  @apply text-green-100 bg-sky-300 hover:bg-sky-600 border-2 px-40 py-1.5 mb-3 rounded-lg;
+  @apply text-green-100 bg-sky-300 hover:bg-sky-600 border-2 py-0 px-20 sm:px-40 sm:py-1.5 mb-3 rounded-lg;
 }

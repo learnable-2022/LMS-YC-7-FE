@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "courseName": "Mathematics Marvels ",
+    "Instuctor": "Steven Cohen",
+    "Ratings": "*****",
+    "Score": "Score",
+    "Amount": "$999.99",
+    "Image": "src/assets/happy8.png"
+  },
+  {
+    "id": 2,
+    "courseName": "World Georgraphy",
+    "Instuctor": "Adeshola Temitope",
+    "Ratings": "*****",
+    "Score": "Score",
+    "Amount": "$999.99",
+    "Image": "src/assets/happy9.png"
+  },
+  {
+    "id": 3,
+    "courseName": "Media ",
+    "Instuctor": "Steven Cohen",
+    "Ratings": "*****",
+    "Score": "Score",
+    "Amount": "$999.99",
+    "Image": "src/assets/happy10.png"
+  },
+  {
+    "id": 4,
+    "courseName": "Media Literacy",
+    "Instuctor": "Steven Cohen",
+    "Ratings": "*****",
+    "Score": "Score",
+    "Amount": "$999.99",
+    "Image": "src/assets/happy11.png"
+  },
+  {
+    "id": 5,
+    "courseName": "Media ",
+    "Instuctor": "Simeon Odusa",
+    "Ratings": "*****",
+    "Score": "Score",
+    "Amount": "$999.99",
+    "Image": "src/assets/happy12.png"
+  },
+  {
+    "id": 6,
+    "courseName": "Media Literacy",
+    "Instuctor": "Nathan Phillip",
+    "Ratings": "*****",
+    "Score": "Score",
+    "Amount": "$999.99",
+    "Image": "src/assets/happy1.png"
+  }
+]
