@@ -34,6 +34,7 @@ const TeacherAudio = () => {
 
   return (
     <div className="teacher-audio">
+
       <label className="label">
         <h2>Lesson Title</h2>
         <input
@@ -79,7 +80,26 @@ const TeacherAudio = () => {
               <ReactAudioPlayer src={URL.createObjectURL(file)} controls />
             </div>
           ))}
+      <Dropzone onDrop={handleFileDrop} accept="audio/*" multiple>
+        {({ getRootProps, getInputProps }) => (
+          <div
+            {...getRootProps()}
+            style={{
+              border: "1px dashed black",
+              padding: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            <input {...getInputProps()} />
+            <p>Drag and drop audio files here, or click to select files</p>
+          </div>
+        )}
+      </Dropzone>
+      {audioFiles.map((file, index) => (
+        <div key={index}>
+          <ReactAudioPlayer src={URL.createObjectURL(file)} controls />
         </div>
+      ))}
       </div>
       <div>
         <button className="publishButton" onClick={handlePublish}>
@@ -87,7 +107,8 @@ const TeacherAudio = () => {
         </button>
       </div>
     </div>
+    </div>
   );
 };
 
-export default TeacherAudio;
+export default TeacherAudio
