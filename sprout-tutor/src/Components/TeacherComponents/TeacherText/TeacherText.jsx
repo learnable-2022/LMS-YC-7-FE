@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Dropzone from 'react-dropzone';
+import './TeacherText.scss';
 
 const TeacherText = () => {
   const [documentFiles, setDocumentFiles] = useState([]);
@@ -28,39 +29,62 @@ const TeacherText = () => {
   };
 
   return (
-    <div>
-      <label>
-        <h1>Lesson Title</h1>
-          <input type="text"  name='text' placeholder="Untitled Title" value={lessonTitle} onChange={handleTitleChange} />
+    <div className="teacher-text">
+      <label className="label">
+        <h2>Lesson Title</h2>
+        <input
+          type="text"
+          name="text"
+          placeholder="Untitled Title"
+          value={lessonTitle}
+          onChange={handleTitleChange}
+        />
       </label>
 
-      <label>
-          <h1>Course Description</h1>
-          <textarea name='text' id='description' placeholder="What is the Lesson about" value={lessonDescription} onChange={handleDescriptionChange} />
-
+      <label className="label">
+        <h2>Lesson Description (add a link here)</h2>
+        <textarea
+          name="text"
+          id="description"
+          placeholder="What is the Lesson about"
+          value={lessonDescription}
+          onChange={handleDescriptionChange}
+        />
       </label>
-      <Dropzone onDrop={handleFileDrop} multiple>
-        {({ getRootProps, getInputProps }) => (
-          <div
-            {...getRootProps()}
-            style={{ border: '1px dashed black', padding: '20px', marginBottom: '20px', cursor: 'pointer' }}
-            onClick={() => {
-              const fileInput = document.querySelector('input[type="file"]');
-              fileInput.click();
-            }}
-          >
-            <input {...getInputProps()} />
-            <p>Drag and drop document files here, or click to select files</p>
-          </div>
-        )}
-      </Dropzone>
-      {documentFiles.map((file, index) => (
-        <div key={index}>
-          <p>{file.name}</p>
+
+      <span>
+        <h2>Text File</h2>
+      </span>
+      <div >
+        <Dropzone className="dropZone" onDrop={handleFileDrop} accept=".pdf, .txt, .doc, .docx" multiple>
+          {({ getRootProps, getInputProps }) => (
+            <div
+              {...getRootProps()}
+              className="dropZoneContent"
+              onClick={() => {
+                const fileInput = document.querySelector('input[type="file"]');
+                fileInput.click();
+              }}
+            >
+              <input {...getInputProps()} />
+              <p>Drop PDF or EPS file here or click to upload</p>
+            </div>
+          )}
+        </Dropzone>
+        <div className="preview">
+          {documentFiles.map((file, index) => (
+            <div key={index}>
+              <p>{file.name}</p>
+            </div>
+          ))}
         </div>
-      ))}
-     
-      <button onClick={handleSave}>Save</button>
+      </div>
+
+      <div>
+        <button className="publishButton" onClick={handleSave}>
+          Publish
+        </button>
+      </div>
     </div>
   );
 };

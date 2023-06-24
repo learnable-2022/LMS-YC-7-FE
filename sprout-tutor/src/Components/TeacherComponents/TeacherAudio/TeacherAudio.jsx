@@ -19,15 +19,20 @@ const TeacherAudio = () => {
     setLessonDescription(event.target.value);
   };
 
-  const handlePreview = () => {
-    // Handle preview logic here
-  };
-
   const handlePublish = () => {
     // Handle publish logic here
+    const lessonData = {
+      audioFiles,
+      lessonTitle,
+      lessonDescription,
+    };
+    // Handle save logic here
+    alert('Lesson saved successfully.');
+    // Redirect to teacher's dashboard
   };
 
   return (
+
     <div>
       <label>
         <h1>Lesson Title</h1>
@@ -50,6 +55,7 @@ const TeacherAudio = () => {
           onChange={handleDescriptionChange}
         />
       </label>
+
       <Dropzone onDrop={handleFileDrop} accept="audio/*" multiple>
         {({ getRootProps, getInputProps }) => (
           <div
@@ -69,9 +75,12 @@ const TeacherAudio = () => {
         <div key={index}>
           <ReactAudioPlayer src={URL.createObjectURL(file)} controls />
         </div>
-      ))}
-      <button onClick={handlePreview}>Preview</button>
-      <button onClick={handlePublish}>Publish</button>
+      </div>
+      <div>
+        <button className="publishButton" onClick={handlePublish}>
+          Publish
+        </button>
+      </div>
     </div>
   );
 };
