@@ -92,5 +92,10 @@
         label{
             display: none;
         }
+
+        #userprofile{
+            flex-direction: row-reverse;
+            margin: 0;
+        }
     }
 }

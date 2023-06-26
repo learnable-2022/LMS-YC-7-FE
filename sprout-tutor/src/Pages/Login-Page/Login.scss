@@ -1,0 +1,141 @@
+@import '../../App.scss';
+
+#login{
+    position: relative;
+    width: $width;
+    height: $height;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: hidden;
+
+    #girl-img{
+        object-fit: cover;
+    }
+
+    
+    aside{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 1em 1em;
+
+        .google, .wallet{
+            margin: .5em 0;
+            border: 0.1em solid $main;
+            border-radius: calc($small-radius * 4);
+            width: 100%;
+        }
+
+        p{
+            display: flex;
+            align-items: center;
+
+            .log-sign{
+                color: $main;
+            }
+        }
+
+        .login-btn{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        #or{
+            position: relative;
+            width: 100%;
+
+            &::before, &::after{
+                position: absolute;
+                content: '';
+                padding: .05em;
+                width: 40%;
+                top: 48%;
+                background: $gray;
+            }
+
+            &::before{
+                left: 0;
+            }
+
+            &::after{
+                right: 0;
+            }
+        }
+
+        form{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            span{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                label{
+                    color: $gray;
+                }
+
+                input{
+                    outline: none;
+                    border: 0.02em solid $gray;
+                    font-size: $text;
+                    font-family: $font;
+                }
+
+                .eyes{
+                    color: $gray;
+                    position: absolute;
+                    top: 5%;
+                    right: 2%;
+                    width: max-content;
+                }
+                
+                #email, #password{
+                    border-radius: $small-radius;
+                    width: 100%;
+                }
+
+                .forgot{
+                    align-self: flex-start;
+                    position: relative;
+                    margin-left: auto;
+                    color: $main;
+                }
+            }
+
+            #span-checkbox{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1em;
+                cursor: pointer;
+            }
+
+            #login-submit{
+                background: $lt-blue;
+                padding: .7em;
+                border-radius: $small-radius;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #login{
+        overflow: visible;
+        #girl-img{
+            display: none;
+        }
+    }
+}
