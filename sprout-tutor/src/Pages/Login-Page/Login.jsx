@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import teach from "../../assets/teach-logo.png";
@@ -8,7 +7,6 @@ import parent from "../../assets/parent-logo.png";
 // import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
-=======
 import { useState } from "react";
 import teach from '../../assets/teach-logo.png';
 import studt from '../../assets/studt-logo.png';
@@ -16,7 +14,6 @@ import logo from '../../assets/Logo-sprout.png';
 import girl2 from '../../assets/girl2.png';
 import google from '../../assets/google.png';
 import wallet from '../../assets/wallet.png';
->>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
 import Modal from "../../Components/Modal/Modal";
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 import ToggleButton from "../../Components/ToggleButton/ToggleButton";
@@ -24,52 +21,10 @@ import './Login.scss';
 
 function Login() {
   const [openModal, setOpenModal] = useState(false);
-<<<<<<< HEAD
-
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (localStorage.getItem("user-info")) {
-      navigate("/teacherdashboard");
-    }
-  }, [navigate]);
-
-  const LoginSubmit = (e) => {
-    e.preventDefault();
-    fetch("https://sprout-tutor.onrender.com/api/v1/auth/login", {
-      method: "POST",
-      body: JSON.stringify({
-        email: Email,
-        password: Password,
-      }),
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        // console.log(result, "result");
-        if (result) {
-          navigate("/teacherdashboard");
-          // alert("logged in.");
-        } else {
-          alert("Please check your login information.");
-        }
-      })
-      .catch((err) => {
-        console.log(err, "error");
-      });
-  };
-=======
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [keepSignedIn, setKeepSignedIn] = useState(false);
->>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
 
   function handleOpen() {
     setOpenModal(!openModal);

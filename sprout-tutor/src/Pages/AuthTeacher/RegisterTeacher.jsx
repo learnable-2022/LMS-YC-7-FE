@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./RegisterTeacher.scss";
-<<<<<<< HEAD
 // import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 ConnectButton;
@@ -67,7 +66,6 @@ const RegisterTeacher = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-=======
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 
 const RegisterTeacher = () => {
@@ -89,7 +87,6 @@ const RegisterTeacher = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
              <path
->>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
               d="M12.3937 49.0526H0.191605V40.8115C0.188736 40.8518 0.188736 40.8923 0.191605 40.9326C0.433034 41.7208 0.83108 42.452 1.36187 43.0825C1.73797 43.6126 2.14738 44.1183 2.58763 44.5964C3.31023 45.3667 4.12516 46.0447 5.01391 46.6151C7.22252 48.0508 9.76478 48.8904 12.3937 49.0526Z"
               fill="#2364AA"
             />
@@ -247,20 +244,16 @@ const RegisterTeacher = () => {
                     <label htmlFor="cpassword"> Confirm password</label>
                     <input id="cpassword" type="password" />
                   </div>
-<<<<<<< HEAD
 
                   <button onClick={CreateAccount} type="sumbmit">
                     Create Account
                   </button>
-=======
                   <NavigateButton title={"Create Account"} link={"/teacherdashboard"} />
->>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
                 </form>
               </div>
             )
           )}
         </div>
-<<<<<<< HEAD
         <div className="flex my-4">
           {" "}
           <div className="">
@@ -271,7 +264,6 @@ const RegisterTeacher = () => {
               {" "}
               connect with Google
             </button>
-=======
 
         <div className="google-ctn">
           <div className="google-wrapper-one">
@@ -323,7 +315,6 @@ const RegisterTeacher = () => {
               </svg>
               Google
            </button>
->>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
           </div>
         </div>
       </div>
