@@ -8,6 +8,9 @@
     align-items: flex-start;
     justify-content: space-between;
     // overflow: hidden;
+    h1{
+        font-size: clamp($large-text, 10vw, calc($large-text * 0.8));
+    }
 
     #girl-img{
         height: 100%;

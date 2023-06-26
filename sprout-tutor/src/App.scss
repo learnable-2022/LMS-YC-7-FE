@@ -47,10 +47,6 @@ $font: 'Open Sans', sans-serif;
     color: $main;
   }
 
-  h1{
-    font-size: clamp($large-text, 10vw, calc($large-text * 0.8));
-  }
-
   .heading{
     width: $width;
   }
