@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './OfferSlide.scss';
-import slide from '../../../../Data/OfferSlide.json';
+import slide from '../../../Data/OfferSlide.json';
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 

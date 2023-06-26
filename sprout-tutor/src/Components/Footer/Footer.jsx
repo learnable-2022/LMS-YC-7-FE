@@ -12,6 +12,7 @@ const Footer = () => {
         const currentYear = date.getFullYear();
         setYear(currentYear);
     }, []);
+    
   return (
     <footer>
         <div className="foots">

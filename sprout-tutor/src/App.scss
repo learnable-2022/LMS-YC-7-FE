@@ -23,6 +23,7 @@ $lt-gray: #E5E7E8;
 $gray: #696F75;
 $orange: #EA7317;
 $green: #299310;
+$red: #db2424;
 
 
 
@@ -46,8 +47,17 @@ $font: 'Open Sans', sans-serif;
     color: $main;
   }
 
+  h1{
+    font-size: clamp($large-text, 10vw, calc($large-text * 0.8));
+  }
+
   .heading{
     width: $width;
+  }
+
+  small{
+    color: $red;
+    font-size: calc($text * 0.6);
   }
 
 }

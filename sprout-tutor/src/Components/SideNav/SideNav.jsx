@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SideNav.scss';
 import { Link } from 'react-router-dom';
-import content from '../../../Data/SideNavComponents.json';
+import content from '../../Data/SideNavComponents.json';
 import ToggleButton from '../ToggleButton/ToggleButton';
 
 const SideNav = ({ setActiveLink }) => {

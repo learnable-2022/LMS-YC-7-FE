@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./RegisterTeacher.scss";
+<<<<<<< HEAD
 // import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 ConnectButton;
@@ -66,6 +67,29 @@ const RegisterTeacher = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+=======
+import NavigateButton from "../../Components/NavigateButton/NavigateButton";
+
+const RegisterTeacher = () => {
+    const [active, setActive] = useState(1);
+    console.log("active", active);
+
+    return (
+        <div className="main">
+          <div className="main-image-ctn">
+            <img src="/assets/image 4.png" />
+          </div>
+          <div className="container">
+            <div className="logo-ctn">
+              <svg
+                width="322"
+                height="61"
+                viewBox="0 0 322 61"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+             <path
+>>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
               d="M12.3937 49.0526H0.191605V40.8115C0.188736 40.8518 0.188736 40.8923 0.191605 40.9326C0.433034 41.7208 0.83108 42.452 1.36187 43.0825C1.73797 43.6126 2.14738 44.1183 2.58763 44.5964C3.31023 45.3667 4.12516 46.0447 5.01391 46.6151C7.22252 48.0508 9.76478 48.8904 12.3937 49.0526Z"
               fill="#2364AA"
             />
@@ -131,8 +155,8 @@ const RegisterTeacher = () => {
               fill="#2364AA"
             />
           </svg>
-        </div>
-        <div className="title-ctn">
+          </div>
+          <div className="title-ctn">
           <h2 className="title-header">Create an account</h2>
           <p>
             Already have an account?{" "}
@@ -196,23 +220,12 @@ const RegisterTeacher = () => {
                 </div>
                 <div className="input-wrapper">
                   <div className="input-ctn">
-                    <label htmlFor="year">
-                      {" "}
-                      How many years Of Teaching Experience?
-                    </label>
-                    <input
-                      id="year"
-                      type="text"
-                      placeholder="Years of experience"
-                    />
+                    <label htmlFor="year"> How many years Of Teaching Experience?</label>
+                    <input id="year" type="text" placeholder="Years of experience" />
                   </div>
                   <div className="input-ctn">
                     <label htmlFor="subject"> Subject </label>
-                    <input
-                      id="subject"
-                      type="text"
-                      placeholder="Your subject"
-                    />
+                    <input id="subject" type="text" placeholder="Your subject" />
                   </div>
                 </div>
                 <button onClick={() => setActive(3)}>Next</button>
@@ -234,15 +247,20 @@ const RegisterTeacher = () => {
                     <label htmlFor="cpassword"> Confirm password</label>
                     <input id="cpassword" type="password" />
                   </div>
+<<<<<<< HEAD
 
                   <button onClick={CreateAccount} type="sumbmit">
                     Create Account
                   </button>
+=======
+                  <NavigateButton title={"Create Account"} link={"/teacherdashboard"} />
+>>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
                 </form>
               </div>
             )
           )}
         </div>
+<<<<<<< HEAD
         <div className="flex my-4">
           {" "}
           <div className="">
@@ -253,6 +271,59 @@ const RegisterTeacher = () => {
               {" "}
               connect with Google
             </button>
+=======
+
+        <div className="google-ctn">
+          <div className="google-wrapper-one">
+            <p className="line-one"></p>
+            <h4 className="google-header">OR CONTINUE WITH</h4>
+            <p className="line-two"></p>
+          </div>
+          <div className="google-wrapper-two">
+            <button className="button-one">
+            <svg
+             width="17"
+             height="15"
+             viewBox="0 0 32 33"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+            >
+            
+            <path
+                  d="M25.6002 10.1389H5.6002V9.33892L23.2002 7.93092V9.33892H25.6002V6.93892C25.6002 5.17892 24.1746 3.94372 22.4338 4.19172L6.3682 6.48612C4.6258 6.73572 3.2002 8.37892 3.2002 10.1389V26.1389C3.2002 26.9876 3.53734 27.8015 4.13745 28.4017C4.73757 29.0018 5.5515 29.3389 6.4002 29.3389H25.6002C26.4489 29.3389 27.2628 29.0018 27.8629 28.4017C28.4631 27.8015 28.8002 26.9876 28.8002 26.1389V13.3389C28.8002 12.4902 28.4631 11.6763 27.8629 11.0762C27.2628 10.4761 26.4489 10.1389 25.6002 10.1389ZM23.2002 21.3485C22.8849 21.3484 22.5727 21.2862 22.2815 21.1655C21.9903 21.0447 21.7257 20.8678 21.5028 20.6448C21.2799 20.4218 21.1032 20.157 20.9826 19.8657C20.8621 19.5744 20.8001 19.2622 20.8002 18.9469C20.8003 18.6316 20.8625 18.3195 20.9833 18.0282C21.104 17.737 21.2809 17.4724 21.5039 17.2495C21.7269 17.0267 21.9917 16.8499 22.283 16.7294C22.5743 16.6088 22.8865 16.5468 23.2018 16.5469C23.8385 16.5471 24.4491 16.8003 24.8992 17.2507C25.3493 17.7011 25.602 18.3118 25.6018 18.9485C25.6016 19.5853 25.3484 20.1958 24.8981 20.6459C24.4477 21.096 23.8369 21.3487 23.2002 21.3485Z"
+                  fill="#2364AA"
+                />
+              </svg>
+              Connect Wallet
+              </button>
+            <button className="button-two">
+            <svg
+                width="15"
+                height="15"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.0005 12.7721C23.0005 11.9088 22.9291 11.2788 22.7744 10.6255H12.7148V14.5221H18.6196C18.5006 15.4905 17.8577 16.9488 16.4291 17.9288L16.4091 18.0592L19.5897 20.4739L19.8101 20.4955C21.8338 18.6638 23.0005 15.9688 23.0005 12.7721Z"
+                  fill="#4285F4"
+                />
+                <path
+                  d="M12.714 23.039C15.6068 23.039 18.0353 22.1056 19.8092 20.4956L16.4282 17.9288C15.5235 18.5472 14.3092 18.9789 12.714 18.9789C9.88069 18.9789 7.47596 17.1472 6.61874 14.6155L6.49309 14.626L3.18583 17.1344L3.14258 17.2522C4.90446 20.6822 8.5235 23.039 12.714 23.039Z"
+                  fill="#34A853"
+                />
+                <path
+                  d="M6.62095 14.6157C6.39476 13.9623 6.26386 13.2623 6.26386 12.539C6.26386 11.8156 6.39476 11.1156 6.60905 10.4623L6.60306 10.3232L3.25435 7.77454L3.14478 7.82561C2.41862 9.24896 2.00195 10.8473 2.00195 12.539C2.00195 14.2306 2.41862 15.8289 3.14478 17.2523L6.62095 14.6157Z"
+                  fill="#FBBC05"
+                />
+                <path
+                  d="M12.7141 6.09891C14.7259 6.09891 16.083 6.95057 16.8569 7.66229L19.8807 4.76894C18.0236 3.07728 15.6069 2.03894 12.7141 2.03894C8.52353 2.03894 4.90447 4.39559 3.14258 7.82556L6.60686 10.4623C7.47598 7.9306 9.88073 6.09891 12.7141 6.09891Z"
+                  fill="#EB4335"
+                />
+              </svg>
+              Google
+           </button>
+>>>>>>> 32b6aadd345b0ba5107cad7508069280a5062fee
           </div>
         </div>
       </div>
