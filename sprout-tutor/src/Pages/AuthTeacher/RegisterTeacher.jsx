@@ -1,72 +1,6 @@
-import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./RegisterTeacher.scss";
-// import NavigateButton from "../../Components/NavigateButton/NavigateButton";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-ConnectButton;
-
-const RegisterTeacher = () => {
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
-  const [Name, setName] = useState("");
-
-  const [active, setActive] = useState(1);
-  console.log("active", active);
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (localStorage.getItem("user-info")) {
-      navigate("/Login");
-    }
-  }, [navigate]);
-
-  const CreateAccount = () => {
-    // e.preventDefault();
-    console.log("hello");
-    fetch("https://sprout-tutor.onrender.com/api/v1/auth/register", {
-      method: "POST",
-      body: JSON.stringify({
-        name: Name,
-        email: Email,
-        password: Password,
-      }),
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result, "result");
-        if (result) {
-          alert("YOU ARE NOW registered. Thank U.");
-          // navigate("/Login");
-        } else {
-          alert("Please check your login information.");
-        }
-      })
-      .catch((err) => {
-        console.log(err, "error");
-      });
-  };
-
-  return (
-    <div className="main">
-      <div className="main-image-ctn">
-        <img src="/assets/image 4.png" />
-      </div>
-      <div className="container">
-        <div className="logo-ctn">
-          <svg
-            width="322"
-            height="61"
-            viewBox="0 0 322 61"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-<<<<<<< HEAD
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 
 const RegisterTeacher = () => {
@@ -88,9 +22,6 @@ const RegisterTeacher = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
              <path
-=======
-
->>>>>>> 740630a6374ff1d0e80d925b25206c8df07d5b89
               d="M12.3937 49.0526H0.191605V40.8115C0.188736 40.8518 0.188736 40.8923 0.191605 40.9326C0.433034 41.7208 0.83108 42.452 1.36187 43.0825C1.73797 43.6126 2.14738 44.1183 2.58763 44.5964C3.31023 45.3667 4.12516 46.0447 5.01391 46.6151C7.22252 48.0508 9.76478 48.8904 12.3937 49.0526Z"
               fill="#2364AA"
             />
@@ -193,16 +124,15 @@ const RegisterTeacher = () => {
             <div className="form-ctn active-form">
               <form>
                 <div className="input-ctn">
-                  <label htmlFor="email"> What is your email?</label>
+                  <label htmlFor="email"> What's your email?</label>
                   <input
                     id="email"
                     type="email"
                     placeholder="Enter your email address"
-                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <p>You will need to verify your email</p>
                 </div>
-                <button onClick={() => setActive(2)} className="submit-btn">
+                <button onClick={(e) => setActive(2)} className="submit-btn">
                   Next
                 </button>
               </form>
@@ -211,12 +141,11 @@ const RegisterTeacher = () => {
             <div className="form-ctn">
               <form>
                 <div className="input-ctn">
-                  <label htmlFor="name"> What is your name?</label>
+                  <label htmlFor="name"> What's your name?</label>
                   <input
                     id="name"
                     type="text"
                     placeholder="Enter your full name"
-                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="input-wrapper">
@@ -229,7 +158,7 @@ const RegisterTeacher = () => {
                     <input id="subject" type="text" placeholder="Your subject" />
                   </div>
                 </div>
-                <button onClick={() => setActive(3)}>Next</button>
+                <button onClick={(e) => setActive(3)}>Next</button>
               </form>
             </div>
           ) : (
@@ -238,44 +167,18 @@ const RegisterTeacher = () => {
                 <form>
                   <div className="input-ctn">
                     <label htmlFor="password"> Enter password</label>
-                    <input
-                      id="password"
-                      type="password"
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
+                    <input id="password" type="password" />
                   </div>
                   <div className="input-ctn">
                     <label htmlFor="cpassword"> Confirm password</label>
                     <input id="cpassword" type="password" />
                   </div>
-
-                  <button onClick={CreateAccount} type="sumbmit">
-                    Create Account
-                  </button>
-<<<<<<< HEAD
                   <NavigateButton title={"Create Account"} link={"/teacherdashboard"} />
-=======
->>>>>>> 740630a6374ff1d0e80d925b25206c8df07d5b89
                 </form>
               </div>
             )
           )}
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 740630a6374ff1d0e80d925b25206c8df07d5b89
-        <div className="flex my-4">
-          {" "}
-          <div className="">
-            <ConnectButton label="connect with wallet" />
-          </div>
-          <div className="">
-            <button className="border-2 bg-blue-500 text-white rounded-lg px-4 pb-2 py-2 font-bold text-sm cursor-pointer">
-              {" "}
-              connect with Google
-            </button>
-<<<<<<< HEAD
 
         <div className="google-ctn">
           <div className="google-wrapper-one">
@@ -327,8 +230,6 @@ const RegisterTeacher = () => {
               </svg>
               Google
            </button>
-=======
->>>>>>> 740630a6374ff1d0e80d925b25206c8df07d5b89
           </div>
         </div>
       </div>
