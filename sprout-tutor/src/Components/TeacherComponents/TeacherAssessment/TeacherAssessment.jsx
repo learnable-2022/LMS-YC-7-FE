@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './TeacherAssessment.scss'
+import './TeacherAssessment.scss';
 
 const TeacherAssessment = () => {
   const [questions, setQuestions] = useState([]);
@@ -30,27 +30,35 @@ const TeacherAssessment = () => {
   };
 
   return (
-    <div>
+    <div className="teacher-assessment">
       <div>
-        <h2> Assessment</h2>
-        <div>
-          <label htmlFor="question">Question: </label>
-          <textarea id="question" value={question} onChange={(e) => setQuestion(e.target.value)}></textarea>
+        <h2>Assessment</h2>
+        <div className="question-wrapper">
+          <label htmlFor="question">Question:</label>
+          <textarea
+            id="question"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            className="text-input"
+          ></textarea>
         </div>
         {isMultipleChoice ? (
           <div>
             <h3>Options:</h3>
-            {options.map((option, index) => (
-              <div key={index}>
-                <label htmlFor={`option${index}`}>{`Option ${String.fromCharCode(65 + index)}: `}</label>
-                <input
-                  id={`option${index}`}
-                  type="text"
-                  value={option}
-                  onChange={(e) => handleOptionChange(index, e.target.value)}
-                />
-              </div>
-            ))}
+            <div className="options-wrapper">
+              {options.map((option, index) => (
+                <div key={index} className="option-item">
+                  <label htmlFor={`option${index}`}>{`Option ${String.fromCharCode(65 + index)}:`}</label>
+                  <input
+                    id={`option${index}`}
+                    type="text"
+                    value={option}
+                    onChange={(e) => handleOptionChange(index, e.target.value)}
+                    className="text-input"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         ) : (
           <div>
@@ -58,31 +66,40 @@ const TeacherAssessment = () => {
             <p>Allow the teacher to input essay-specific details here</p>
           </div>
         )}
-        <button onClick={handleToggleQuestionType}>
+        <button onClick={handleToggleQuestionType} className="toggle-button">
           Switch to {isMultipleChoice ? 'Essay' : 'Multiple Choice'}
         </button>
-        <button onClick={handleAddQuestion}>Add Question</button>
-        <div>
-          <label htmlFor="timer">Timer (in minutes): </label>
+        <button onClick={handleAddQuestion} className="add-question-button">
+          Add Question
+        </button>
+        <div className="timer-wrapper">
+          <label htmlFor="timer">Timer (in minutes):</label>
           <input
             id="timer"
             type="number"
             min="0"
             value={timer}
             onChange={(e) => setTimer(e.target.value)}
+            className="text-input"
           />
         </div>
-        <button onClick={handleSavePublish}>Save/Publish</button>
+        <button onClick={handleSavePublish} className="save-publish-button">
+          Save/Publish
+        </button>
       </div>
-      <div>
+      <div className="preview">
         <h2>Preview</h2>
         {questions.map((q) => (
           <div key={q.title}>
             <h3>{q.title}</h3>
             <p>{q.question}</p>
-            {q.options.map((option, index) => (
-              <div key={index}>{`${String.fromCharCode(65 + index)}. ${option}`}</div>
-            ))}
+            <div className="options-preview">
+              {q.options.map((option, index) => (
+                <div key={index} className="option-preview">
+                  {`${String.fromCharCode(65 + index)}. ${option}`}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
