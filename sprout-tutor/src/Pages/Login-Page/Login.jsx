@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import teach from "../../assets/teach-logo.png";
 import studt from "../../assets/studt-logo.png";
 import parent from "../../assets/parent-logo.png";
 
-// import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
 import Modal from "../../Components/Modal/Modal";
 import NavigateButton from "../../Components/NavigateButton/NavigateButton";
 import Logo from "../../assets/Logo-sprout.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-// import { response } from "express";
+
 ConnectButton;
 
 function Login() {
