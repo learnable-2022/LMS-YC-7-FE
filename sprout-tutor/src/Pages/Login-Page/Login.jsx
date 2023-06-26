@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-// Link
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import teach from "../../assets/teach-logo.png";
 import studt from "../../assets/studt-logo.png";
 import parent from "../../assets/parent-logo.png";
+
 // import Button from "../../Components/ButtonL/Button";
 import Button2 from "../../Components/ButtonL/Button2";
 import Inputs from "../../Components/Inputs/Inputs";
@@ -30,7 +30,7 @@ function Login() {
 
   const LoginSubmit = (e) => {
     e.preventDefault();
-    fetch("https://sprout-tutor.onrender.com/auth/login", {
+    fetch("https://sprout-tutor.onrender.com/api/v1/auth/login", {
       method: "POST",
       body: JSON.stringify({
         email: Email,
@@ -43,9 +43,10 @@ function Login() {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log(result, "result");
+        // console.log(result, "result");
         if (result) {
-          alert("You are logged in.");
+          navigate("/teacherdashboard");
+          // alert("logged in.");
         } else {
           alert("Please check your login information.");
         }
