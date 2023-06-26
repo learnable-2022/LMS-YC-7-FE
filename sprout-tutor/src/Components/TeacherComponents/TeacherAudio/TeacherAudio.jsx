@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import Dropzone from "react-dropzone";
-import ReactAudioPlayer from "react-audio-player";
+import React, { useState } from 'react';
+import Dropzone from 'react-dropzone';
+import ReactAudioPlayer from 'react-audio-player';
+import './TeacherAudio.scss';
 
 const TeacherAudio = () => {
   const [audioFiles, setAudioFiles] = useState([]);
-  const [lessonTitle, setLessonTitle] = useState("");
-  const [lessonDescription, setLessonDescription] = useState("");
+  const [lessonTitle, setLessonTitle] = useState('');
+  const [lessonDescription, setLessonDescription] = useState('');
 
   const handleFileDrop = (acceptedFiles) => {
     setAudioFiles([...audioFiles, ...acceptedFiles]);
@@ -32,10 +33,10 @@ const TeacherAudio = () => {
   };
 
   return (
+    <div className="teacher-audio">
 
-    <div>
-      <label>
-        <h1>Lesson Title</h1>
+      <label className="label">
+        <h2>Lesson Title</h2>
         <input
           type="text"
           name="text"
@@ -45,9 +46,10 @@ const TeacherAudio = () => {
         />
       </label>
 
-      <label>
-        <h1>Course Description</h1>
+      <label className="label">
+        <h2>Lesson Description</h2>
         <textarea
+          type="text"
           name="text"
           id="description"
           placeholder="What is the Lesson about"
@@ -56,6 +58,28 @@ const TeacherAudio = () => {
         />
       </label>
 
+
+      <span>
+        <h2>Audio File</h2>
+      </span>
+      <div>
+        <Dropzone  className="dropZone" onDrop={handleFileDrop} accept="audio/*" multiple>
+          {({ getRootProps, getInputProps }) => (
+            <div
+              {...getRootProps()}
+              className="dropZoneContent"
+            >
+              <input {...getInputProps()} />
+              <p>Drag and drop audio files here, or click to select files</p>
+            </div>
+          )}
+        </Dropzone>
+        <div className="preview">
+          {audioFiles.map((file, index) => (
+            <div key={index}>
+              <ReactAudioPlayer src={URL.createObjectURL(file)} controls />
+            </div>
+          ))}
       <Dropzone onDrop={handleFileDrop} accept="audio/*" multiple>
         {({ getRootProps, getInputProps }) => (
           <div
@@ -75,6 +99,7 @@ const TeacherAudio = () => {
         <div key={index}>
           <ReactAudioPlayer src={URL.createObjectURL(file)} controls />
         </div>
+      ))}
       </div>
       <div>
         <button className="publishButton" onClick={handlePublish}>
@@ -82,7 +107,8 @@ const TeacherAudio = () => {
         </button>
       </div>
     </div>
+    </div>
   );
 };
 
-export default TeacherAudio;
+export default TeacherAudio

@@ -66,6 +66,7 @@ const RegisterTeacher = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+
               d="M12.3937 49.0526H0.191605V40.8115C0.188736 40.8518 0.188736 40.8923 0.191605 40.9326C0.433034 41.7208 0.83108 42.452 1.36187 43.0825C1.73797 43.6126 2.14738 44.1183 2.58763 44.5964C3.31023 45.3667 4.12516 46.0447 5.01391 46.6151C7.22252 48.0508 9.76478 48.8904 12.3937 49.0526Z"
               fill="#2364AA"
             />
@@ -131,8 +132,8 @@ const RegisterTeacher = () => {
               fill="#2364AA"
             />
           </svg>
-        </div>
-        <div className="title-ctn">
+          </div>
+          <div className="title-ctn">
           <h2 className="title-header">Create an account</h2>
           <p>
             Already have an account?{" "}
@@ -196,23 +197,12 @@ const RegisterTeacher = () => {
                 </div>
                 <div className="input-wrapper">
                   <div className="input-ctn">
-                    <label htmlFor="year">
-                      {" "}
-                      How many years Of Teaching Experience?
-                    </label>
-                    <input
-                      id="year"
-                      type="text"
-                      placeholder="Years of experience"
-                    />
+                    <label htmlFor="year"> How many years Of Teaching Experience?</label>
+                    <input id="year" type="text" placeholder="Years of experience" />
                   </div>
                   <div className="input-ctn">
                     <label htmlFor="subject"> Subject </label>
-                    <input
-                      id="subject"
-                      type="text"
-                      placeholder="Your subject"
-                    />
+                    <input id="subject" type="text" placeholder="Your subject" />
                   </div>
                 </div>
                 <button onClick={() => setActive(3)}>Next</button>
@@ -243,6 +233,7 @@ const RegisterTeacher = () => {
             )
           )}
         </div>
+
         <div className="flex my-4">
           {" "}
           <div className="">

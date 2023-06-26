@@ -1,52 +1,83 @@
-import React, { Fragment, useState } from "react";
-import Inputs from "../../Components/Inputs/Inputs";
-import Logo from "../../assets/Logo-sprout.png";
-import "../../App.css";
-import Button2 from "../../Components/ButtonL/Button2";
-import PasswordChanged from "./Changed-Password";
+import { useState } from "react";
+import './NewPassword.scss';
+import boy1 from '../../assets/boy1.png';
+import logo from '../../assets/Logo-sprout.png';
+import NavigateButton from '../../Components/NavigateButton/NavigateButton';
+import ToggleButton from "../../Components/ToggleButton/ToggleButton";
 
 function Forget() {
-  const [showModal, setShowModal] = useState(false);
-  return (
-    <Fragment>
-      <div className="flex flex-row box-border blockED-css">
-        <img
-          src="girl2.png"
-          alt="Girl-Pix"
-          className="h-screen w-1/2 hidden sm:block"
-        ></img>
-        <div className="mx-0 px-2">
-          <div className="flex justify-center align-center">
-            <img
-              src={Logo}
-              alt="Logo"
-              className=" h-2/6 mt-28 mb-8 w-2/5 "
-            ></img>
-          </div>
-          <h1 className="text-2xl font-semibold font-sans text-center">
-            New Password
-          </h1>
-          <p className="mb-10 text-lg font-normal leading-7 text-gray-600 tracking-wide font-sans text-center">
-            Create a password different from the previously used password.
-          </p>
-          <div className="mx-20">
-            <div className="my-1">
-              <Inputs name="New Password" />
-            </div>
-            <input type="Password" className="px-28 rounded-lg" />
-            <br />
-            <br />
-            <Inputs name="Confirm Password" />
-            <input type="Password" className="px-28 rounded-lg mb-8" />
-            <div onClick={() => setShowModal(true)}>
-              <Button2 name="New Password" type="submit" />
-            </div>
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+  const [error, setError] = useState(false);
 
-            <PasswordChanged isChanged={showModal} />
-          </div>
-        </div>
-      </div>
-    </Fragment>
+  function handleToggleVisibility() {
+    setPasswordVisible(!passwordVisible);
+  }
+
+  function handleConfirmPasswordVisibility() {
+    setConfirmPasswordVisible(!confirmPasswordVisible);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (newPassword !== confirmPassword) {
+      setError(true);
+      return;
+    }
+    setError(false);
+    setNewPassword('');
+    setConfirmPassword('');
+  }
+
+  return (
+    <div id="new-password">
+      <img src={boy1} alt="" id='boy1' />
+
+      <aside>
+        <NavigateButton image={logo} link={'/'} className={'pw-logo'} />
+
+        <h1>New Password?</h1>
+        <p>Create a password different from the previously used password</p>
+
+        <form action="" onSubmit={handleSubmit} id="nw-form">
+          <span>
+            <label htmlFor="new-pword">New Password</label>
+            <ToggleButton onClick={handleToggleVisibility}>
+              <i className={`fa-solid fa-${passwordVisible ? 'eye' : 'eye-slash'} eyes`}></i>
+            </ToggleButton>
+            <input
+              type={passwordVisible ? 'text' : 'password'}
+              name="new-pword"
+              id="new-pword"
+              placeholder="Your Password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+          </span>
+
+          <span>
+            <label htmlFor="confirm-password">Confirm New Password</label>
+            <ToggleButton onClick={handleConfirmPasswordVisibility}>
+              <i className={`fa-solid fa-${confirmPasswordVisible ? 'eye' : 'eye-slash'} eyes`}></i>
+            </ToggleButton>
+            <input
+              type={confirmPasswordVisible ? 'text' : 'password'}
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+            {error && <small className="error-message">Passwords do not match</small>}
+          </span>
+
+          <NavigateButton link={'/New-Password'} className={'password-submit'} title={'Change Password'} />
+        </form>
+      </aside>
+    </div>
   );
 }
 

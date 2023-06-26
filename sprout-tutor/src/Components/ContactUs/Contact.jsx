@@ -34,7 +34,7 @@ const Contact = () => {
                 </a>
             </aside>
 
-            <form action="">
+            <form action="" id='contact-form'>
                 
                 <div id='name'>
                     <label htmlFor="">
