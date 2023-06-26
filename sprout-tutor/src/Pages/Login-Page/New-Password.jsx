@@ -42,7 +42,7 @@ function Forget() {
         <h1>New Password?</h1>
         <p>Create a password different from the previously used password</p>
 
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit} id="nw-form">
           <span>
             <label htmlFor="new-pword">New Password</label>
             <ToggleButton onClick={handleToggleVisibility}>
