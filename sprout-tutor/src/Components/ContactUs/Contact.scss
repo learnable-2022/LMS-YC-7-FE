@@ -31,7 +31,7 @@
         height: calc($height * 0.8);
         display: flex;
         gap: 1em;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: space-between;
 
         aside{
@@ -167,6 +167,7 @@
         .cct-content{
             height: auto;
             padding: 0;
+            flex-wrap: wrap;
 
             aside{
                 width: 100%;

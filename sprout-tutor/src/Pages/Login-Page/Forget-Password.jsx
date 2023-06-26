@@ -23,7 +23,7 @@ function NewP() {
         <h1>Forgot Password?</h1>
         <p>Enter your email and we’ll send you a link to reset your password</p>
 
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit} id='fg-form'>
         <span>
             <label htmlFor="email">Email Address</label>
             <input

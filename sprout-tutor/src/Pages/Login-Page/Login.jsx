@@ -47,7 +47,7 @@ function Login() {
 
         <span id="or">OR</span>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id="log-form">
           <span>
             <label htmlFor="email">Email Address</label>
             <input
